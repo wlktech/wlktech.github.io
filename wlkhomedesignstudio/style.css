@@ -1,0 +1,179 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    background-image: url(https://img.redbull.com/images/c_crop,w_4499,h_2248,x_0,y_387,f_auto,q_auto/c_scale,w_1200/redbullcom/2015/07/27/1331737542701_2/moon-hill-natural-bridge-in-china);
+    background-size: 100% 100%;
+    width: 100%;
+    height:580px;
+    color: white;
+}
+.container h2{
+    margin: 0;
+    text-align: center;
+    padding-top: 280px;
+    text-shadow: 2px 2px 3px grey;
+    letter-spacing: 2px;
+    animation: slide 1s ease-in-out;
+}
+.work{
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    position: relative;
+    animation: slide-text 2s ease-in-out;
+}
+.menu{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right;
+    text-shadow: 2px 2px 3px grey;
+    background-color: #332e30;
+    opacity: 0.3;
+    position: fixed;
+    width: 100%;
+}
+.menu li{
+    padding: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+.menu li a{
+    color: #fff;
+    text-decoration: none;
+}
+.menu:hover{
+    opacity: 0.6;
+}
+@keyframes slide{
+    0%{
+        letter-spacing: 10px;
+    }
+    50%{
+        letter-spacing: 8px;
+    }
+    100%{
+        letter-spacing: 3px;
+    }
+}
+@keyframes slide-text{
+    0%{
+        bottom: -20%;
+    }
+    50%{
+        bottom: 30%;
+    }
+    80%{
+        bottom: 40%;
+    }
+    100%{
+        bottom: 30%;
+    }
+}
+#service h2{
+    text-align: center;
+}
+#service p{
+    padding: 10px 60px;
+}
+.card{
+    width: 45%;
+    height: auto;
+    border: 1px solid grey;
+    margin: 10px;
+    box-shadow: 2px 3px 8px black;
+    border-radius: 40px 100px 40px 100px;
+    float: left;
+    margin-left: 40px;
+}
+.card .card-header{
+    text-align: center;
+    height: 150px;
+    border: 1px solid grey;
+    background-color: #35254f;
+    border-radius: 40px 100px 40px 100px;
+}
+.card-header h2{
+    padding-top: 30px;
+}
+.card-body{
+    padding: 20px;
+    height: 200px;
+}
+.card-header:hover{
+    background-color: black;
+    color: white;
+}
+.card-group{
+    margin-top: 20px;
+}
+.card-group h2{
+    text-align: center;
+}
+.training{
+    clear: both;
+    text-align: center;
+    padding-top: 100px;
+    background-color: #35254f;
+
+}
+.traininghead{
+    padding-top: 50px;
+    color: white;
+}
+.training-card{
+    display: inline-block;
+    width: 30%;
+    height: 350px;
+    border: 1px solid gray;
+    margin: 10px 15px;
+    background-color: #fff;
+}
+.training-header{
+    height: 80px;
+    text-align: center;
+    border: 1px solid gray;
+}
+.training-body{
+    padding: 30px;
+}
+.training-card:hover{
+    box-shadow: 2px 2px 3px gray;
+}
+.training-body button{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    background-color:#fff;
+    color:#35254f;
+    border: 1px solid #000;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+.training-body button:hover{
+    background-color: #35254f;
+    color: #fff;
+
+}
+.contact-box{
+    width: 25%;
+    height: 100px;
+    display: inline-block;
+    
+    background-color: #efefef;
+    margin: 20px;
+    padding: 20px;
+}
+.contact{
+    text-align: center;
+    padding: 20px 0;
+}
+footer{
+    background-color: #35254f;
+    height: 45px;
+    text-align: center;
+    color: white;
+    line-height: 45px;
+}
