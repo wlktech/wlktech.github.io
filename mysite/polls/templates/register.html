@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        *{
+            background-color: darkslategrey;
+            color: #fff;
+        }
+        .container{
+            width: 1400px;
+            margin-left: 200px;
+            margin-top: 50px;
+            
+        }
+        img{
+            border-radius: 50%;
+            margin-left: 600px;
+            
+        }
+        h1{
+            margin-left: 450px;
+
+        }
+        table{
+            border-collapse: collapse;
+            text-align: center;
+            width: 1400px;
+        
+        }
+        th{
+            background-color: rgb(66, 66, 65);
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://scontent-sin6-3.xx.fbcdn.net/v/t39.30808-6/272274356_146791817732289_4949843533722317882_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=ZZkgTJEOPtwAX_0i5uw&_nc_ht=scontent-sin6-3.xx&oh=00_AT-Bz8RI9lWNSstTapbPfcUdCX1upusoi89Sdl0Ya94KdA&oe=62BE83C8" width="150px" alt="">
+        <h1 style="text-shadow: 2px 3px 4px rgb(0, 0, 0)">Welcome to JKT Digital Institute</h1>
+        <h2 style="text-shadow: 2px 3px 4px rgb(0, 0, 0)">FE Student Registerations</h2>
+        <table border="1">
+            <tr id="head">
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Father Name</th>
+                <th>Date of Birth</th>
+                <th>NRC No</th>
+                <th>Contact No</th>
+                <th>Email Address</th>
+                <th>Parmanent Address</th>
+                <th>Education Background</th>
+                <th>Remove Tag</th>
+            </tr>
+            {% for x in mypolls %}
+            <tr>
+                <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+                <td>{{ x.firstname }}</td>
+                <td>{{ x.lastname }}</td>
+                <td>{{ x.fathername }}</td>
+                <td>{{ x.dateofbirth }}</td>
+                <td>{{ x.nrcno }}</td>
+                <td>{{ x.contactno }}</td>
+                <td>{{ x.emailAddress }}</td>
+                <td>{{ x.pAddress }}</td>
+                <td>{{ x.edu }}</td>
+                <td><a href="delete/{{ x.id }}">delete</a></td>
+                {% endfor %}
+            </tr>
+        </table>
+        <p>
+            <a href="add/">Enroll Here>>></a>
+        </p>
+        <p style="color: red; text-shadow: 2px 3px 4px rgb(0, 0, 0)">*If you want to update or edit your registerd list >> enter each id no you want to edit.</p>
+    </div>
+</body>
+</html>

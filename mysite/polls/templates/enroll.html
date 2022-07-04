@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll Here</title>
+    <style>
+        body{
+            background-color: darkslategrey;
+            color: #fff;
+        }
+        h1{
+            text-align: center;
+        }
+        .form{
+            width: 1100px;
+            height: 1000px;
+            margin-left: 600px;
+            margin-top: 60px;
+
+
+        }
+        .row_tab{
+            display: inline-block;
+            margin-bottom: 30px;
+            
+        }
+        .label{
+            width: 400px;
+            text-align: left; 
+            display: block; 
+            margin-bottom: 10px;  
+        }
+        label{
+            font-size: 20px;
+            
+        }
+        .input{
+            width: 400px;
+            text-align: left;
+            display: block;
+        }
+        input{
+            font-size: 20px;
+            width: 300px;
+            height: 40px;
+            border-width: 3px;
+            border-radius: 15px;
+            background-color: black;
+            color: #fff;
+        }
+        .btn{
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+            margin-top: 50px;
+            margin-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FE Preparation Course Enroll Here</h1>
+    <div class="form">
+        <form action="addrecord/" method="post">
+            {% csrf_token %}
+            <div class="main">
+                <div class="row_tab">
+                    <div class="label">
+                        <label>First Name:</label>
+                    </div>
+                    <div class="input">
+                        <input name="first" placeholder="Enter Your First Name:">
+                    </div>
+                </div>
+                <div class="row_tab">
+                    <div class="label">
+                        <label>Last Name:</label>
+                    </div>
+                    <div class="input">
+                        <input name="last" placeholder="Enter Your Last Name:">
+                    </div>
+                </div>
+                <div class="row_tab">
+                    <div class="label">
+                        <label>Father Name:</label>
+                    </div>
+                    <div class="input">
+                        <input name="father" placeholder="Enter Your Father Name:">
+                    </div>
+                </div>
+                <div class="row_tab">
+                    <div class="label">
+                        <label>Date of Birth:</label>
+                    </div>
+                    <div class="input">
+                        <input name="dob" placeholder="Enter Your Birthday:">
+                    </div>
+                </div>
+                <div class="row_tab">
+                    <div class="label">
+                        <label>NRC No:</label>
+                    </div>
+                    <div class="input">
+                        <input name="nrc" placeholder="Enter Your NRC Number:">
+                    </div>
+                </div>
+                <div class="row_tab">
+                    <div class="label">
+                        <label>Contact No:</label>
+                    </div>
+                    <div class="input">
+                        <input name="contact" placeholder="Enter Your Phone Number:">
+                    </div>
+                </div>
+                <div class="row_tab">
+                    <div class="label">
+                        <label>Email Address:</label>
+                    </div>
+                    <div class="input">
+                        <input name="email" placeholder="Enter Your Email:">
+                    </div>
+                </div>
+                <div class="row_tab">
+                    <div class="label">
+                        <label>Parmanent Address:</label>
+                    </div>
+                    <div class="input">
+                        <input name="address" placeholder="Enter Your Parmanent Address:">
+                    </div>
+                </div>
+                <div class="row_tab">
+                    <div class="label">
+                        <label>Education Background:</label>
+                    </div>
+                    <div class="input">
+                        <input name="edu" placeholder="Enter Your Education:">
+                    </div>
+                </div>
+                <div>
+                    {% for message in messages %} 
+                    <p style="color: red;">{{message}}</p>
+                    {% endfor %}
+                </div>
+                <div>
+                    <input class="btn" type="submit"  value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
