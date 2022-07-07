@@ -1,0 +1,10 @@
+.btn{
+    border-radius: 20px;
+    font-size: 20px;
+    margin-bottom: 100px;
+    
+}
+.btn a{
+    color: #fff;
+    text-decoration: none;
+}
