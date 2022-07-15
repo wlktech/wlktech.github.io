@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wai Linn Kyaw</title>
-    <style>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- <style>
         *{
             background-color: black;
             color: white;
@@ -39,18 +43,74 @@
         a{
             margin: 100px;
         }
-    </style>
+        .button-container{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+        button{
+            cursor: pointer;
+            font-size: 1.2rem;
+            height: 2.5rem;
+            border-radius: 10px;
+            color: #fff;
+            background-color: blue;
+            outline: none;
+            box-shadow: 0 0.3rem grey;        
+        }
+        button:hover{
+            filter: brightness(110%);
+        }
+        button:active{
+            transform:translate(0,0.3rem);
+            box-shadow: 0 0.1rem pink;
+        }
+
+    </style> -->
 </head>
 <body>
-    <div class="container">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">WLK-TECH</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Knowledge Sharing</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Web Development</a></li>
+                  <li><a class="dropdown-item" href="#">Programming Languages</a></li>
+                  <li><a class="dropdown-item" href="#">Software Development</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>  
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container-fluid p-5 bg-secondary text-white text-center">
+        <h1>Welcome to WLK-TECH</h1>
+        <p>Knowledge Sharing for Information Technology!</p> 
+      </div>
+    <div class="container text-center mt-5">
         <h1>Welcome to my Virtual World!</h1>
-        <h3><quote>Hello, This is my Curriculum Vitae</quote></h3>
+        <h3><quote>Hello, This is my Blog.</quote></h3>
 
         <p>My Name is <em>Wai Linn Kyaw</em>. I am 24 years old. I have graduated in <em>BEng(Civil Engineering) from University of Portsmouth, UK and BA(English) from Dagon University.</em></p>
         <p>Now I would like to go to Japan as Developer. I have to get IT Visa, so I am preparing for FE Exam and to improve my IT Skills. I am learing Zero to Pro CS BootCamp Batch 13 at Myanmar IT BootCamp.</p>
         <h4>Thank you so much for your attention.</h4>
     </div>
-    <a href="a1/" target="__blank">Assignment-1</a>
-    
+    <a class="container text-center" href="a1/" target="__blank">Assignment-1</a>
 </body>
 </html>
