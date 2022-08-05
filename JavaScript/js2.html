@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Lesson</title>
+</head>
+<body>
+    <h1>Operator Lessons</h1>
+    <p id="demo"></p>
+    <script>
+                //Variable
+        var a = 13 //Global Variable
+        console.log(a)
+        let b = 23 //Block Scope Variable
+        console.log(b)
+        const c = 33
+        console.log(c)
+
+        a = 103
+        console.log(a)
+        b = 203
+        console.log(b)
+        //c = 303
+        //console.log(c)
+
+        var a = 130
+        console.log(a)
+        // let b = 230
+        // console.log(b)
+        // const c = 330
+        // console.log(c) 
+        //let and const are not decleared repeatedly.
+        //var can declare repeatedly.
+
+        if (a==130){
+        var num1 = 12
+        console.log(num1)
+        let num2 = 15
+        console.log(num2)
+        }
+        console.log(num1)
+        //console.log(num2) let is block scope variable. it will work in block.
+        let d = 2; e=12; f=13;
+        let g 
+        console.log(g)
+        let h = null
+        console.log(h)
+
+
+        //Addition Operator(+)
+        var a = 3+1
+        console.log(a)
+        var e = '2'+'1'
+        console.log(e)
+
+        //substraction operator(-)
+        var a = 4-1
+        console.log(a)
+        var e = '4'-'1'
+        console.log(e)
+
+        //Divisional Operator(/)
+        var a = 6
+        console.log(a/3)
+
+        //Remainder Operator(%)
+        console.log(a%3)
+
+
+        //Multiplication Operator(*)
+        var mul = 12*12
+        console.log(mul)
+        let mul2 = -12* -12
+        console.log(mul2)
+        let mul1 = 23
+        mul1 *= 2 
+        console.log(mul1)
+
+        document.getElementById('demo').innerHTML = "The Answer is "+ a +' '+ b +' '+ c
+        document.getElementById('demo').innerHTML = "Hello World!"
+    </script>
+</body>
+</html>

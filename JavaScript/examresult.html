@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container mt-3">
+        <h2>Exam Result Calculation</h2>
+        <p>Please Enter Your Marks of Each Subject!</p>
+        <form action="" name="myForm">
+          <div class="form-floating mb-3 mt-3">
+            <input type="text" class="form-control" id="name" placeholder="Enter Your Name" name="name">
+            <label for="name">Name</label>
+          </div>
+          <div class="form-floating mt-3 mb-3">
+            <input type="number" class="form-control" id="html" placeholder="Enter HTML Marks" name="html">
+            <label for="mark">HTML</label>
+          </div>
+          <div class="form-floating mt-3 mb-3">
+            <input type="number" class="form-control" id="css" placeholder="Enter CSS Marks" name="css">
+            <label for="mark">CSS</label>
+          </div>
+          <div class="form-floating mt-3 mb-3">
+            <input type="number" class="form-control" id="js" placeholder="Enter JavaScript Marks" name="js">
+            <label for="mark">JavaScript</label>
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="result()">Result</button>
+        </form>
+    </div>
+    <script>
+        function result(){
+            let name = document.myForm.name.value;
+            console.log(name);
+            let html = document.myForm.html.value;
+            console.log(html);
+            let css = document.myForm.css.value;
+            console.log(css);
+            let js = document.myForm.js.value;
+            console.log(js);
+
+            if (html<=50 || css<=50 || js<=50){
+                document.write('<h1">'+name+' is Fail.</h1>')
+            }else if (html>80 && css<80 && js<80){
+                document.write('<h1>'+name+' has passed HTML with Distinction.</h1>')
+            }else if (css>80 && html<80 && js<80){
+                document.write('<h1>'+name+' has passed CSS with Distinction.</h1>')
+            }else if (js>80 && html<80 && css<80){
+                document.write('<h1>'+name+' has passed JavaScript with Distinction.</h1>')
+            }else if (html>80 && css>80 && js<80){
+                document.write('<h1>'+name+' has passed HTML & CSS with Distinction.</h1>')
+            }else if (html>80 && js>80 && css<80){
+                document.write('<h1>'+name+' has passed HTML & JavaScript with Distinction.</h1>')
+            }else if (html<80 && css>80 && js>80){
+                document.write('<h1>'+name+' has passed CSS & JavaScript with Distinction.</h1>')
+            }
+            else{
+                document.write('<h1>'+name+' is Pass.</h1>')
+            }
+        }
+    </script>
+</body>
+</html>

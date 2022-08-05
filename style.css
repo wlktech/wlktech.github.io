@@ -1,0 +1,102 @@
+.navbar{
+    background-color: #000;
+    opacity: 80%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbar:hover{
+    opacity:100%;
+}
+.navbar-nav{
+    margin-left:auto;
+
+}
+.nav-link{
+    color:gold;
+    margin-left: 3px;
+}
+.cover{
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/006/272/147/large/jack-oldham-mountain-galaxy-background-1.jpg?1497300224);
+    color:#fff;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    padding-bottom: 350px;
+}
+.header{
+    color:#fff;
+    padding-top: 200px;
+    margin: auto;
+    font-variant: small-caps;
+    text-shadow: 2px 3px 4px gold;
+    text-align:center;
+}
+.btn{
+    margin-left: 30px;
+    background-color: #000;
+}
+.btn a{
+    text-decoration: none;
+    color: gold;
+}
+
+.img{
+    margin-left: auto;
+}
+.title{
+    background-color: rgb(18, 18, 18);
+    color: white;
+}
+#about{
+    background-color: rgb(25, 24, 24);
+    color:#fff;
+    width: 100%;
+    height: auto;
+}
+.left{
+    margin-top: 50px;
+}
+.right{
+    margin:auto;
+}
+#service{
+    background-color: rgb(25, 24, 24);
+    color:#fff;
+    width: 100%;
+    height: auto;
+}
+.card{
+    margin: auto;    
+}
+.service{
+    margin: auto;
+}
+.button{
+    text-align: center;
+}
+.button .btn{
+    margin-left: auto;
+}
+#contact{
+    text-align: center;
+}
+.icon a{
+    margin: 8px;
+}
+.tele{
+    width: 300px;
+    margin: auto;
+
+}
+.tele-com{
+    background-color: darkblue;
+    border-radius: 30px;
+}
+.tele-com section{
+    margin: 10px;
+    
+}
+.tech{
+    text-decoration: none;
+}

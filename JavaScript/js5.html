@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript File No.5</title>
+</head>
+<body>
+    <script>
+        //String
+        let firstName = 'Wai Linn';
+        let lastName = ' Kyaw';
+        let fullName = firstName.concat(lastName)
+        console.log(firstName+lastName)
+        console.log(typeof(firstName))
+        console.log(typeof(lastName))
+        console.log(firstName.length)
+        console.log(lastName.length)
+        console.log(fullName)
+        console.log('My name is '+ fullName+'.')
+        document.write(`<h1>My name is ${fullName}.</h1>`)
+        console.log(fullName[5])
+        console.log(fullName.toUpperCase())
+        console.log(fullName.toLowerCase())
+        console.log(fullName.substr(9,4))
+        let job = ' Web Developer '
+        console.log(job.trim())
+
+        let search = 'JavaScript is Funny!'
+        let search_result = search.search('i');
+        console.log(search_result)
+
+        let replace = 'I want to visit Yangon.'
+        let replace_result = replace.replace('Yangon', 'Mandalay')
+        console.log(replace_result)
+
+        let num = '3,500,000'
+        num = num.replace(/\,/g,'')
+        console.log(num)
+        console.log(Number(num))
+        console.log('Hello \n JS')
+        console.log('\t JavaScript')
+        //" ' " or 'I/'m'
+        console.log('I\'m a programmer.')
+        console.log("I'm a programmer.")
+    </script>
+</body>
+</html>

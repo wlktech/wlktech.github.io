@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Development</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        .jumbo{
+            background-color: #A273E1;
+        }
+        .btn{
+            background-color:#A273E1;
+        }
+        .btn a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="jumbo mt-2 p-5 text-white rounded">
+          <h1>SOFTWARE DEVELOPMENT</h1> 
+          <p>DJANGO, TKINTER, KOTLIN & FLUTTER</p> 
+        </div>
+    </div>
+    <div class="container-fluid mt-3">
+        <a class="btn text-white" href="">DJANGO</a>
+        <a class="btn text-white" href="">TKINTER</a>
+        <a class="btn text-white" href="">KOTLIN & FLUTTER</a>
+    </div>
+    <div class="container-fluid">
+        <h3 class="mt-4">DJANGO (Python Framework)</h3>
+        <h5 class="mt-4">Creating Project & App</h5>
+        <div class="mt-4">
+            <p>django-admin startproject <em>mysite</em></p>
+            <p>cd <em>mysite</em></p>
+            <p>python manage.py startapp <em>polls</em></p>
+            <p>python manage.py runserver</p>
+
+        </div>
+        <div>
+            <h5 class="mt-4">Django Views</h5>
+            <h6 class="mt-4">Views</h6>
+            <div class="mt-4">
+                <strong class="mb-4">polls/views.py</strong>
+                <p class="mt-4">from django.shortcuts import render</p>
+                <p class="text-secondary">#Create your views here</p>
+            </div>
+            <div class="mt-4">
+                <strong class="mb-4">polls/views.py</strong>
+                <p class="mt-4">from django.shortcuts import render</p>
+                <p class="mt-4">from django.http import HttpResponse</p>
+                <p class="mt-4">def index(request):</p>
+                <p style="margin-left: 30px;">return HttpResponse("Hello world!")</p>
+            </div>
+        </div>
+        <div>
+            <h6 class="mt-4">URLs</h6>
+            <div class="mt-4">
+                <strong class="mb-4">polls/urls.py</strong>
+                <p class="mt-4">from django.urls import path</p>
+                <p>from . import views</p>
+                <p class="mt-4">urlpatterns = [</p>
+                <p style="margin-left: 30px;">path('', views.index, name='index'),</p>
+                <p>]</p>
+            </div>
+            <div class="mt-4">
+                <strong class="mb-4">mysite/urls.py</strong>
+                <p class="mt-4">from django.contrib import admin</p>
+                <p class="mt-4">from django.urls import include, path</p>
+                <p class="mt-4">urlpatterns = [</p>
+                <p style="margin-left: 30px;">path('polls/', include('polls.urls')),</p>
+                <p style="margin-left: 30px;">path('admins/', admin.site.urls),</p>
+                <p>]</p>
+                <p><strong>python manage.py runserver</strong></p>
+            </div>
+        </div>
+        <div class="container-fluid bg-secondary text-white p-3">
+            <h5>Recommended Youtube Video Links for Django(Beginners):</h5>
+            <iframe width="400" height="200" src="https://www.youtube.com/embed/videoseries?list=PLsyeobzWxl7r2ukVgTqIQcl-1T0C2mzau" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br><a class="text-white" href="https://youtube.com/playlist?list=PLsyeobzWxl7r2ukVgTqIQcl-1T0C2mzau">Django with Telsuko</a>
+        </div>
+        </div>
+        
+    </div>
+    
+    
+    <div class="container-fluid">
+        <div class="btn mt-5">
+            <a class="text-white" href="../">HOME PAGE</a>
+        </div>
+    </div>
+</body>
+</html>

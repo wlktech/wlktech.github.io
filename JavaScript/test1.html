@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Test</title>
+    <style>
+        .box{
+            background-color: white;
+            color: black;
+
+        }
+    </style>
+</head>
+<body class="box">
+    <h1>Welcome to WLK-TECH</h1>
+    <p>Here is  the technology things!</p>
+    <button onclick="changeColor()">darkmode</button>
+    <button onclick="changeColor1()">normal mode</button>
+    <button onclick="changeColor2()">light mode</button>
+    <script>
+        function changeColor(){
+            document.querySelector('.box').style.background = 'black'
+            document.querySelector('.box').style.color = 'white'
+        }
+        function changeColor1(){
+            document.querySelector('.box').style.background = 'white'
+            document.querySelector('.box').style.color = 'black'
+        }
+        function changeColor2(){
+            document.querySelector('.box').style.background = 'darkgrey'
+            document.querySelector('.box').style.color = 'white'
+        }
+    </script>
+</body>
+</html>

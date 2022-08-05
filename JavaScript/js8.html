@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funtion</title>
+</head>
+<body>
+    
+    <script>
+        //function()
+        function funName(){
+            document.write('<h3>Hello Function</h3>')
+        }
+        funName()
+        function add(num1, num2){
+            let result = num1 + num2
+            return result
+        }
+        let addResult = add(55,55)
+        document.write(`<h3>Add Result: ${addResult} </h3>`)
+
+        function getSize(length, width, height){
+            let area = length * width
+            let volume = length * width * height
+            let size = [area, volume]
+            return size
+        }
+        let area = getSize(3,2,3)[0]
+        let volume = getSize(3,2,3)[1]
+        document.write(`<h4>Area is: ${area}</h4>`)
+        document.write(`<h4>Volume is: ${volume}</h4>`)
+
+        let hotel = {
+            name: "XYZ Hotel",
+            rooms: 40,
+            booked: 25,
+            gym: true,
+            roomTypes: ['Twin', 'Double', 'Suite'],
+
+            checkAvailability: function(){
+                return this.rooms - this.booked
+            }
+        }
+        let hotelName = hotel.name
+        let roomFree = hotel.checkAvailability()
+        document.write(`<h4>Hotel Name is: ${hotelName}</h4>`)
+        document.write(`<h4>Hotel Name is: ${roomFree}</h4>`)
+
+        hotel.pool = false
+        document.write(`<h4>Pool is: ${hotel.pool}</h4>`)
+        //delete hotel.pool
+        //console.log(hotel)
+    </script> 
+</body>
+</html>

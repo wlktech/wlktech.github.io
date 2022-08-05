@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //for loop
+        for (let i=1; i<=5; i++){
+            document.write('<h4>Hello JS</h4>');
+        }
+
+        let list = ['Dell', 'Acer', 'HP', 'Asus', 'Lenovo'];
+        for (let a=0; a<list.length; a++){
+            document.write(`<h4>${list[a]}</h4>`)
+            document.write('<h4>'+list[a]+'</h4>')
+        }
+        //*****
+        //*****
+        //*****
+        //*****
+        //*****
+        //*****
+        for (let m=0; m<5; m++){
+            for(let p=0; p<5; p++){
+                document.write('*')
+            }
+            document.write('<br>')
+        }
+        for (let q=0; q<=5; q++){
+            for(let r=0; r<=q; r++){
+                document.write('*')
+            }
+            document.write('<br>')
+        }
+        //while loop
+        let num =1
+        while(num<=10){
+            document.write(`<h3>This num is ${num} </h3>`)
+            num++
+        }
+        let no = 1;
+        do{
+            document.write(`<h3>This num is ${no} </h3>`)
+            no++
+        }while(no<10)
+    </script>
+</body>
+</html>

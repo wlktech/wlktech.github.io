@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <p>[] is a array</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        let arr = [1,2,3,4]
+        let arr1 = Array('a', 'b', 'c')
+        console.log(arr)
+        console.log(arr1)
+        console.log(arr[1])
+        console.log(arr[2])
+        console.log(arr.length)
+        console.log(arr1.length)
+        let arr2 = [1,2,3,'a','b','c',['x','y',5, 6]]
+        console.log(arr2.length)
+        
+        let multi = [
+        ['mg mg', 'aung aung', 'ma ma'],
+        [23,24,22],
+        ['Yangon', 'Mandalay', 'Monywa']
+        ]
+        console.log(multi)
+        console.log(multi[2][1])
+
+        let fruits = []
+        fruits[0]='Apple'
+        fruits[1]='Orange'
+        fruits[2]='Banana'
+        console.log(fruits)
+        console.log(fruits[2])
+
+        fruits.push('Mango')
+        console.log(fruits)
+
+        fruits.unshift('Cheery')
+        console.log(fruits)
+
+        fruits.pop()
+        console.log(fruits)
+
+        fruits.shift()
+        console.log(fruits)
+
+        console.log(fruits.sort())
+        console.log(fruits.reverse())
+
+        let fruits_str = fruits.toString()
+        console.log(fruits_str)
+
+        fruits = fruits_str.split(',')
+        console.log(fruits)
+
+        let arr_a = [1,2,3]
+        let arr_b = ['a', 'b', 'c']
+        let arr_c = arr_a.concat(arr_b)
+        console.log(arr_c)
+
+        let arr_d = [...arr_a,...arr_b,...arr_c]
+        console.log(arr_d)
+
+
+
+        document.getElementById('demo').innerHTML= arr
+        document.getElementById('demo1').innerHTML=arr1
+        document.getElementById('demo2').innerHTML=arr[1]
+    </script>
+</body>
+</html>
