@@ -7,94 +7,45 @@
     <title>Engineering Calculator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="style.css">
+  </head>
 <body>
-    <div class="container-fluid text-center bg-dark">
-        <img src="logo2.png" width="200px" alt="">
+  <div class="container-fluid text-center bg-dark">
+    <img src="logo.png" width="200px" alt="">
+</div>
+<div class="text-center m-5">
+  <h1 class="mb-3">Welcome to WLK-TECH</h1>
+  <h3>(Engineering Online Calculator)</h3>
+  <marquee class="mt-5 text-success">မင်္ဂလာပါ။ WLK-TECH မှကြိုဆိုပါတယ်။ ခု application လေးဟာ ဆောက်လုပ်ရေး အင်ဂျင်နီယာများ၊ ကန်ထရိုက်တာများ ဖုန်းထဲရှိ Browser တွင်လွယ်ကူစွာ အသုံးပြုနိုင်ရန် ရည်ရွယ်ရေးသားထားခြင်းဖြစ်ပါသည်။ ကျေးဇူးတင်ပါတယ်။ </marquee>
+</div>
+<!-- Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start" id="demo">
+<div class="offcanvas-header">
+  <h1 class="offcanvas-title">Calculators</h1>
+  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+</div>
+<div class="offcanvas-body">
+    <div class="mb-3">
+        <button class="btn btn-dark" type="button"><a href="area/area.html">Area Calculator</a></button>
     </div>
-    <div class="container mt-3 mb-5">
-        <h2>Engineering Calculator</h2>
-        <p>Please Enter Your Data Here!</p>
-        <div>
-            <h3>Area Calculator</h3>
-            <form action="" name="myForm">
-            <div class="form-floating mb-3 mt-3">
-                <input type="number" class="form-control" id="length" placeholder="Enter length" name="length">
-                <label for="name">Enter your length: </label>
-            </div>
-            <div class="form-floating mt-3 mb-3">
-                <input type="number" class="form-control" id="breadth" placeholder="Enter breadth" name="breadth">
-                <label for="mark">Enter your breadth: </label>
-            </div>
-            <input type="radio" id="ft" name="unit" value="sq-ft">
-                <label for="ft">sq-ft</label>
-                <input type="radio" id="in" name="unit" value="sq-in">
-                <label for="in">sq-in</label>
-                <input type="radio" id="m" name="unit" value="sq-m">
-                <label for="m">sq-m</label>
-                <input type="radio" id="mm" name="unit" value="sq-mm">
-                <label for="mm">sq-mm</label>
-            <br><br>
-            <button type="submit" class="btn btn-dark" onclick="result()">Calculate</button>
-            </form>
-        </div>
-
-        <div>
-            <h3 class="mt-5">Volume Calculator</h3>
-            <form action="" name="myForm1">
-            <div class="form-floating mb-3 mt-3">
-                <input type="number" class="form-control" id="length" placeholder="Enter length" name="length">
-                <label for="name">Enter your length: </label>
-            </div>
-            <div class="form-floating mt-3 mb-3">
-                <input type="number" class="form-control" id="breadth" placeholder="Enter breadth" name="breadth">
-                <label for="mark">Enter your breadth: </label>
-            </div>
-            <div class="form-floating mt-3 mb-3">
-                <input type="number" class="form-control" id="height" placeholder="Enter height" name="height">
-                <label for="mark">Enter your height: </label>
-            </div>
-            <input type="radio" id="ft" name="unit" value="cu-ft">
-                <label for="ft">cu-ft</label>
-                <input type="radio" id="in" name="unit" value="cu-in">
-                <label for="in">cu-in</label>
-                <input type="radio" id="m" name="unit" value="cu-m">
-                <label for="m">cu-m</label>
-                <input type="radio" id="mm" name="unit" value="cu-mm">
-                <label for="mm">cu-mm</label>
-            <br><br>
-            <button type="submit" class="btn btn-dark" onclick="result1()">Calculate</button>
-            </form>
-        </div>
-
-        <div>
-            <h3 class="mt-5">Numbers of Material Calculator</h3>
-            <p>Units that inputed data must be same! (ft=ft)/(in=in)/(m=m)/(mm/mm)</p>
-            <form action="" name="myForm2">
-            <div class="form-floating mb-3 mt-3">
-                <input type="number" class="form-control" id="slength" placeholder="Enter length" name="slength">
-                <label for="name">Enter Site Length: </label>
-            </div>
-            <div class="form-floating mt-3 mb-3">
-                <input type="number" class="form-control" id="sbreadth" placeholder="Enter breadth" name="sbreadth">
-                <label for="mark">Enter Site Breadth: </label>
-            </div>
-            <div class="form-floating mb-3 mt-3">
-                <input type="number" class="form-control" id="mlength" placeholder="Enter length" name="mlength">
-                <label for="name">Enter Material Length: </label>
-            </div>
-            <div class="form-floating mt-3 mb-3">
-                <input type="number" class="form-control" id="mbreadth" placeholder="Enter breadth" name="mbreadth">
-                <label for="mark">Enter Material Breadth: </label>
-            </div>
-
-            <button type="submit" class="btn btn-dark" onclick="result2()">Calculate</button>
-            </form>
-        </div>
+    <div class="mb-3">
+        <button class="btn btn-dark" type="button"><a href="volume/volume.html">Volume Calculator</a></button>
     </div>
-    <script src="main.js"></script>
+    <div class="mb-3">
+        <button class="btn btn-dark" type="button"><a href="material/material.html">Material Calculator</a></button>
+    </div>
+    <div class="mb-3">
+      <button class="btn btn-dark" type="button"><a href="index.html">Home Page</a></button>
+    </div>
+</div>
+</div>
+
+<!-- Button to open the offcanvas sidebar -->
+<button class="btn btn-dark mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+Choose Calculator
+</button>
   <!--Footer-->
-  <footer class="bg-dark text-center text-white">
+  <footer class="bg-dark text-center text-white mt-5">
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       ©All Rights Reserved 2022 By :

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Material Calculation</title>
+    <title>Area Calculator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -24,13 +24,13 @@
             <button class="btn btn-dark" type="button"><a href="area.html">Area Calculator</a></button>
         </div>
         <div class="mb-3">
-            <button class="btn btn-dark" type="button"><a href="volume.html">Volume Calculator</a></button>
+            <button class="btn btn-dark" type="button"><a href="../volume/volume.html">Volume Calculator</a></button>
         </div>
         <div class="mb-3">
-            <button class="btn btn-dark" type="button"><a href="material.html">Material Calculator</a></button>
+            <button class="btn btn-dark" type="button"><a href="../material/material.html">Material Calculator</a></button>
         </div>
         <div class="mb-3">
-            <button class="btn btn-dark" type="button"><a href="index.html">Home Page</a></button>
+            <button class="btn btn-dark" type="button"><a href="../">Home Page</a></button>
         </div>
     </div>
   </div>
@@ -39,32 +39,30 @@
   <button class="btn btn-dark mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
     Choose Calculator
   </button>
-  <div class="container">
-    <h3 class="mt-5">Numbers of Material Calculator</h3>
-    <p>Units that inputed data must be same! (ft=ft)/(in=in)/(m=m)/(mm/mm)</p>
-    <form action="" name="myForm2">
-    <div class="form-floating mb-3 mt-3">
-        <input type="number" class="form-control" id="slength" placeholder="Enter length" name="slength">
-        <label for="name">Enter Site Length: </label>
+    <div class="container mt-5">
+        <h3>Area Calculator</h3>
+        <form action="" name="myForm">
+        <div class="form-floating mb-3 mt-3">
+            <input type="number" class="form-control" id="length" placeholder="Enter length" name="length">
+            <label for="name">Enter your length: </label>
+        </div>
+        <div class="form-floating mt-3 mb-3">
+            <input type="number" class="form-control" id="breadth" placeholder="Enter breadth" name="breadth">
+            <label for="mark">Enter your breadth: </label>
+        </div>
+        <input type="radio" id="ft" name="unit" value="sq-ft">
+            <label for="ft">sq-ft</label>
+            <input type="radio" id="in" name="unit" value="sq-in">
+            <label for="in">sq-in</label>
+            <input type="radio" id="m" name="unit" value="sq-m">
+            <label for="m">sq-m</label>
+            <input type="radio" id="mm" name="unit" value="sq-mm">
+            <label for="mm">sq-mm</label>
+        <br><br>
+        <button type="submit" class="btn btn-dark" onclick="result()">Calculate</button>
+        </form>
     </div>
-    <div class="form-floating mt-3 mb-3">
-        <input type="number" class="form-control" id="sbreadth" placeholder="Enter breadth" name="sbreadth">
-        <label for="mark">Enter Site Breadth: </label>
-    </div>
-    <div class="form-floating mb-3 mt-3">
-        <input type="number" class="form-control" id="mlength" placeholder="Enter length" name="mlength">
-        <label for="name">Enter Material Length: </label>
-    </div>
-    <div class="form-floating mt-3 mb-3">
-        <input type="number" class="form-control" id="mbreadth" placeholder="Enter breadth" name="mbreadth">
-        <label for="mark">Enter Material Breadth: </label>
-    </div>
-
-    <button type="submit" class="btn btn-dark" onclick="result2()">Calculate</button>
-    </form>
-</div>
-</div>
-<script src="main.js"></script>
+    <script src="main.js"></script>
   <!--Footer-->
   <footer class="bg-dark text-center text-white mt-5">
     <!-- Copyright -->
