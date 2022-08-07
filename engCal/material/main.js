@@ -9,7 +9,11 @@ function result2(){
     console.log(mbreadth);
     let siteArea = slength*sbreadth
     let materialArea = mlength*mbreadth
+    let ans = (siteArea/materialArea)+" nos"
+    console.log(ans);
+    document.myForm2.ans.value = ans;
 
-    document.write('<h1 align="center">Material Calculation</h1>')
-    document.write(`<h3 align="center">Numbers of Material: ${siteArea/materialArea} nos</h3>`)
+
+    // document.write('<h1 align="center">Material Calculation</h1>')
+    // document.write(`<h3 align="center">Numbers of Material: ${siteArea/materialArea} nos</h3>`)
 }

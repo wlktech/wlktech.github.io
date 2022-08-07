@@ -36,9 +36,11 @@
   </div>
   
   <!-- Button to open the offcanvas sidebar -->
-  <button class="btn btn-dark mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
-    Choose Calculator
-  </button>
+  <div class="container mt-5">
+    <button class="btn btn-dark mt-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+        Choose Calculator
+    </button>
+  </div>
   <div class="container">
     <h3 class="mt-5">Numbers of Material Calculator</h3>
     <p>Units that inputed data must be same! (ft=ft)/(in=in)/(m=m)/(mm/mm)</p>
@@ -59,8 +61,12 @@
         <input type="number" class="form-control" id="mbreadth" placeholder="Enter breadth" name="mbreadth">
         <label for="mark">Enter Material Breadth: </label>
     </div>
-
-    <button type="submit" class="btn btn-dark" onclick="result2()">Calculate</button>
+    <input type="button" class="btn btn-dark" onclick="result2()" value="Calculate">
+    <!-- <button type="submit" class="btn btn-dark" onclick="result2()">Calculate</button> -->
+    <div class="form-floating mt-3 mb-3">
+        <input type="text" class="form-control" id="ans" placeholder="answer" name="ans">
+        <label for="mark">Result: </label>
+    </div>
     </form>
 </div>
 </div>
