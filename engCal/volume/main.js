@@ -7,6 +7,9 @@ function result1(){
     console.log(height);
     let unit = document.myForm1.unit.value;
     console.log(unit);
-    document.write('<h1 align="center">Volume Calculation</h1>')
-    document.write(`<h3 align="center">Volume Value: ${length*breadth*height} ${unit}</h3>`)
+    let ans = (length*breadth*height)+" "+unit;
+    console.log(ans);
+    document.myForm1.ans.value = ans;
+    // document.write('<h1 align="center">Volume Calculation</h1>')
+    // document.write(`<h3 align="center">Volume Value: ${length*breadth*height} ${unit}</h3>`)
 }
