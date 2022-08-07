@@ -5,6 +5,10 @@ function result(){
     console.log(breadth);
     let unit = document.myForm.unit.value;
     console.log(unit);
-    document.write('<h1 align="center">Area Calculation</h1>')
-    document.write(`<h3 align="center">Area Value: ${length*breadth} ${unit}</h3>`)
+    let result = (length*breadth)+" "+unit;
+    console.log(result);
+    document.myForm.res.value = result;
+
+    // document.write('<h1 align="center">Area Calculation</h1>')
+    // document.write(`<h3 align="center">Area Value: ${length*breadth} ${unit}</h3>`)
 }

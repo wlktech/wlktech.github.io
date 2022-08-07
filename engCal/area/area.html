@@ -52,6 +52,7 @@
             <input type="number" class="form-control" id="breadth" placeholder="Enter breadth" name="breadth">
             <label for="mark">Enter your breadth: </label>
         </div>
+        
         <input type="radio" id="ft" name="unit" value="sq-ft">
             <label for="ft">sq-ft</label>
             <input type="radio" id="in" name="unit" value="sq-in">
@@ -61,7 +62,12 @@
             <input type="radio" id="mm" name="unit" value="sq-mm">
             <label for="mm">sq-mm</label>
         <br><br>
-        <button type="submit" class="btn btn-dark" onclick="result()">Calculate</button>
+        <input type="button" class="btn btn-dark" onclick="result()" value="Calculate">
+        <!-- <button type="submit" class="btn btn-dark" onclick="result()">Calculate</button> -->
+        <div class="form-floating mt-3 mb-3">
+            <input type="text" class="form-control" id="ans" placeholder="ans" name="res">
+            <label for="mark">Result: </label>
+        </div>
         </form>
     </div>
     <script src="main.js"></script>
