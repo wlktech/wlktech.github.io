@@ -66,6 +66,12 @@
     width: 100%;
     height: auto;
 }
+#project{
+    background-color: rgb(25, 24, 24);
+    color:#fff;
+    width: 100%;
+    height: auto;
+}
 .card{
     margin: auto;    
 }
@@ -99,4 +105,8 @@
 }
 .tech{
     text-decoration: none;
+}
+.card:hover{
+    background-color: rgb(249, 230, 249);
+    color: white;
 }
