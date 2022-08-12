@@ -10,43 +10,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <h3>Area Calculator</h3>
-        <form action="" name="myForm">
-        <div class="form-floating mb-3 mt-3">
-            <input type="number" class="form-control" id="length" placeholder="Enter length" name="txtnum1">
-            <label for="name">Enter your length: </label>
-        </div>
-        <div class="form-floating mt-3 mb-3">
-            <input type="number" class="form-control" id="breadth" placeholder="Enter breadth" name="txtnum2">
-            <label for="mark">Enter your breadth: </label>
-        </div>
-        <div class="form-floating mt-3 mb-3">
-            <input type="text" class="form-control" id="breadth" placeholder="Enter breadth" name="txtresult">
-            <label for="mark">Answer: </label>
-        </div>
-        
-            <input type="radio" id="ft" name="unit" value="sq-ft">
-            <label for="ft">sq-ft</label>
-            <input type="radio" id="in" name="unit" value="sq-in">
-            <label for="in">sq-in</label>
-            <input type="radio" id="m" name="unit" value="sq-m">
-            <label for="m">sq-m</label>
-            <input type="radio" id="mm" name="unit" value="sq-mm">
-            <label for="mm">sq-mm</label>
-        <br><br>
-        <input type="button" class="btn btn-dark" onclick="sumValue()" value="Calculate">
-        <!-- <button type="submit" class="btn btn-dark" onclick="sumValue()">Calculate</button> -->
-        </form>
-    </div>
-    <!-- <form action="" name="myForm">
-        Length: <input type="number" name="txtnum1">
-        <br><br>
-        Breadth: <input type="number" name="txtnum2">
-        <br><br>
-        Result: <input type="number" name="txtres"><br><br>
-        <input type="button" value="Calculate" onClick="sumValue()">
-    </form> -->
+    <form action="" name="myForm">
+        <input type="number" placeholder="Enter your number" name="m">=
+        <input type="number" placeholder="Enter your number" name="ft">
+    </form>
+    <p id="demo"></p>
+    
+
     <script src="main.js"></script>
 </body>
 </html>
