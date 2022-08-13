@@ -1,152 +1,112 @@
-*{
-    margin: 0;
+.navbar{
+    background-color: #000;
+    opacity: 80%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbar:hover{
+    opacity:100%;
+}
+.navbar-nav{
+    margin-left:auto;
+
+}
+.nav-link{
+    color:gold;
+    margin-left: 3px;
+}
+.cover{
+    background-image: url(https://cdnb.artstation.com/p/assets/images/images/006/272/147/large/jack-oldham-mountain-galaxy-background-1.jpg?1497300224);
+    color:#fff;
+    width: 100%;
+    height: auto;
     padding: 0;
-    box-sizing: border-box;
+    padding-bottom: 350px;
 }
-html{
-    font-size: 10px;
-    font-family: "roboto", sans-serif;
+.header{
+    color:#fff;
+    padding-top: 200px;
+    margin: auto;
+    font-variant: small-caps;
+    text-shadow: 2px 3px 4px gold;
+    text-align:center;
 }
-a{
+.btn{
+    margin-left: 30px;
+    background-color: #000;
+}
+.btn a{
     text-decoration: none;
-    color: #fff;
+    color: gold;
 }
-section{
-    padding: 10rem 0;
-    background-color: #fff;
+
+.img{
+    margin-left: auto;
 }
-.heading{
-    text-transform: uppercase;
-    font-size: 3.5rem;
-    letter-spacing: 3px;
-    margin-right: -3px;
-    margin-bottom: 5rem;
-    text-align: center;
-    color: #333;
-    position: relative;
+.title{
+    background-color: rgb(18, 18, 18);
+    color: white;
 }
-.heading::after{
-    content: "";
-    width: 10rem;
-    height: .8rem;
-    background-color: #45e19f;
-    position: absolute;
-    bottom: -2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 2rem;
+#about{
+    background-color: rgb(25, 24, 24);
+    color:#fff;
+    width: 100%;
+    height: auto;
 }
-.card-wrapper{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
+.left{
+    margin-top: 50px;
+}
+.right{
+    margin:auto;
+}
+#service{
+    background-color: rgb(25, 24, 24);
+    color:#fff;
+    width: 100%;
+    height: auto;
+}
+#project{
+    background-color: rgb(25, 24, 24);
+    color:#fff;
+    width: 100%;
+    height: auto;
 }
 .card{
-    width: 32rem;
-    background-color: #ebeef8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem 0;
-    box-shadow: .5rem .5rem 3rem rgba(0, 0, 0, .2);
-
+    margin: auto;    
 }
-.card .card-img{
-    width: 100%;
-    height: 26rem;
-    object-fit: cover;
-    -webkit-clip-path:polygon(0 0, 100% 0, 100% 78%, 0% 100%);
-    clip-path:polygon(0 0,100% 0, 100% 78%, 0% 100%);
+.service{
+    margin: auto;
 }
-.profile-img{
-    width: 15rem;
-    height: 15rem;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-top: -11rem;
-    z-index:999;
-    border:1rem solid #ebeef8;
-
-}
-.card h1{
-    font-size: 2.5rem;
-    color:#333;
-    margin: 1.5rem 0;
-}
-.job-title{
-    color: #777;
-    font-size: 1.5rem;
-    font-weight: 300;
-
-}
-.about{
-    font-size: 1.5rem;
-    margin: 1.5rem 0;
-    font-style: italic;
+.button{
     text-align: center;
-    color: #333;
 }
-.card .btn{
-    padding: 1rem 2.5rem;
-    background-color: #445ae3;
-    border-radius: 2rem;
-    margin: 1rem 0;
-    text-transform: uppercase;
-    color: #eee;
-    font-size: 1.4rem;
-    transition: all .5s;
+.button .btn{
+    margin-left: auto;
 }
-.card .btn:hover{
-    transform: translateY(-2px);
-    box-shadow: .5rem .5rem 2rem rgba(0, 0, 0, .2);
+#contact{
+    text-align: center;
 }
-.card .btn:active{
-    transform: translateY(0);
-    box-shadow: none;
+.icon a{
+    margin: 8px;
 }
-.social-media{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    padding:2rem 0;
-    margin-top: 1.5rem;
-    border-top: 1px solid rgba(0,0,0,.1);
-}
-.social-media i{
-    font-size: 3rem;
-    transition: color .5s;
+.tele{
+    width: 300px;
+    margin: auto;
 
 }
-.fa-facebook-square{
-    color: #3b5999;
+.tele-com{
+    background-color: darkblue;
+    border-radius: 30px;
 }
-.fa-twitter-square{
-    color: #55acee;
+.tele-com section{
+    margin: 10px;
+    
 }
-.fa-instagram-square{
-    color: #e6683c;
+.tech{
+    text-decoration: none;
 }
-.fa-google-plus-square{
-    color: #dd4b39;
-}
-.fa-facebook-square:hover,
-.fa-twitter-square:hover,
-.fa-instagram-square:hover,
-.fa-google-plus-square:hover{
-    color:#45e19f;
-}
-
-@media screen and (min-width: 700px){
-    .card-wrapper{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-    .card{
-        margin:2rem;
-    }
+.card:hover{
+    background-color: rgb(249, 230, 249);
+    color: white;
 }
