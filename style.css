@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 .navbar{
     background-color: #000;
     opacity: 80%;
