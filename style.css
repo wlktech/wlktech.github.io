@@ -91,15 +91,13 @@
     margin: 8px;
 }
 .tele{
-    width: 300px;
+    width: 250px;
     margin: auto;
+    border-radius: 40px;
 
 }
-.tele-com{
-    background-color: darkblue;
-    border-radius: 30px;
-}
-.tele-com section{
+
+.tele-com .blue{
     margin: 10px;
     
 }
