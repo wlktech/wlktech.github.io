@@ -10,6 +10,18 @@
     <script src="https://kit.fontawesome.com/b829c5162c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>WLK-TECH</title>
+    <script src="main.js"></script>
+    <script>
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    </script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init("user_iQWwkNRtNmr3ZNGKl");
+
+      })();
+
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
@@ -252,9 +264,12 @@
   </div>
 
 
-  <div id="contact">
-    <div class="bg-dark pt-3 text-white">
-      <h3>Contact Us</h3>
+
+<div id="contact">
+    <div class="bg-dark text-white">
+<div class="row container" style="margin:auto;">
+  <div class="col-xl-6 mt-5">
+    <h3 class="">Contact Us</h3>
       <div class="icon pt-4 pb-4">
         <a style="color: #608cea;" href="https://www.facebook.com/wlktech" target="_blank"><i class="fa-brands fa-facebook" style="font-size: 30px;"></i></a>
         <a style="color:#55acee;" href="https://twitter.com/WaiLinn14350415" target="_blank"><i class="fa-brands fa-twitter" style="font-size: 30px;"></i></a>
@@ -266,8 +281,41 @@
           <section class=""><img class="rounded-circle" src="https://play-lh.googleusercontent.com/lB6Ro6pjPw17G8HnTvv_qerC2yMGlvjVpryNXoeKfxyglyB8Ljk1HUxmegKU85acTmQ" width="40px" alt=""><span>    +95-9-421023714</span></section>
         </div>
       </div>
-    </div>
   </div>
+  <div class="col-xl-6 mt-5" align="center">
+    <h3>Feedbacks</h3>
+    <div class="comment mb-4">
+      <form>
+          <div class="container row">
+            <div class="col-xl-6 col-12 form-floating mt-3 mb-3 text-secondary">
+              <input type="text" class="form-control" id="toName" placeholder="name" name="name">
+              <label for="name" style="margin-left: 10px;">Name</label>
+            </div>
+            <div class="col-xl-6 col-12 form-floating mb-3 mt-3 text-secondary">
+              <input type="text" class="form-control" id="fromName" placeholder="Enter email" name="email">
+              <label for="email" style="margin-left: 10px;">Email</label>
+            </div>
+          </div>
+          <div class="container row">
+            <div class="col-12 form-floating text-secondary">
+              <textarea class="form-control" id="msg" name="message" placeholder="message goes here"></textarea>
+              <label for="message" style="margin-left: 10px;">Comments</label>
+            </div>
+          </div>
+          <div class="container row mt-3">
+            <div class="col-12">
+              <!-- <input type="submit" class="btn btn-success" value="Send"> -->
+              <button onclick="sendMail()" class="btn btn-success">Send</button>
+            </div>
+          </div>
+      </form>
+    </div>
+
+  </div>
+  </div>
+  
+</div>
+</div>
   <!--Footer-->
   <footer class="bg-dark text-center text-white pt-4">
     <!-- Copyright -->
