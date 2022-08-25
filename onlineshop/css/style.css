@@ -57,6 +57,7 @@ nav ul li a:hover{
 }
 .banner_text p{
     width: 750px;
+    font-size: 20px;
 }
 .shop{
     width: 100px;
@@ -192,7 +193,7 @@ i{
     }
     
 }
-@media screen and (min-width:856px) {
+/* @media screen and (max-width:856px) {
     .banner_text{
         top: 150px;
     }
@@ -213,4 +214,4 @@ i{
         width: 100%;
     }
     
-}
+} */
