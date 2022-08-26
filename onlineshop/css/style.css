@@ -9,14 +9,15 @@
 }
 .logo{
     margin-left: 50px;
-    margin-top: 15px;
+    margin-top: -70px;
 }
 .brand-name{
     position: relative;
     top: -45px;
-    left: 85px;
+    left: 90px;
     font-size: 20px;
     font-family: lobster;
+    color: black;
 }
 .navbar{
     display: inline-block;
@@ -25,6 +26,9 @@ nav{
     background-color: pink;
     height: 70px;
 
+}
+.navbar a{
+    text-decoration: none;
 }
 nav ul{
     float: right;
@@ -48,16 +52,19 @@ nav ul li a:hover{
 }
 .banner_text{
     position: absolute;
-    top: 400px;
-    left: 60px;
+    top: 300px;
+    left: 80px;
 }
 .banner_text h1{
     font-family: lobster;
     margin-bottom: 15px;
+
 }
 .banner_text p{
     width: 750px;
     font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
 }
 .shop{
     width: 100px;
@@ -70,7 +77,8 @@ nav ul li a:hover{
 .shop a{
     text-decoration: none;
     color: black;
-    font-size: 15px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .product{
     text-align: center;
@@ -144,7 +152,7 @@ small{
 .package{
     margin: auto;
     margin-top: 80px;
-    width: 90%;
+    width: 80%;
     margin-bottom: 50px;
     
 }
@@ -177,14 +185,14 @@ i{
 }
 .right-content p{
     text-align: justify;
-
+    line-height: 25px;
     font-size: 18px;
 }
 .right-content{
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
-@media screen and (max-width:560px) {
+@media screen and (max-width:1535px) {
     .banner_text{
         display: none;
     }
@@ -215,3 +223,60 @@ i{
     }
     
 } */
+#service{
+   background-color: rgb(205, 206, 206);
+   margin: auto;
+   height: 100px;
+   font-size: 18px;
+
+}
+.service{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    
+}
+.service div{
+    margin: auto;
+    margin-top: 25px;
+}
+.service div i{
+    font-size: 40px;
+}
+.service div p{
+    display: inline-block;
+    margin-left: 15px;
+}
+footer{
+    background-color: #000;
+    color: white;
+    text-align: center;
+
+}
+.navbar{
+    margin-top: 50px;
+}
+.navbar li{
+    display: inline-block;
+    margin: 10px;
+    
+}
+.navbar li a{
+    text-decoration: none;
+    color: gray;
+}
+footer p{
+    color: gray;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.social{
+    font-size: 30px;
+    padding-bottom: 50px;
+    
+}
+.social a{
+    color: gray;
+}
+.social i{
+    margin: 10px;
+}
