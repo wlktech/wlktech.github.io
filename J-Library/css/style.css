@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: jetbrain;
+    src: url(../font/JetBrainsMono-VariableFont_wght.ttf);
+}
+
+.logo{
+    font-family: jetbrain;
+    color: #A6D276;
+}
+.logo h1{
+    display: inline-block;
+    font-size: 50px;
+    text-shadow: 2px 3px 4px black;
+}
+.logo p{
+    display: inline-block;
+    position: relative;
+    top: 18px;
+    right: 75px;
+    font-size: 11px;
+    
+}
+#home .row{
+    padding-top: 200px;
+    font-family: jetbrain;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(7, 7, 7);
+    text-shadow: 2px 3px 4px rgb(67, 66, 66);
+}
+
+.welcome{
+    color: #A6D276;
+}
+.row .col-xl img{
+    box-shadow: 2px 3px 4px black;
+    
+}
+.home{
+    margin: 50px;
+}
+.home img{
+    margin: 10px;
+}
+.img{
+    border-radius: 20px;
+}
+.carousel-item{
+    height:100vh;
+    min-height: 300px;
+}
+.carousel-caption{
+
+    bottom: 240px;
+
+}
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    animation: moveright 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+.carousel-caption .home{
+    animation: moveright 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+
+}
+@keyframes moveright{
+    0%{
+        transform: translateX(-100px);
+        visibility: visible;
+    }
+    100%{
+        transform:translateX(0);
+        visibility: visible;
+    }
+}
+
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+.carousel-caption p, .carousel-caption a{
+    animation: moveleft 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+@keyframes moveleft{
+    0%{
+        transform: translateX(100px);
+        visibility: visible;
+    }
+    100%{
+        transform:translateX(0);
+        visibility: visible;
+    }
+}
+
+.carousel-caption a{
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+}
+.w-100{
+    height: 100vh;
+}
+
+@media only screen and (max-width:767px){
+
+    .carousel-caption{
+        bottom: 200px;
+    }
+    .carousel-caption h5{
+        font-size: 17px;
+    }
+    .carousel-caption p{
+        font-size: 14px;
+    }
+    .carousel-caption a{
+        margin-top: 10px;
+    }
+}
+
+.carousel-item::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right:0;
+    background: #000;
+    opacity: 0.7;
+}
