@@ -11,6 +11,7 @@
 .logo{
     font-family: jetbrain;
     color: #A6D276;
+    text-shadow: 2px 3px 4px black;
 }
 .logo h1{
     display: inline-block;
@@ -181,4 +182,20 @@
     right:0;
     background: #000;
     opacity: 0.7;
+}
+
+.about{
+    padding-top: 120px;
+}
+.underline{
+    width: 100px;
+    margin: auto;
+    margin-top: 18px;
+    border: 2px solid #05ffb4;
+    border-radius: 20px;
+    box-shadow: 2px 3px 4px black;   
+}
+.about .para1{
+    line-height: 35px;
+    text-align: justify;
 }
