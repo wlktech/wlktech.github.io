@@ -142,7 +142,7 @@
     }
     .home, .slider-btn{
         position: relative;
-        top: 0px;
+        top: 50px;
     }
 }
 
