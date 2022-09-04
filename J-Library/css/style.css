@@ -199,3 +199,37 @@
     line-height: 35px;
     text-align: justify;
 }
+.n1{
+    margin-top: 130px;
+}
+.n1 h1{
+    text-align: center;
+    color: #A6D276;
+    text-shadow: 2px 3px 4px black;
+}
+.title{
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.book{
+    text-align: center;
+    margin: 30px;
+    /* box-shadow: 2px 3px 4px gray;
+    padding: 10px 10px 20px 10px;
+    border-radius: 20px;
+    background-color: #05ffb4; */
+}
+.book img{
+    border-radius: 10px;
+    box-shadow: 2px 3px 4px gray;
+}
+.book p{
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+.level{
+    text-shadow: 2px 3px 4px #A6D276;
+    font-weight: 700;
+}
