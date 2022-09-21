@@ -28,7 +28,12 @@
 .welcome{
     color: #A6D276;
 }
-
+.home h1{
+    margin-bottom: 30px;
+}
+.consultName2{
+    margin-top: 30px;
+}
 .home img{
     margin: 10px;
     box-shadow: 2px 3px 4px greenyellow;
