@@ -96,6 +96,12 @@
 .w-100{
     height: 100vh;
 }
+@media only screen and (max-width:1360px){
+    .home, .slider-btn{
+        position: relative;
+        top: 150px;
+    }
+}
 
 @media only screen and (max-width:1024px){
     .home, .slider-btn{
@@ -232,4 +238,7 @@
 .level{
     text-shadow: 2px 3px 4px #A6D276;
     font-weight: 700;
+}
+.line{
+    line-height: 100%;
 }
