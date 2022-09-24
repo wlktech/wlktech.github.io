@@ -98,7 +98,7 @@
     height: 100vh;
 }
 
-@media only screen and (max-width:1360px){
+@media only screen and (max-width:1366px){
     .home, .slider-btn{
         position: relative;
         top: 200px;
