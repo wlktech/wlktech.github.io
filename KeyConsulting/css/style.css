@@ -21,6 +21,7 @@
     font-size: 11px;
     
 }
+
 #home .row{
     padding-top: 200px;
     text-transform: uppercase;
@@ -32,6 +33,7 @@
 .welcome{
     color: #A6D276;
 }
+
 .home h1{
     margin-bottom: 30px;
     font-family: 'Poppins', sans-serif;
@@ -96,27 +98,17 @@
     height: 100vh;
 }
 
-@media only screen and (max-width:1366px){
+@media only screen and (max-width:1360px){
     .home, .slider-btn{
         position: relative;
-        top: 100px;
+        top: 200px;
     }
     .slider-btn{
         top: 0;
     }
 }
 
-@media only screen and (max-width:1360px){
-    .home, .slider-btn{
-        position: relative;
-        top: 0px;
-    }
-}
-
 @media only screen and (max-width:1024px){
-    .home{
-
-    }
     .home, .slider-btn{
         position: relative;
         top: 170px;
