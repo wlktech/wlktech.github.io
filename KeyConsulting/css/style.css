@@ -95,6 +95,17 @@
 .w-100{
     height: 100vh;
 }
+
+@media only screen and (max-width:1366px){
+    .home, .slider-btn{
+        position: relative;
+        top: 100px;
+    }
+    .slider-btn{
+        top: 0;
+    }
+}
+
 @media only screen and (max-width:1360px){
     .home, .slider-btn{
         position: relative;
