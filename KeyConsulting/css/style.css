@@ -98,15 +98,17 @@
     height: 100vh;
 }
 
+/* this screen size is for 1920px with 100% or 125% */
 @media only screen and (max-width:1920px){
     .home, .slider-btn{
         position: relative;
-        top: 130px;
+        top: 50px;
     }
     .slider-btn{
         top: 0;
     }
 }
+
 
 @media only screen and (max-width:1433px){
     .home, .slider-btn{
@@ -332,4 +334,16 @@
 .about .para1{
     line-height: 35px;
     text-align: justify;
+}
+.copy{
+    padding: 20px 0 150px 0;
+
+}
+
+
+/* Podcast CSS codes */
+.podcast{
+    width: 100%;
+    height: auto;
+    padding: 60px;
 }
