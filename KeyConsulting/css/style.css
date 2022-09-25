@@ -102,7 +102,7 @@
 @media only screen and (max-width:1920px){
     .home, .slider-btn{
         position: relative;
-        top: 50px;
+        top: 0px;
     }
     .slider-btn{
         top: 0;
@@ -148,7 +148,23 @@
     .slider-btn{
         top: 0;
     }
+    .podcast{
+        text-align: center;
+    }
+    #track_image{
+        display: none;
+    }
+    .mid{
+        display: none;
+    }
+    .right .middle {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+      }
 }
+
+
 
 @media only screen and (max-width:1024px){
     .home, .slider-btn{
@@ -244,6 +260,16 @@
         top: -10px;
     }
 }
+@media only screen and (max-width:680px){
+    #logo{
+        text-align: left;
+    }
+    .middle{
+        position: absolute;
+        right: 0px;
+        top: 10px;
+    }
+}
 
 @media only screen and (max-width:540px){
     .home img{
@@ -272,9 +298,33 @@
         position: relative;
         top: 50px;
     }
+    #logo{
+        position: relative;
+        top: -20px;
+        right: 20px;
+    }
     .slider-btn{
         top: 0;
     }
+    .main{
+        padding: 20px;
+    }
+    .volume{
+        position: relative;
+        bottom: -10px;
+        font-size: 10px;
+    }
+    
+    .middle{
+        top: 30px;
+    }
+    input[type="range"] {
+        -webkit-appearance: none;
+        width: 100%;
+        outline: none;
+        height: 2px;
+        margin: 0 15px;
+      }
 }
 
 @media only screen and (max-width:375px){
@@ -336,14 +386,96 @@
     text-align: justify;
 }
 .copy{
-    padding: 20px 0 150px 0;
+    padding: 20px 0 200px 0;
 
 }
 
 
 /* Podcast CSS codes */
 .podcast{
+    padding: 10px;
     width: 100%;
-    height: auto;
-    padding: 60px;
+    /* background-color: grey;
+    color: white; */
+    background: linear-gradient(to right, #e76bf8e9, #52a6f5);
+}
+.show_song_no p{
+    display: inline-block;
+}
+
+/* both range slider part */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 35%;
+    outline: none;
+    height: 2px;
+    margin: 0 15px;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #52a6f5;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .right input[type="range"] {
+    width: 60%;
+  }
+
+  .left .volume p {
+    font-size: 15px;
+  }
+  .left .volume i {
+    cursor: pointer;
+    padding: 8px 12px;
+    background: rgba(245, 245, 245, 0.1);
+  }
+
+  .left .volume i:hover {
+    background: rgba(245, 245, 245, 0.1);
+  }
+/* right part */
+.right .middle {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .right .middle button {
+    border: none;
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 3px;
+    margin-top: 30px;
+}
+.right #auto {
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 30px;
+    border: none;
+    padding: 10px 14px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    border-radius: 10px;
+}
+.right #auto i {
+    margin-left: 8px;
+}
+#play {
+    background: #d50af9;
+}
+.right button:hover {
+    background: #d50af9;
+}
+.right i:before {
+    color: #fff;
+    font-size: 15px;
 }

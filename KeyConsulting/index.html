@@ -161,6 +161,62 @@
       </footer>
 
 
-    
+    <!-- podcast start -->
+      <div class="podcast container-fluid fixed-bottom" align="center">
+        <div class="main">
+          <p id="logo"><i class="fa fa-music"></i> Podcast</p>
+          <div class="row">
+                <!--- left part --->
+              <div class="left col-xl col-lg col-md col-sm col">
+                <!--- song img --->
+                <div class="volume">
+                  <p id="volume_show">90</p>
+                  <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+                  <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+                </div>
+              </div>
+
+              <div class="col-xl col-lg col-md col-sm col">
+                <img id="track_image" width="20%">
+              </div>
+
+              <div class="mid col-xl col-lg col-md col-sm col">
+                <div class="show_song_no">
+                  <p id="present">1</p>
+                  <p>/</p> 
+                  <p id="total">5</p>
+                </div>
+                <!--- song title & artist name --->
+                <p id="title">title.mp3</p>
+                <p id="artist">Artist name</p>
+              </div>
+
+
+              <!--- right part --->
+              <div class="right col-xl col-lg col-md col-sm col">
+                <!--- middle part --->
+                <div class="middle">
+                  <!--- song duration part --->
+                  <div class="duration">
+                   <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+                 </div>     
+                 <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+                 <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+                 <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>             
+               </div>
+              </div>
+              <div class="right col-xl col-lg col-md col-sm col">
+                <button id="auto" onclick="autoplay_switch()"><i class="fa fa-circle-o-notch" aria-hidden="true"></i></button>
+              </div>
+             
+
+
+          </div>
+       </div>
+      </div>
+      <!--- Add javascript file --->
+      <script src="js/script.js"></script>
+      <!-- podcast end -->
+
 </body>
 </html>
