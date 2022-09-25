@@ -125,10 +125,16 @@
 @media only screen and (max-width:1366px){
     .home, .slider-btn{
         position: relative;
-        top: 200px;
+        top: 150px;
     }
     .slider-btn{
         top: 0;
+    }
+    .home h1{
+        font-size: 30px;
+    }
+    .slider-btn .btn{
+        font-size: 20px;
     }
 }
 
