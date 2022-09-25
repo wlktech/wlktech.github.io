@@ -101,7 +101,7 @@
 @media only screen and (max-width:1920px){
     .home, .slider-btn{
         position: relative;
-        top: 200px;
+        top: 150px;
     }
     .slider-btn{
         top: 0;
