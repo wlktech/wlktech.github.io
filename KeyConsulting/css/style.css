@@ -281,8 +281,9 @@
     .mid{
         display: none;
     }
-    .left #volume_show{
-        display: none;
+    .left, .right{
+        display: grid;
+        grid-template-columns: auto auto;
     }
 }
 
@@ -313,16 +314,33 @@
         position: relative;
         top: 50px;
     }
-    .duration{
-        margin-top: 30px;
+    #logo{
+        position: relative;
+        top: -20px;
+        right: 20px;
     }
-    .player{
-        margin-bottom: 50px;
+    .slider-btn{
+        top: 0;
+    }
+    .main{
+        padding: 20px;
     }
     .volume{
-        margin-top: 70px;
-        margin-left: 40px;
+        position: relative;
+        bottom: -10px;
+        font-size: 10px;
     }
+    
+    .middle{
+        top: 30px;
+    }
+    input[type="range"] {
+        -webkit-appearance: none;
+        width: 100%;
+        outline: none;
+        height: 2px;
+        margin: 0 15px;
+      }
 }
 
 @media only screen and (max-width:375px){
@@ -336,13 +354,9 @@
     .slider-btn{
         top: 0px;
     }
-   
-    .player{
-        padding-bottom: 50px;
-    }
-    .volume{
-        margin-top: 70px;
-        margin-left: 40px;
+    .left, .right{
+        display: grid;
+        grid-template-columns: auto auto;
     }
 }
 
@@ -399,12 +413,12 @@
 
 /* Podcast CSS codes */
 .podcast{
-    padding: 10px 10px;
+    padding: 10px;
     width: 100%;
-    height: 20%;
-    background-color: grey;
+    height: auto;
+    /* background-color: grey; */
     color: white;
-    /* background: linear-gradient(to right, #e76bf8e9, #52a6f5); */
+    background: linear-gradient(to right, #e76bf8e9, #52a6f5);
 }
 .show_song_no p{
     display: inline-block;
@@ -412,9 +426,8 @@
 
 /* both range slider part */
 input[type="range"] {
-    margin: auto;
     -webkit-appearance: none;
-    width: 90%;
+    width: 35%;
     outline: none;
     height: 2px;
     margin: 0 15px;
