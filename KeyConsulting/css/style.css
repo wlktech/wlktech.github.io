@@ -3,6 +3,9 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+.nav-link{
+    margin-left: 15px;
+}
 .logo{
     font-family: jetbrain;
     color: #A6D276;
@@ -143,7 +146,16 @@
 @media only screen and (max-width:1360px){
     .home, .slider-btn{
         position: relative;
-        top: 0px;
+        top: 80px;
+    }
+    .home h1{
+        font-size: 25px;
+    }
+    .img{
+        width: 100px;
+    }
+    .slider-btn .btn{
+        font-size: 15px;
     }
     .slider-btn{
         top: 0;
@@ -151,17 +163,14 @@
     .podcast{
         text-align: center;
     }
-    #track_image{
-        display: none;
-    }
-    .mid{
-        display: none;
-    }
     .right .middle {
         width: 100%;
         align-items: center;
         justify-content: center;
       }
+    #track_image{
+        display: none;
+    }
 }
 
 
@@ -269,6 +278,12 @@
         right: 0px;
         top: 10px;
     }
+    .mid{
+        display: none;
+    }
+    .left #volume_show{
+        display: none;
+    }
 }
 
 @media only screen and (max-width:540px){
@@ -298,33 +313,16 @@
         position: relative;
         top: 50px;
     }
-    #logo{
-        position: relative;
-        top: -20px;
-        right: 20px;
+    .duration{
+        margin-top: 30px;
     }
-    .slider-btn{
-        top: 0;
-    }
-    .main{
-        padding: 20px;
+    .player{
+        margin-bottom: 50px;
     }
     .volume{
-        position: relative;
-        bottom: -10px;
-        font-size: 10px;
+        margin-top: 70px;
+        margin-left: 40px;
     }
-    
-    .middle{
-        top: 30px;
-    }
-    input[type="range"] {
-        -webkit-appearance: none;
-        width: 100%;
-        outline: none;
-        height: 2px;
-        margin: 0 15px;
-      }
 }
 
 @media only screen and (max-width:375px){
@@ -337,6 +335,14 @@
     }
     .slider-btn{
         top: 0px;
+    }
+   
+    .player{
+        padding-bottom: 50px;
+    }
+    .volume{
+        margin-top: 70px;
+        margin-left: 40px;
     }
 }
 
@@ -393,11 +399,12 @@
 
 /* Podcast CSS codes */
 .podcast{
-    padding: 10px;
+    padding: 10px 10px;
     width: 100%;
-    /* background-color: grey;
-    color: white; */
-    background: linear-gradient(to right, #e76bf8e9, #52a6f5);
+    height: 20%;
+    background-color: grey;
+    color: white;
+    /* background: linear-gradient(to right, #e76bf8e9, #52a6f5); */
 }
 .show_song_no p{
     display: inline-block;
@@ -405,8 +412,9 @@
 
 /* both range slider part */
 input[type="range"] {
+    margin: auto;
     -webkit-appearance: none;
-    width: 35%;
+    width: 90%;
     outline: none;
     height: 2px;
     margin: 0 15px;
@@ -425,6 +433,14 @@ input[type="range"] {
 
   .left .volume p {
     font-size: 15px;
+    margin: auto;
+    margin-top: 35px;
+    background-color: rgb(0, 90, 192);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: pink;
+    border-radius: 50%;
   }
   .left .volume i {
     cursor: pointer;
@@ -466,9 +482,7 @@ input[type="range"] {
     outline: none;
     border-radius: 10px;
 }
-.right #auto i {
-    margin-left: 8px;
-}
+
 #play {
     background: #d50af9;
 }

@@ -27,19 +27,19 @@ let track = document.createElement('audio');
 let All_song = [{
 		name: "Left & Right",
 		path: "music/song1.mp3",
-		img: "img/img1.jpg",
+		img: "",
 		singer: "Charlie Puth ft JungKook"
 	},
 	{
 		name: "Off My Face",
 		path: "music/song2.mp3",
-		img: "img/img2.jpg",
+		img: "",
 		singer: "Justin Bieber"
 	},
 	{
 		name: "Night Changes",
 		path: "music/song3.mp3",
-		img: "img/img3.jpg",
+		img: "",
 		singer: "One Direction"
 	}
 ];
