@@ -32,4 +32,28 @@
 .carousel{
     margin: 50px 0px;
 }
+.row-product{
+    margin: auto;
 
+}
+.product-card{
+    width: 300px;
+    text-align: center;
+    margin: 50px 0px;
+}
+.product-card img{
+    border-radius: 30px;
+    margin-bottom: 20px;
+    box-shadow: 2px 3px 4px grey;
+}
+.product-text button{
+    background-image: radial-gradient(red, darkred);
+    color: white;
+    border: 3px solid pink;
+    padding: 10px;
+    border-radius: 15px;
+}
+marquee{
+    color: rgb(247, 0, 41);
+    text-shadow: 2px 3px 4px grey;
+}
