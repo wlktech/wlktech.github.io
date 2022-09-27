@@ -58,3 +58,12 @@ marquee{
     text-shadow: 2px 3px 4px grey;
     text-align: center;
 }
+.project-card{
+    text-align: center;
+    margin: 50px 0px;
+    
+}
+.project-card:hover{
+    letter-spacing: 5px;
+    transition-duration: 0.6s;
+}
