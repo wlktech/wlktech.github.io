@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.cover-photo{
+    background-image: radial-gradient(red, darkred);
+}
+.about:hover{
+    letter-spacing: 5px;
+    color: violet;
+    transition-duration: 0.6s;
+}
+/*.card{
+  margin: auto;
+} */
+.nav-item{
+    margin-right: 20px;
+}
+.nav-link{
+    text-transform: uppercase;
+}
+.intro{
+    text-align: justify;
+    margin: 50px 0px;
+    line-height: 35px;
+}
+.row-about{
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+}
+.carousel{
+    margin: 50px 0px;
+}
+
