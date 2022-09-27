@@ -56,4 +56,5 @@
 marquee{
     color: rgb(247, 0, 41);
     text-shadow: 2px 3px 4px grey;
+    text-align: center;
 }
