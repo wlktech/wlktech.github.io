@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Lesson</title>
+</head>
+<body>
+    <h1>Student Information</h1>
+
+    <form action="">
+        <label for="name">Name</label>
+        <input type="text" name="stu_name" id="name" required>
+        <br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <br><br>
+        <label for="phone">Phone</label>
+        <input type="number" name="phone" id="phone">
+        <br><br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" id="dob">
+        <br><br>
+        <label for="passport">Passport Photo</label>
+        <input type="file" accept=".png" name="passport" id="passport">
+        <br><br>
+        <label for="gender">Gender</label><br>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="gender" value="male">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="gender" value="female">
+        <br><br>
+        <label for="years">Years</label>
+        <select name="years" id="years">
+            <option value="">Choose year</option>
+            <option value="1" selected>First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Year</option>
+        </select>
+        <br><br>
+        <label for="">Hobbies</label>
+        <br><br>
+        <input type="checkbox" name="reading" id="reading" value="reading"><label for="reading">Reading</label>
+        <input type="checkbox" name="travelling" id="travelling" value="travelling"><label for="travelling">Travelling</label>
+        <input type="checkbox" name="singing" id="singing" value="singing"><label for="singing">Singing</label>
+        <br><br>
+        <label for="address">Address</label><br>
+        <textarea name="address" id="address" cols="50" rows="10"></textarea>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

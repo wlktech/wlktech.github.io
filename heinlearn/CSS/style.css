@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    color: red;
+}
+p{
+    text-align: justify;
+}
+a{
+    font-size: 30px;
+    color: blue;
+}
+.active:active{
+    color: red;
+}
+.hover:hover{
+    letter-spacing: 10px;
+    color: green;
+}
+#link:target{
+    border: 1px solid red;
+}
