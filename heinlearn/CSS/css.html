@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="register.css">
+    <link rel="icon" href="../hl.jpg">
+</head>
+<body>
+    <h1 class="header">Student Register</h1>
+    <form class="form" action="" >
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Mg Mg">
+            <br><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="example@gmail.com">
+            <br><br>
+            <label for="phone">Phone</label>
+            <input type="number" id="phone" placeholder="09********">
+            <br><br>
+            <label for="dob">Date Of Birth</label>
+            <input type="date" id="dob">
+            <br><br>
+            <label for="address">Address</label>
+            <textarea name="" id="address" placeholder="Address" width="100%"></textarea>
+            <br><br>
+            <label for="">Gender</label>
+            <br><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <br><br>
+            <label for="">Qualification</label>
+            <div>
+                <input type="checkbox" name="highschool" id="highschool" >
+                <label for="highschool">High School ( 10 th )</label>
+        </div>
+            <div>
+                <input type="checkbox" name="higherschool" id="higherschool" disabled >
+                <label for="higherschool">Higher School ( 12 th )</label>
+        </div>
+            <div>
+                <input type="checkbox" name="highschool" id="graduated" >
+                <label for="graduated">Graduated</label>
+        </div>
+            <div>
+                <input type="checkbox" name="master" id="master" >
+                <label for="master">Master</label>
+        </div>
+            <div>
+                <input type="checkbox" name="phd" id="phd" >
+                <label for="phd">PHD</label>
+        </div>
+        <br><br>
+            <fieldset>
+                <legend>Rules</legend>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet perspiciatis blanditiis autem quisquam aliquam rem quasi, praesentium omnis sed neque minus sequi, fugit veniam vel earum sunt asperiores, optio illum!</p>
+                <ul>
+                    <li>This is First Rule</li>
+                    <li>This is Second Rule</li>
+                    <li>This is Third Rule</li>
+                    <li>This is Fourth Rule</li>
+                    <li>This is Fifth Rule</li>
+                    <li>This is Sixth Rule</li>
+                    <li>This is Seventh Rule</li>
+            </ul>
+        </fieldset>
+            <p></p>
+            <button>Register</button>
+    </form>
+</body>
+</html>
