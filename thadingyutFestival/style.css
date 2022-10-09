@@ -35,9 +35,16 @@ h1{
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
-img{
+.logo{
     position: relative;
     left: 40%;
+}
+.grd{
+    width: 100%;
+    margin: auto;
+    position: relative;
+    left: 25%;
+    top: 100px;
 }
 @keyframes gradient{
     50%{
