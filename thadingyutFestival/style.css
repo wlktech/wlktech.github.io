@@ -22,31 +22,21 @@ canvas{
 }
 h1{
     text-align: center;
-    font-size: 70px;
     border-image: linear-gradient(130deg, red, green, blue, lime, purple, orange);
     animation: gradient 2s linear infinite;
     border-image-slice: 1;
     padding-top: 0px;
-    margin: auto;
     position: relative;
-    top: 100px;
+    top: 30px;
     text-transform: uppercase;
     font-family: 'Ruslan Display', cursive;
     background: linear-gradient(to right, red, green, blue, lime, purple,orange);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    
 }
 img{
     position: relative;
-    top: 200px;
-}
-.grd{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto;
-    align-items: center;
-    margin: 0 350px;
-
+    left: 40%;
 }
 @keyframes gradient{
     50%{
