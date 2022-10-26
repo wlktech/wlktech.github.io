@@ -32,6 +32,18 @@
     width: 100%;
     height: auto;
 }
+.bu{
+    box-shadow: 2px 3px 4px pink;
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.bu:hover{
+    margin-top: 5px;
+    transition-duration: .6s;
+}
 .row{
     margin: auto;
 }
