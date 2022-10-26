@@ -28,10 +28,28 @@
     padding-top: 110px;
     padding-bottom: 30px;
     color: white;
-    background-color: #582F7E;
+    background: linear-gradient(to bottom, #660033 0%, #cc0066 100%);
     width: 100%;
     height: auto;
 }
+
+.welcome, .para1, .underline, .bu{
+    animation: leftin 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+@keyframes leftin{
+    0%{
+        transform: translateX(-100px);
+        visibility: visible;
+    }
+    100%{
+        transform:translateX(0);
+        visibility: visible;
+    }
+}
+
 .bu{
     box-shadow: 2px 3px 4px pink;
     width: 100px;
@@ -49,6 +67,20 @@
 }
 .img{
     margin: 20px 0px;
+    animation: rightin 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+@keyframes rightin{
+    0%{
+        transform: translateX(100px);
+        visibility: visible;
+    }
+    100%{
+        transform:translateX(0);
+        visibility: visible;
+    }
 }
 .img img{
     border-radius: 10px;
