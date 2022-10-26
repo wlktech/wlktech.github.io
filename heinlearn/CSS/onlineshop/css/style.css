@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
+*{
+    font-family: 'Signika Negative', sans-serif;
+}
 .logo:hover{
     width: 60px;
     transition-duration: .6s;
@@ -67,6 +71,7 @@
     border: none;
     border-radius: 10px;
     margin-top: 10px;
+    color: black;
 }
 .bu:hover{
     margin-top: 5px;
@@ -105,7 +110,65 @@
     border: 2px solid rgba(41, 17, 151, 0.685);
     border-radius: 3px;
     margin: auto;
+    margin-top: 30px;
 }
 .phone-types h3{
     font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+}
+.phone-kind1{
+    margin: 20px 0px;
+}
+.ph{
+    width: 100px;
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: 0px 8px;
+}
+.ph:hover{
+    transform: scale(1.2);
+    transition-duration: .6s;
+}
+.vertical{
+    width: 1px;
+    height: 50px;
+    background-color: #660033;
+    color: #660033;
+    margin-right: 30px;
+    font-weight: 800;
+}
+.sale{
+    margin: 0px 50px;
+}
+.icon1{
+    margin: 5px;
+    font-size: 20px;
+}
+.icon2{
+    color: rgb(0, 189, 189);
+    text-shadow: 1px 2px -2px grey;
+    margin-top: 10px;
+}
+.blog-card img{
+    border-radius: 8px 8px 0px 0px;
+    margin-bottom: 10px;
+}
+.blog-card:hover{
+    overflow: hidden;
+    border-radius: 8px 8px 0px 0px;
+}
+.blog-card img:hover{
+    transform: scale(1.1);
+    transition-duration: .6s;
+    
+}
+
+.icon2 p{
+    color: #000;
+    text-align: justify;
+}
+.readmore{
+    text-decoration: none;
+    color: rgb(0, 189, 189);
 }
