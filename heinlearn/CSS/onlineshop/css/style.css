@@ -154,6 +154,9 @@
     border-radius: 8px 8px 0px 0px;
     margin-bottom: 10px;
 }
+.blog-card{
+    margin: 20px;
+}
 .blog-card:hover{
     overflow: hidden;
     border-radius: 8px 8px 0px 0px;
@@ -171,4 +174,32 @@
 .readmore{
     text-decoration: none;
     color: rgb(0, 189, 189);
+}
+
+.service{
+    background-color: rgb(219, 219, 219);
+}
+
+.service1{
+    display: inline-block;
+    margin-left: 10px;
+}
+.service1 span{
+    font-size: 25px;
+
+}
+.service1 small{
+    font-size: 16px;
+}
+.contact .row{
+    width: 600px;
+
+}
+.icon4 a{
+    color: rgb(131, 130, 130);
+    margin: 10px;
+}
+.contact{
+    background-color: black;
+    color: rgb(131, 130, 130);
 }
