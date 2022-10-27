@@ -208,9 +208,26 @@
     transform: translateY(150px);
     opacity: 0;
     transition: 1s all ease;
-  }
+}
   
-  .reveal.active{
+.reveal.active{
     transform: translateY(0);
     opacity: 1;
-  }
+}
+.about{
+    padding-top: 110px;
+    padding-bottom: 30px;
+    color: white;
+    background: linear-gradient(to bottom, #08095e 0%, #5a0114 100%);
+    width: 100%;
+    height: 100%;
+}
+.about img{
+    box-shadow: 5px 5px 2px rgb(131, 130, 130,0.2);;
+}
+.type{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: 100%;
+}
