@@ -232,7 +232,8 @@
     height: 100%;
 }
 .contact_pg{
-    margin: auto;
+    width: 100%;
+    height: auto;
     margin-top: 90px;
     padding: 50px;
     background-color: #660033;
@@ -240,18 +241,14 @@
 }
 .map{
     margin-top: 100px;
-
-}
-.form-floating{
-    width: 400px;
-}
-
-
-.con1{
-    margin: auto;
-    background-image: url(https://images.theconversation.com/files/433499/original/file-20211123-17-199wbff.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=675.0&fit=crop);
     width: 100%;
     height: auto;
+
+}
+.con1{
+    width: 100%;
+    margin: auto;
+    background-image: url(https://images.theconversation.com/files/433499/original/file-20211123-17-199wbff.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=675.0&fit=crop);
 
 }
 .f-link{
