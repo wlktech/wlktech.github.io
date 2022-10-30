@@ -187,18 +187,16 @@ nav{
 }
 .card{
     width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
 }
 .card img{
     width: 100%;
     border-radius: 10px;
 }
-.card:hover{
-    overflow: hidden;
-    border-radius: 10px;
-}
 .card img:hover{
     transform: scale(1.1);
-    transition-duration: .6s;
+    transition-duration: 0.6s;
 }
 /* Home End */
 
@@ -208,10 +206,49 @@ nav{
     text-align: center;
 }
 .underline{
-    width: 100px;
+    width: 80px;
     margin: auto;
     border: 3px solid grey;
     border-radius: 3px;
 }
+.row2{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 90px;
+    justify-content: space-between;
+    margin: 50px 100px;
+}
+.col p{
+    text-align: justify;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    line-height: 40px;
+}
+.body{
+    width: 100%;
+    overflow: hidden;
+}
+.body img:hover{
+    transform: scale(1.2);
+    transition-duration: 0.6s;
+}
+.btn1{
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 13px;
+}
+.btn1:hover{
+    background-color: goldenrod;
+    transition-duration: 0.6s;
+    padding: 10px 20px;
+    text-decoration: underline;
+}
 
 /* About End */
+
+/* Service Start */
+
+/* Service End */
