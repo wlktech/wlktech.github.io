@@ -7,6 +7,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    color: rgb(78, 78, 78);
 }
 /* Navbar Start*/
 nav{
@@ -45,7 +46,7 @@ nav{
     letter-spacing: 8px;
     position: relative;
     top: -38px;
-    left: 10px;
+    left: -10px;
     
 }
 .do{
@@ -54,7 +55,7 @@ nav{
     text-transform: uppercase;
     position: relative;
     top: -39px;
-    left: 90px;
+    left: 70px;
     font-size: 18px;
 }
 .brand:hover{
@@ -72,19 +73,31 @@ nav{
 }
 .nav-link{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(114, 113, 113);
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 600;
-    margin: 0px 50px;
+    margin: 0px 20px;
 }
 .nav-link:hover{
     text-shadow: 2px 4px 4px rgb(8, 8, 8);
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     transition-duration: .6s;
+    color: #000;
 }
 .join_now{
     padding-top: 20px;
+}
+.log-in{
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    margin: auto;
+    margin-left: 10px;
 }
 .log{
     padding: 10px;
@@ -101,12 +114,19 @@ nav{
     padding: 10px 20px;
     transition-duration: .6s;
 }
+.log-in:hover{
+    background-color: goldenrod;
+    padding: 10px 20px;
+    transition-duration: .6s;
+    color: #fff;
+    border: none;
+}
 /* Navbar End */
 
 /* Home Start */
 #home{
     width: 100%;
-    height: 1000px;
+    height: auto;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -119,12 +139,17 @@ nav{
     margin: 0px 100px;
 }
 .sologan{
-    margin-top: 150px;
-    margin-bottom: 30px;
-    line-height: 150px;
+    margin-top: 120px;
+    line-height: 85px;
     font-family: 'Poppins', sans-serif;
-    font-size: 90px;
+    font-size: 36px;
+    text-transform: uppercase;
     color: rgb(78, 78, 78);
+    text-align: left;
+}
+.social{
+    margin-top: 30px;
+    display: flex;
 }
 .btn{
     padding: 15px;
@@ -134,26 +159,27 @@ nav{
     border-radius: 10px;
 }
 .btn:hover{
-    display: inline-block;
-    margin-top: 20px;
+    padding: 15px 20px;
     transition-duration: .6s;
     box-shadow: 2px 3px 4px grey;
+    background-color: goldenrod;
+}
+.fb1{
+    margin-left: 10px;
+    margin-top: -13px;
 }
 .fb{
     text-decoration: none;
     color: rgb(87, 87, 87);
-    position: relative;
-    top: 12px;
-    left: 20px;
 }
-.fb:hover{
-    display: inline-block;
-    margin-top: 10px;
+.fb i:hover{
+    transform: scale(1.1);
     transition-duration: .6s;
+    color: goldenrod;
 }
 .pattern{
-    margin-top: 200px;
-    width: 100%;
+    margin-top: 130px;
+    width: 600px;
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 20px;
@@ -174,6 +200,18 @@ nav{
     transform: scale(1.1);
     transition-duration: .6s;
 }
-
-
 /* Home End */
+
+/* About Start */
+.header{
+    margin-top: 50px;
+    text-align: center;
+}
+.underline{
+    width: 100px;
+    margin: auto;
+    border: 3px solid grey;
+    border-radius: 3px;
+}
+
+/* About End */
