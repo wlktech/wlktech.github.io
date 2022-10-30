@@ -111,6 +111,13 @@ nav{
     background-size: cover;
 
 }
+.row1{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 300px;
+    justify-content:space-between;
+    margin: 0px 100px;
+}
 .sologan{
     margin-top: 150px;
     margin-bottom: 30px;
@@ -144,4 +151,29 @@ nav{
     margin-top: 10px;
     transition-duration: .6s;
 }
+.pattern{
+    margin-top: 200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+
+}
+.card{
+    width: 100%;
+}
+.card img{
+    width: 100%;
+    border-radius: 10px;
+}
+.card:hover{
+    overflow: hidden;
+    border-radius: 10px;
+}
+.card img:hover{
+    transform: scale(1.1);
+    transition-duration: .6s;
+}
+
+
 /* Home End */
