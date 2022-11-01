@@ -18,6 +18,7 @@ nav{
     overflow: hidden;;
     position: fixed;
     top: 0;
+    z-index: 1;
     animation: dropdown 1s linear 1;
     animation-delay: 1s;
     visibility: hidden;
@@ -152,7 +153,7 @@ nav{
     grid-template-columns: auto auto;
     grid-column-gap: 300px;
     justify-content:space-between;
-    margin: 0px 100px;
+    margin: 0px 110px;
 }
 .sologan{
     margin-top: 100px;
@@ -261,8 +262,9 @@ nav{
 .underline{
     width: 80px;
     margin: auto;
-    border: 3px solid grey;
+    border: 3px solid gray;
     border-radius: 3px;
+    background-color: gray;
 }
 .row2{
     display: grid;
@@ -277,6 +279,7 @@ nav{
     margin-top: 40px;
     margin-bottom: 30px;
     line-height: 40px;
+    font-size: 20px;
 }
 .body{
     width: 100%;
@@ -311,19 +314,23 @@ nav{
 .row3{
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-column-gap: 30px;
+    grid-column-gap: 50px;
     justify-content: space-between;
     padding: 30px 300px;
 }
 .service-card{
     background-color: gray;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     box-shadow: 2px 3px 4px gray;
+    border-radius: 5px;
 }
 .service-card:hover{
     transform: scale(1.1);
     transition-duration: .6s;
+}
+.service-card a{
+    text-decoration: none;
 }
 .service-card i{
     font-size: 50px;
@@ -338,7 +345,8 @@ nav{
 .service-card p{
     font-size: 12px;
     color: rgb(224, 224, 224);
-    text-align: left;
+    text-align: justify;
+    margin-top: 20px;
 }
 .recent_work{
     text-align: center;
