@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
 *{
     padding: 0;
@@ -269,14 +270,14 @@ nav{
 .row2{
     display: grid;
     grid-template-columns: auto auto;
-    grid-column-gap: 90px;
+    grid-column-gap: 100px;
     justify-content: space-between;
-    margin: 50px 100px;
+    margin: 50px 150px;
+
 }
 .col p{
     color: #000;
     text-align: justify;
-    margin-top: 40px;
     margin-bottom: 30px;
     line-height: 40px;
     font-size: 20px;
@@ -361,6 +362,45 @@ nav{
 }
 /* Service End */
 
+/* Client's Review */
+.container{
+    background-color: rgb(42, 42, 42);
+    padding: 100px;
+    border-radius: 100% 50% 100% 50%;
+    margin: 50px 0px;
+}
+.container h3{
+    color: rgb(177, 177, 177);
+}
+
+.row7{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 50px;
+    padding: 30px 100px;
+    text-align: center;
+}
+.review-card small, .fa-quote-left, .fa-quote-right, .para p{
+    color: rgb(177, 177, 177);
+    text-align: center;
+}
+.review-card p{
+    font-size: 15px;
+}
+.review-card img{
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.fa-medal{
+    color: white;
+}
+.container p{
+    color: rgb(210, 207, 207);
+    text-align: center;
+    margin-top: 10px;
+}
+/* Client's Review */
+
 /* Project Start */
 .row6{
     display: grid;
@@ -389,8 +429,8 @@ nav{
     top: 150px;
     left: 100px;
 }
-.pro1 h1, p{
-    color: #fff;
+.pro1 h1, .pro1 p{
+    color: rgb(255, 255, 255);
     text-shadow: 2px 3px 4px #000;
 }
 .pro1 h1{
@@ -417,7 +457,30 @@ nav{
     transform: scale(1.1);
     transition-duration: .6s;
 }
+.r1{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 100px;
+    padding: 50px 200px;
+}
+.c1 p{
+    font-weight: 500;
+    font-family: 'Acme', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 10px;
+}
+.c1 img:hover{
+    transform: scale(1.1);
+    transition-duration: .6s;
+}
+.c1{
+    overflow: hidden;
+    
+}
 /* Project End */
+
+
 
 /* contact start */
 #contact h2{
@@ -455,6 +518,7 @@ nav{
 .form1 p{
     padding-bottom: 30px;
     font-weight: 800;
+    color: rgb(164, 164, 164);
 }
 
 .btn2{
