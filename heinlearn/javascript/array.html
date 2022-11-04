@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var a = 'Hello';
+        console.log(a);
+        let studentList = ['Mg Mg', 'Aye Aye', 'Linn Linn'];
+        console.log(studentList);
+        studentList.push('Su Su')
+        console.log(studentList);
+        studentList.unshift('Ag Ag')
+        console.log(studentList);
+        studentList.pop()
+        console.log(studentList);
+        
+        let student1 = {
+            roll : 1, 
+            name : 'Ael Htoo Naw', 
+            email : 'aelhtoonaw@gmail.com',
+            major : 'High School',
+            phone : 0945454545,
+            age : 18, 
+            address : 'Mandalay'
+        }
+        let student2 = {
+            roll : 2, 
+            name : 'Aung Myat Thu', 
+            email : 'aungmyatthu@gmail.com',
+            major : 'Geology',
+            phone : 0954545454,
+            age : 20, 
+            address : 'Yangon'
+        }
+        let student3 = {
+            roll : 3, 
+            name : 'Ei Chan', 
+            email : 'eichan@gmail.com',
+            major : 'IT Major',
+            phone : 0948484848,
+            age : 27, 
+            address : 'Singapore'
+        }
+        let studentListArr = Object.entries(student1, student2, student3);
+        console.log(studentListArr)
+
+    </script>
+</body>
+</html>

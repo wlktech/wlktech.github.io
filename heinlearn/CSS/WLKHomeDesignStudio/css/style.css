@@ -364,7 +364,7 @@ nav{
     display: grid;
     grid-template-columns: auto auto;
     grid-column-gap: 100px;
-    margin: 100px 200px;
+    margin: 150px 200px;
 }
 .service1 p{
     text-align: justify;
@@ -487,6 +487,23 @@ nav{
 .c1{
     overflow: hidden;
     
+}
+
+.back a{
+    line-height: 70px;
+    font-size: 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.back a i{
+    margin-right: 10px;
+    color: #fff;
+}
+.back a:hover{
+    box-shadow: 2px 3px 4px rgb(132, 132, 132);
 }
 /* Project End */
 
