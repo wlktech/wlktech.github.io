@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="datehw.css">
+</head>
+<body>
+    <div class="clock1">
+        <div class="clock">
+            <div id="amPM"></div>
+            <div id="day"></div>
+            <div id="second"></div>
+        </div>
+        <div id="time"></div>
+        <div class="clock">
+            <div id="month"></div>
+            <div id="date"></div>
+            <div id="year"></div>
+        </div>
+    
+    </div>
+    <script>
+        function timeInterval(){
+            let date = new Date();
+            let seconds = date.getSeconds();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+
+            let month = date.getMonth();
+            let da = date.getDate();
+            let year = date.getFullYear();
+            switch (month) {
+                case 0:
+                  month = "JAN";
+                  break;
+                case 1:
+                  month = "FEB";
+                  break;
+                case 2:
+                   month = "MAR";
+                  break;
+                case 3:
+                  month = "APR";
+                  break;
+                case 4:
+                  month = "MAY";
+                  break;
+                case 5:
+                  month = "JUNE";
+                  break;
+                case 6:
+                  month = "JUL";
+                  break;
+                case 7:
+                  month = "AUG";
+                  break;
+                case 8:
+                  month = "SEP";
+                  break;
+                case 9:
+                  month = "OCT";
+                  break;
+                case 10:
+                  month = "NOV";
+                  break;
+                case 11:
+                  month = "DEC";
+                  break;
+              }
+            let day = date.getDay();
+            switch (day) {
+                case 0:
+                  day = "Sunday";
+                  break;
+                case 1:
+                  day = "Monday";
+                  break;
+                case 2:
+                   day = "Tuesday";
+                  break;
+                case 3:
+                  day = "Wednesday";
+                  break;
+                case 4:
+                  day = "Thursday";
+                  break;
+                case 5:
+                  day = "Friday";
+                  break;
+                case 6:
+                  day = "Saturday";
+              }
+
+            let amPM = hours < 12? ' AM' : ' PM';
+            let clock = hours+ ":" + minutes;
+            document.getElementById('amPM').innerHTML = amPM;
+            document.getElementById('day').innerHTML = day;
+            document.getElementById('month').innerHTML = month;
+            document.getElementById('year').innerHTML = year;
+            document.getElementById('time').innerHTML = clock;
+            document.getElementById('second').innerHTML = seconds;
+            document.getElementById('date').innerHTML = da;
+
+        }
+        setInterval(timeInterval, 1000);
+
+    </script>
+</body>
+</html>
