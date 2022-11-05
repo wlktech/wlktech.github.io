@@ -29,4 +29,9 @@
 #amPM, #second, #day, #date, #month, #year{
     font-size: 30px;
 }
+h2{
+    margin-top: 20px;
+    font-size: 30px;
+    text-shadow: 2px 3px 4px #0066ff;
+}
 
