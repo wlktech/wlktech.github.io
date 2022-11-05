@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gussing Secret Number</title>
+</head>
+<body align="center">
+    <h1 style="color:gray;">Gussing Game</h1>
+    <script>
+        let secretNo = parseInt(prompt("Enter any number between 1 to 10"))
+        if(secretNo == 7){
+            document.write("<h2 style='color:red;'>Excellent.</h2>");
+        }
+        else if(secretNo > 10){
+            document.write("<h2 style='color:red;'>Out of Range!!.</h2>");
+        }
+        else{
+            document.write("<h2 style='color:red;'>Wrong Guess.</h2>");
+        }
+    </script>
+</body>
+</html>
