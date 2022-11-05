@@ -21,7 +21,7 @@
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-between;
-    margin: 10px 100px;
+    margin: 10px 50px;
 }
 #time{
     font-size: 200px;
