@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills&display=swap');
+*{
+    font-family: 'Stick No Bills', sans-serif;
+}
+h2{
+    margin-top: 50px;
+    text-shadow: 2px 3px 4px #0066ff;
+}
+#amPM, #day, #second, #month, #year, #date{
+    font-size: 30px;
+} 
+#time{
+    font-size: 100px;
+}
+.clock{
+    text-align: center;
+    /* background-color: rgb(0, 0, 0); */
+    background: linear-gradient(to bottom, #0066ff 0%, #cc0099 100%);
+    color: white;
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 40px 10px;
+    border-radius: 30px;
+    /* box-shadow: 3px 4px 4px rgb(249, 7, 249); */
+    border: 20px solid rgb(93, 93, 93);
+}
