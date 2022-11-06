@@ -425,7 +425,17 @@ nav{
 .seemore{
     display: block;
     text-align: center;
+    margin: auto;
     margin-top: 10px;
+    background-color: rgb(85, 83, 83);
+    width: 30%;
+    height: 30px;
+    border-radius: 10px;
+}
+.seemore a{
+    color: #fff;
+    text-decoration: none;
+    line-height: 30px;
 }
 .seemore:hover{
     transform: scale(1.1);
