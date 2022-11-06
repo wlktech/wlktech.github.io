@@ -498,10 +498,15 @@ nav{
     overflow: hidden;
     
 }
-
+.back{
+    position: fixed;
+    opacity: 0.3;
+    top: 90px;
+    left: 10px;
+}
 .back a{
     line-height: 70px;
-    font-size: 20px;
+    font-size: 15px;
     background-color: #000;
     color: #fff;
     text-decoration: none;
@@ -514,6 +519,9 @@ nav{
 }
 .back a:hover{
     box-shadow: 2px 3px 4px rgb(132, 132, 132);
+}
+.back:hover{
+    opacity: 1;
 }
 /* Project End */
 
