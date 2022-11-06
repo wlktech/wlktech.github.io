@@ -9,8 +9,9 @@
 <body align="center">
     <h1 style="color:gray;">Gussing Game</h1>
     <script>
-        let secretNo = parseInt(prompt("Enter any number between 1 to 10"))
-        if(secretNo == 7){
+        let secretNo = 3;
+        let userInput = prompt("Enter any number between 1 to 10");
+        /*if(secretNo == 7){
             document.write("<h2 style='color:red;'>Excellent.</h2>");
         }
         else if(secretNo > 10){
@@ -18,7 +19,21 @@
         }
         else{
             document.write("<h2 style='color:red;'>Wrong Guess.</h2>");
+        }*/
+        let count = 1;
+        while(secretNo != userInput){
+            if(secretNo < userInput && userInput < 10){
+                alert("Greater than secretNo, Try Again.");
+            }else if(userInput > 10){
+                alert("OUT OF RANGE, PLEASE INPUT FROM 1 TO 10!!!");
+            }
+            else{
+                alert("Less than secretNo, Try Again.");
+            }
+            userInput = prompt("Enter any number between 1 to 10");
+            count++;
         }
+        alert(`Your Number is correct in ${count} times`);
     </script>
 </body>
 </html>

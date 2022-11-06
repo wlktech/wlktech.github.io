@@ -5,40 +5,54 @@ function timeInterval(){
     switch (hours) {
       case 13:
         hours = 1;
+        amPM = "PM";
         break;
       case 14:
         hours = 2;
+        amPM = "PM";
         break;
       case 15:
          hours = 3;
+         amPM = "PM";
         break;
       case 16:
         hours = 4;
+        amPM = "PM";
         break;
       case 17:
         hours = 5;
+        amPM = "PM";
         break;
       case 18:
         hours = 6;
+        amPM = "PM";
         break;
       case 19:
         hours = 7;
+        amPM = "PM";
         break;
       case 20:
         hours = 8;
+        amPM = "PM";
         break;
       case 21:
         hours = 9;
+        amPM = "PM";
         break;
       case 22:
         hours = 10;
+        amPM = "PM";
         break;
       case 23:
         hours = 11;
+        amPM = "PM";
         break;
       case 24:
         hours = 12;
+        amPM = "PM";
         break;
+        default:
+        amPM = "AM";
     }
     let minutes = date.getMinutes();
 
@@ -107,7 +121,7 @@ function timeInterval(){
           day = "Saturday";
       }
 
-    let amPM = hours % 12 > 1? ' PM' : ' AM';
+    // let amPM = hours % 12 > 1? ' PM' : ' AM';
     let clock = hours+ ":" + minutes;
     document.getElementById('amPM').innerHTML = amPM;
     document.getElementById('day').innerHTML = day;
