@@ -1,7 +1,13 @@
 function timeInterval(){
     let date = new Date();
     let seconds = date.getSeconds();
+    if(seconds<10){
+      seconds = "0"+ seconds;
+    }
     let hours = date.getHours();
+    if(hours<10){
+      hours = "0"+hours;
+    }
     switch (hours) {
       case 13:
         hours = 1;
@@ -55,7 +61,9 @@ function timeInterval(){
         amPM = "AM";
     }
     let minutes = date.getMinutes();
-
+    if(minutes<10){
+      minutes = "0"+ minutes;
+    }
     let month = date.getMonth();
     let da = date.getDate();
     let year = date.getFullYear();

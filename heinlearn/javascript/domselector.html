@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM Selector Lessons</h1>
+    <p id="demo">Id Selector</p>
+    <p class="myClass">Class 1 Selector</p>
+    <p class="myClass">Class 2 Selecto</p>
+    <p class="myClass">Class 3 Selecto</p>
+    <p>Tag Selector</p>
+    <p class="a">Query Selector</p>
+
+    <button onclick="show()">Click Me</button>
+    <script>
+        function show(){
+            document.getElementById('demo').innerHTML = "My ID";
+            document.getElementsByClassName('myClass')[0].innerHTML = 'My Class One';
+            document.getElementsByClassName('myClass')[1].innerHTML = 'My Class Two';
+            document.getElementsByClassName('myClass')[2].innerHTML = 'My Class Three';
+            document.getElementsByTagName('p')[4].innerHTML = "My Tag Selector";
+            document.querySelector('.a').innerHTML = "QuerySELECTOR";
+            
+        }
+    </script>
+</body>
+</html>
