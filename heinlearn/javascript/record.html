@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record & Calculator</title>
+    <style>
+        .row{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            margin: 10px auto;
+        }
+        .btn{
+            text-align: center;
+            margin-top: 20px;
+            
+        }
+        .btn button{
+            width: 150px;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            background-color: black;
+            color: white;
+            box-shadow: 2px 3px 4px rgb(53, 53, 53);
+            cursor: pointer;
+        }
+        form{
+            background-color: rgb(255, 85, 85);
+            color: white;
+            padding: 30px;
+            width: 40%;
+            border-radius: 20px;
+        }
+        input{
+            width: 200px;
+        }
+        table{
+            border-collapse: collapse;
+            background-color: grey;
+            color: white;
+            text-align: center;
+            width: 80%;
+        }
+        tbody tr td{
+            background-color: rgb(34, 34, 34);
+        }
+        .mainrow{
+            display: grid;
+            grid-template-columns: auto auto;
+            margin: auto;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+<div class="mainrow">
+    <div>
+        <h1>Expense Check-Form</h1>
+        <form action="" name="myForm">
+            <div class="row">
+                <div class="col">
+                    Date :
+                </div>
+                <div class="col">
+                    <input type="date" name="date" id="date">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Item :
+                </div>
+                <div class="col">
+                    <input type="text" name="item">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Qty :
+                </div>
+                <div class="col">
+                    <input type="number" name="qty">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    Unit Price :
+                </div>
+                <div class="col">
+                    <input type="number" name="unitprice">
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col">
+                    Total Price :
+                </div>
+                <div class="col">
+                    <input type="number" name="total">
+                </div>
+            </div> -->
+            <div class="btn">
+                <button type="button" onclick="showData()">ADD RECORD</button>
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <h2>Expenditure List</h2>
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <td>No</td>
+                    <td>Date</td>
+                    <td>Item</td>
+                    <td>Qty</td>
+                    <td>Unit Price</td>
+                    <td>Total Price</td>
+                </tr>
+            </thead>
+            <tbody id="myData">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">Grand Total </td>
+                    <td id="grand"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    
+    <script>
+        let expenseArrayList = [];
+        function showData(){
+            //alert('ok')
+            //get Data
+            let date = document.myForm.date.value;
+            let item = document.myForm.item.value;
+            let qty = document.myForm.qty.value;
+            let unitprice = document.myForm.unitprice.value;
+            //console.log(date);
+            //console.log(amount);
+            //console.log(total);
+
+            //add to array
+            let expense = {
+                expenseDate : date,
+                expenseItem : item,
+                expenseQty : qty,
+                expenseUnitPrice : unitprice,
+                expenseTotal : qty * unitprice
+            }
+            //console.log(expense);
+            expenseArrayList.push(expense)
+            console.log(expenseArrayList)
+            let data = '';
+            let grand = 0;
+            //let totalPrice = 1;
+        for(let i = 0; i < expenseArrayList.length; i++){
+            let expenseList = expenseArrayList[i];
+            data = data + `
+            <tr>
+                <td>${i+1}</td>
+                <td>${expenseList.expenseDate}</td>
+                <td>${expenseList.expenseItem}</td>
+                <td>${expenseList.expenseQty}</td>
+                <td>${expenseList.expenseUnitPrice}</td>
+                <td>${expenseList.expenseTotal}</td>
+            </tr>
+            `;
+            //totalPrice = expenseList.expenseQty * expenseList.expenseUnitPrice;
+            //document.getElementById('totalPrice').innerHTML = totalPrice;
+            grand += parseInt(expenseList.expenseTotal);
+            document.getElementById('grand').innerHTML = grand;
+        }
+        document.getElementById('myData').innerHTML = data;
+        }
+    </script>
+</body>
+</html>
