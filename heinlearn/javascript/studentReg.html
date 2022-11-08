@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Register</title>
+</head>
+<body>
+    <h1>Student Register Form</h1>
+    <form action="" name="myForm">
+        <div>
+            Name : <input type="text" name="name" id="name">
+        </div>
+        <div>
+            Age : <input type="number" name="age">
+        </div>
+        <div>
+            City : <input type="text" name="city">
+        </div>
+        <div>
+            <button type="button" onclick="showData()">ADD STUDENT</button>
+        </div>
+    </form>
+    <h2>Student List</h2>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <td>No</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>City</td>
+            </tr>
+        </thead>
+        <tbody id="myData">
+
+        </tbody>
+
+    </table>
+    <script>
+        let studentArrayList = [];
+        function showData(){
+            //alert('ok')
+            //get Data
+            let name = document.myForm.name.value;
+            let age = document.myForm.age.value;
+            let city = document.myForm.city.value;
+            //console.log(name);
+            //console.log(age);
+            //console.log(city);
+
+            //add to array
+            let student = {
+                studentName : name,
+                studentAge : age,
+                studentCity : city
+            }
+            //console.log(student);
+            studentArrayList.push(student)
+            console.log(studentArrayList)
+            let data = '';
+        for(let i = 0; i < studentArrayList.length; i++){
+            let studentList = studentArrayList[i];
+            data = data + `
+            <tr>
+                <td>${i+1}</td>
+                <td>${studentList.studentName}</td>
+                <td>${studentList.studentAge}</td>
+                <td>${studentList.studentCity}</td>
+            </tr>
+            `;
+        }
+        document.getElementById('myData').innerHTML = data;
+        }
+    </script>
+</body>
+</html>
