@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+<body>
+    <h2 id="header">Hello World</h2>
+    <button id="btn">Hide</button>
+    <button id="btn1">Show</button>
+    <button id="btn2">Dark Mode</button>
+    <button id="btn3">Normal Mode</button>
+    <button id="btn4">Pink Mode</button>
+    
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $("#btn").click(function(){
+            $("#header").hide();
+            $("#btn").css({
+                'background-color':'black',
+                'color':'white',
+                'border':'2px solid red',
+                'padding': '10px',
+                'border-radius':'10px',
+            })
+        })
+        $("#btn1").click(function(){
+            $("#header").show();
+            $("#btn1").css({
+                'background-color':'black',
+                'color':'white',
+                'border':'2px solid red',
+                'padding': '10px',
+                'border-radius':'10px',
+            })
+        })
+        $("#btn2").click(function(){
+            $("body").css({
+                'background-color':'black',
+                'color':'white'
+            }),
+            $("#btn2").css({
+                'background-color':'white',
+                'color':'black',
+                'border':'2px solid red',
+                'padding': '10px',
+                'border-radius':'10px'
+            })
+        })
+        $("#btn3").click(function(){
+            $("body").css({
+                'background-color':'white',
+                'color':'black'
+            }),
+            $("#btn3").css({
+                'background-color':'black',
+                'color':'white',
+                'border':'2px solid red',
+                'padding': '10px',
+                'border-radius':'10px',
+            })
+        })
+        $("#btn4").click(function(){
+            $("body").css({
+                'background-color':'pink',
+                'color':'black'
+            }),
+            $("#btn4").css({
+                'background-color':'pink',
+                'color':'black',
+                'border':'2px solid red',
+                'padding': '10px',
+                'border-radius':'10px',
+            })
+        })
+
+
+        /*$("#btn").click(function(){
+            $("#header").css({
+                'background' : 'black',
+                'color' : 'white'
+            })
+        })
+        $("#btn").on({
+            mouseenter : function(){
+                $("#header").css({
+                    'background-color': 'red',
+                     'color':'white'
+                })
+            },
+            mouseleave : function(){
+                $("#header").css({
+                    'background-color': 'white',
+                    'color': 'black'
+                })
+            },
+            click : function(){
+                $("#header").css({
+                    'background' : 'black',
+                    'color' : 'white'
+                })
+            }
+        })*/
+    </script>
+</body>
+</html>
