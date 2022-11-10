@@ -3,8 +3,7 @@ new Vue({
     data:{
         todo:"",
         todos:[
-            {'text':'List One', 'status': false},
-            {'text':'List Two', 'status': false},
+            
         ]
     },
     methods:{
