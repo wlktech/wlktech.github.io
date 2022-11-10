@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoLists</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b829c5162c.js" crossorigin="anonymous"></script>
+    
+<!-- Start Emoji Set -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emoji-picker/1.3.0/css/emoji.min.css" integrity="sha512-RB5S8EZDBVvQlNJIQNLCMBE/1QzTkmRf+QoYNdOpPu2hIfxvNC/emRQkhiPR0qmya7eYDX+C+hKnp70b0mq49w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- End Emoji Set -->
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-white">
+     <div class="container-fluid" id="app">
+        <div class="col-md-6 offset-3 mt-5">
+            <div class="row">
+                <div class="col-md-10">
+                    <p class="lead emoji-picker-container"><input type="text" class="form-control" v-model="todo" id="exampleFormControlInput1" placeholder="Add To Do List" data-emojiable="true"></p>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-outline-success" @click="addList" type="button"><i class="fa-solid fa-circle-plus"></i></button>
+                </div>
+            </div>
+            <ul class="list-group mt-5">
+                <li v-for="(value, index) in todos" class="list-group-item" :class="{checked:value.status}">{{value.text}}
+                    <span class="float-end" id="pointer"> <input type="checkbox" @click="edit(index)"> <span @click="del(index)"><i class="fa-solid fa-trash text-danger"></i></span></span>
+                </li>
+            </ul>
+        </div>
+     </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- Start Emoji picker JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/emoji-picker/1.3.0/js/emoji-picker.min.js" integrity="sha512-YfxG/O/w/NLRY0pZ8TfuIZVefdDVyN8MOzfyvieoCQ++vj8+W9RUE3oiCqPCdvSJ3UDliy4WPyWutdewPqHgYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/emoji-picker/1.3.0/js/config.min.js" integrity="sha512-r8isdUY8nkGT61qxytdX+vHOwi6jS2WeHUm83GP0kuSnhTE5jAkaIf7mNGTGvjf+fHlxRRfheuLo/qCF6LRDBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/emoji-picker/1.3.0/js/jquery.emojiarea.min.js" integrity="sha512-1wWWpAV8kc1/vC5QF7xPvwvQ2oCjVW8Z8iyH/IBH9ugmeY0kAkjaufsm+EZmFtFDrMy/VIKlJ1nn+K5i+2PCYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/emoji-picker/1.3.0/js/util.min.js" integrity="sha512-A0yozCADB3wk+jbrMLimMR6+7zPhbOMDNpKYMpapT7fqxuxSQ0b60PdZuZK4ryW4gTUaiouwhcV2PAKcNyOLoA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- End Emoji picker JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

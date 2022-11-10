@@ -1,0 +1,9 @@
+.checked{
+    text-decoration: line-through;
+}
+/* .fa-circle-plus{
+    font-size: 10px;
+} */
+#pointer{
+    cursor: pointer;
+}
