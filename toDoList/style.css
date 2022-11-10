@@ -36,6 +36,7 @@ body{
 #input::placeholder{
     color: #bbb;
 }
+
 ul{
     list-style: none;
     margin: 0;
@@ -48,21 +49,29 @@ ul li{
     border-radius: 50px;
     margin: 10px 0;
     padding: 10px;
+
 }
 ul .fa-check, .fa-trash{
-    position: absolute;
+    /* position: absolute; */
+    margin-left: 10px;
     cursor: pointer;
 }
 ul .fa-check{
-    right: 850px;
+    /* right: 36%; */
     color: green;
 }
 ul .fa-trash{
-    right: 830px;
+    /* right: 33%; */
     color: #ff0033;
 }
 ul .checked{
     background: lightgreen;
     text-decoration: line-through;
     transition: .2s;
-}
+} 
+
+/* .row1{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+} */
