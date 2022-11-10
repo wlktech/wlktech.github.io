@@ -28,7 +28,7 @@
             </div>
             <ul class="list-group mt-5">
                 <li v-for="(value, index) in todos" class="list-group-item" :class="{checked:value.status}">{{value.text}}
-                    <span class="float-end" id="pointer"> <input type="checkbox" @click="edit(index)"> <span @click="del(index)"><i class="fa-solid fa-trash text-danger"></i></span></span>
+                    <span class="float-end" id="pointer"> <input type="checkbox" @click="edit(index)"> <span @click="deleteList(index)"><i class="fa-solid fa-trash text-danger"></i></span></span>
                 </li>
             </ul>
      </div>

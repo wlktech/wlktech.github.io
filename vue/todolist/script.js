@@ -19,8 +19,10 @@ new Vue({
                 this.todos[index].status = false;
             }
         },
-        del:function(index){
-            this.todos.splice(index);
+        deleteList:function(index){
+            this.todos.splice(index,1);
+            //this.todos.$remove(index);
+            //console.log(this.todos[index]);
 
         }
     }
