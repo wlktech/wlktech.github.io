@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Components</title>
+</head>
+<body>
+    <div id="app-one">
+        <hi></hi>
+    </div>
+    
+    <div id="app-two">
+        <hi></hi>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        Vue.component("hi",{
+            template:"<p>I am Hi Tag {{name}} <button @click=clickMe()>Click</button></p>",
+            data: function(){
+                return {
+                    name: "Kyaw Kyaw"
+                }
+            },
+            methods: {
+                clickMe:function(){
+                    return this.name = 'Kyaw Kyaw Change';
+                }
+            }
+        })
+
+        var obj1 = new Vue({
+            el: "#app-one",
+            data: {
+
+            },
+            methods:{
+
+            }
+        });
+        var obj2 = new Vue({
+            el: "#app-two",
+            data: {
+
+            },
+            methods:{
+
+            }
+        })
+    </script>
+</body>
+</html>

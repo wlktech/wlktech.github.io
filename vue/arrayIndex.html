@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Index</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(todo, index) in toDo" @click="change(index)">
+                {{todo}}
+            </li>
+        </ul>
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                toDo:[
+                    "Mg Mg",
+                    "Aung Aung",
+                    "Tun Tun"
+                ]
+            },
+            methods:{
+                change: function(index){
+                    //console.log(index);
+                    console.log(this.toDo[index]);
+                }
+            }
+        })
+    </script>
+</body>
+</html>

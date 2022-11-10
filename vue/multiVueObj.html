@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app-one">
+        {{name}}
+        <button @click="changeName()">Change</button>
+    </div>
+    <div id="app-two">
+        {{name}}
+        <button @click="changeName()">Change</button>
+
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        var obj1 = new Vue({
+            el: '#app-one',
+            data:{
+                name: "Aung Aung"
+            },
+            methods:{
+                changeName: function(){
+                    return this.name = 'Mg Mg'
+                }
+            },
+            computed:{
+
+            }
+        });
+
+        var obj2 = new Vue({
+            el: '#app-two',
+            data:{
+                name: "Mg Mg"
+                
+            },
+            methods:{
+                changeName: function(){
+                    return this.name = 'Aung Aung'
+                }
+            },
+            computed:{
+
+            }
+        })
+    </script>
+</body>
+</html>

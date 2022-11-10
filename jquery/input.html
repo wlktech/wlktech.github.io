@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Value</title>
+</head>
+<body>
+
+        <input type="number" name="length" id="length" placeholder="Enter your length: ">
+        <input type="number" name="breadth" id="breadth" placeholder="Enter your breadth: "><br><br>
+        <div class="unit">
+            <label for="unit">Sq-Feet</label>
+            <input type="radio" name="unit" value="sq-ft"><br>
+            <label for="unit">Sq-Meter</label>
+            <input type="radio" name="unit" value="sq-m"><br>
+            <label for="unit">Sq-Centimeter</label>
+            <input type="radio" name="unit" value="sq-cm"><br><br>
+        </div>
+        <button id="submit">Submit</button>
+
+
+    
+    <h2 id="header"></h2>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#submit").click(function(){
+                let length = $("#length").val();
+                let breadth = $("#breadth").val();
+                let unit = $('input:radio[name=unit]:checked').val();
+                //console.log(unit);
+                let area = length * breadth + unit;
+                $("#header").text("Answer is "+area);
+            })
+        })
+    </script>
+</body>
+</html>

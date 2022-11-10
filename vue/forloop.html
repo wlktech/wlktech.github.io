@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <div id="app">
+        <h2>For Loop</h2>
+        <ul>
+            <li v-for="user in users">{{user}}</li>
+        </ul>
+
+        <ul>
+            <li v-for="userlist in userlists">
+                {{userlist.name}}
+                {{userlist.age}}
+            </li>
+        </ul>
+
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data:{
+                users:[
+                'Aung Aung',
+                'Mg Mg',
+                'Tun Tun',
+                'Kyaw Kyaw'
+                ],
+                userlists:[
+                {name: 'Aung Aung', age: 22},
+                {name: 'Mg Mg', age: 23},
+                {name: 'Tun Tun', age: 24},
+                {name: 'Kyaw Kyaw', age: 25}
+
+                ]
+
+            },
+
+        })
+    </script>
+</body>
+</html>

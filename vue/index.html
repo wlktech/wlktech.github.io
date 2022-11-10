@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{ name }} is {{ job }}.
+        {{ doSomething("Wai Linn Kyaw") }}
+        {{ eat() }}
+        <a v-bind:href=website>VueJs</a>
+        <p v-html=tag></p> 
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app", //for elements
+            data:{ //properties
+                name: "Wai Linn Kyaw",
+                job: "Web Developer",
+                website: "https://v2.vuejs.org/", //data binding
+                tag: "<a href='https://v2.vuejs.org/' target='__blank'> Link To VueJs</a>"
+            },
+            //method
+            methods:{
+                doSomething:function(username){
+                    return username;
+                },
+                eat:function(){
+                    return "I am eating";
+                }
+            }
+        })//Vue instance
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event for VueJS</title>
+</head>
+<body>
+    <div id="app">
+        {{ count }}
+        <button v-on:click=add @mouseover=mouseoverMethod>Add</button>
+        <button @click=reset>Reset</button>
+        <button @click=substract>Substract</button>
+        <a href="https://v2.vuejs.org/" @click.prevent=doSomething>VueJS Link</a>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            data:{
+                count:20,
+            },
+            methods:{
+                add:function(){
+                    this.count++;
+                },
+                substract:function(){
+                    this.count--;
+                },
+                reset: function(){
+                    this.count=0;
+                },
+                mouseoverMethod: function(){
+                    console.log('mouseover');
+                }, 
+                doSomething: function(){
+                    alert("Hello");
+                }
+                
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computed Properties</title>
+</head>
+<body>
+    <div id="app">
+        {{x}}
+        {{y}}
+        <button @click="x++">Add x</button>
+        <button @click="y++">Add y</button>
+        {{increateX}}
+        {{increateY}}
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                x: 0,
+                y: 0,
+            },
+            computed:{
+                increateX:function(){
+                    return this.x;
+                },
+                increateY:function(){
+                    return this.y;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
