@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            margin: auto;
+            width: 50%;
+            background-color: rgb(113, 3, 141);
+            min-height: 100vh;
+            color: white;
+
+        }
+        h2{
+            padding-top: 30px;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            padding: 30px 220px;
+        }
+        .label, .input{
+            margin-top: 20px;
+        }
+        label{
+            line-height: 50px;
+            font-size: 20px;
+        }
+        input{
+            width: 300px;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            padding: 0px 10px;
+        }
+        input::placeholder{
+            color: green;
+            font-size: 18px;
+        }
+        #btn{
+            margin-top: 20px;
+            width: 100px;
+            height: 50px;
+            font-size: 19px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .table{
+            margin: auto;
+            margin-top: 50px;
+        }
+        table{
+            width: 90%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        thead{
+            background-color: black;
+            height: 50px;
+        }
+        tbody{
+            background-color: gray;
+        }
+        tfoot{
+            background-color: rgb(47, 0, 128);
+            height: 50px;
+        }
+        ul{
+            list-style: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 align="center">Exam Result</h2>
+        <div class="row">
+            <div class="label">
+                <label for="name">Name:</label>
+            </div>
+            <div class="input">
+                <input type="text" id="name" placeholder="Enter your name: " name="name"><br>
+                <small id="nameCheck" style="color:red;"></small>
+            </div>
+            <div class="label">
+                <label for="myanMark">Myanmar Marks:</label>
+            </div>
+            <div class="input">
+                <input type="number" id="myanMark" placeholder="Enter your myanmar mark: " name="myanMark"><br>
+                <small id="myanMarkCheck" style="color:red;"></small>
+            </div>
+            <div class="label">
+                <label for="engMark">English Marks:</label>
+            </div>
+            <div class="input">
+                <input type="number" id="engMark" placeholder="Enter your english mark: " name="engMark"><br>
+                <small id="engMarkCheck" style="color:red;"></small>
+            </div>
+            <div class="label">
+                <label for="mathMark">Mathematics Marks:</label>
+            </div>
+            <div class="input">
+                <input type="number" id="mathMark" placeholder="Enter your mathematics mark: " name="mathMark"><br>
+                <small id="mathMarkCheck" style="color:red;"></small>
+            </div>
+            <div class="label">
+                <label for="phyMark">Physics Marks:</label>
+            </div>
+            <div class="input">
+                <input type="number" id="phyMark" placeholder="Enter your physics mark: " name="phyMark"><br>
+                <small id="phyMarkCheck" style="color:red;"></small>
+            </div>
+            <div class="label">
+                <label for="cheMark">Chemistry Marks:</label>
+            </div>
+            <div class="input">
+                <input type="number" id="cheMark" placeholder="Enter your chemistry mark: " name="cheMark">
+                <small id="cheMarkCheck" style="color:red;"></small>
+            </div>
+            <div class="label">
+                <label for="bioMark">Biology Marks:</label>
+            </div>
+            <div class="input">
+                <input type="number" id="bioMark" placeholder="Enter your biology mark: " name="bioMark">
+                <small id="bioMarkCheck" style="color:red;"></small>
+            </div>
+            <p id="warning" style="color: red;"></p>
+        </div>
+        <div class="button" align="center">
+            <button type="button" id="btn">Submit</button>
+        </div>
+        <div class="table" align="center">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>Myanmar</th>
+                        <th>English</th>
+                        <th>Mathematics</th>
+                        <th>Physics</th>
+                        <th>Chemistry</th>
+                        <th>Biology</th>
+                        <th>Total Mark</th>
+                    </tr>
+                </thead>
+                <tbody id="myData">
+                    <tr>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <ul id="passFail">
+            
+        </ul>
+    </div>
+
+    
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function(){
+            let no = 0;
+            $('#btn').click(function(){
+                //alert('Hello')
+                no++;
+                let name = $('#name').val();
+                let myanMark = parseInt($('#myanMark').val());
+                let engMark = parseInt($('#engMark').val());
+                let mathMark = parseInt($('#mathMark').val());
+                let phyMark = parseInt($('#phyMark').val());
+                let cheMark = parseInt($('#cheMark').val());
+                let bioMark = parseInt($('#bioMark').val());
+                let totalMark = myanMark+engMark+mathMark+phyMark+cheMark+bioMark;
+
+                $('#result').html = totalMark;
+
+                //Validation Check
+                if(name =="" || myanMark == "0" || engMark == "0" || mathMark == "0" || phyMark == "0" || cheMark == "0" || bioMark == "0"){
+                    $("#warning").text('Please fill all the blank');
+                }
+                
+
+
+
+                //Pass or Fail Check
+                if(myanMark >= 70 && engMark >=75 && mathMark >= 80 && phyMark >= 80 && cheMark >= 80 && bioMark >= 75){
+                    let result = $('#passFail').text(`${name} has passed the Exam with All Ds.`);
+                }else if(myanMark >= 70 && engMark < 75 && mathMark < 80 && phyMark < 80 && cheMark < 80 && bioMark < 75){
+                    let result = $('#passFail').text(`${name} has passed the Exam with Myanmar Distinction.`)
+                }else if(myanMark < 70 && engMark >= 75 && mathMark < 80 && phyMark < 80 && cheMark < 80 && bioMark < 75){
+                    let result = $('#passFail').text(`${name} has passed the Exam with English Distinction.`)
+                }else if(myanMark < 70 && engMark < 75 && mathMark >= 80 && phyMark < 80 && cheMark < 80 && bioMark < 75){
+                    let result = $('#passFail').text(`${name} has passed the Exam with Mathematic Distinction.`)
+                }else if(myanMark < 70 && engMark < 75 && mathMark < 80 && phyMark >= 80 && cheMark < 80 && bioMark < 75){
+                    let result = $('#passFail').text(`${name} has passed the Exam with Physics Distinction.`)
+                }else if(myanMark < 70 && engMark < 75 && mathMark < 80 && phyMark < 80 && cheMark >= 80 && bioMark < 75){
+                    let result = $('#passFail').text(`${name} has passed the Exam with Chemistry Distinction.`)
+                }else if(myanMark < 70 && engMark < 75 && mathMark < 80 && phyMark > 80 && cheMark < 80 && bioMark >= 75){
+                    let result = $('#passFail').text(`${name} has passed the Exam with Biology Distinction.`)
+                }else if(myanMark >= 40 && engMark >= 40 && mathMark >= 40 && phyMark >= 40 && cheMark >= 40 && bioMark >= 40){
+                    let result = $('#passFail').text(`${name} has passed the Exam.`)
+                }else{
+                    let result = $('#passFail').text(`${name} has failed the Exam.`)
+                }
+                //$("#passFail").append('<li>'+result+'</li>')
+                $('#myData').append('<tr><td>' + no + '</td>' + '<td>' + name + '</td>' + '<td>' + myanMark + '</td>' + '<td>' + engMark + '</td>' + '<td>' + mathMark + '</td>' + '<td>' + phyMark + '</td>' + '<td>' + cheMark + '</td>' + '<td>' + bioMark + '</td>'+ '<td>' + totalMark + '</td></tr>');
+                $("#passFail").append(`<li>${result}</li>`)
+            })
+        })
+    </script>
+</body>
+</html>

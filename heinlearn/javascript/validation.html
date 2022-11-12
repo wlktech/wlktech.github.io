@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <style>
+        *{
+            padding: 0;margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 600px;
+            min-height: 100vh;
+            background-color: rgb(253, 117, 117);
+            color: rgb(255, 255, 255);
+            margin: auto;
+        }
+        h2{
+            padding-top: 20px;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            padding: 50px 50px 0px 50px;
+        }
+        input{
+            width: 250px;
+            height: 30px;
+            border-radius: 9px;
+            outline: none;
+            border: none;
+        }
+        #submit{
+            width: 100px;
+            cursor: pointer;
+        }
+        label{
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 600;
+        }
+        .col{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 align="center">SignUp Form</h2>
+        <form action="action.php" name="myForm">
+            <div class="row">
+                <div class="col">
+                    <label for="">Name:</label>
+                </div>
+                <div class="col">
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="col">
+                    <label for="">Password:</label>
+                </div>
+                <div class="col">
+                    <input type="password" name="password" id="password">
+                </div>
+                <div class="col">
+                    <label for="">Confirm Password:</label>
+                </div>
+                <div class="col">
+                    <input type="password" name="cpassword" id="cpassword">
+                </div>
+                <p id="warning"></p>
+                <div class="col">
+                    <input type="submit" onclick="submit()" id="submit" value="Submit">
+                </div>
+            </div>
+                
+        </form>
+    </div>
+
+    <script>
+        function submit(){
+            alert("Hello")
+            let name = document.myForm.name.value;
+            console.log(name)
+            let password = document.myForm.password.value;
+            console.log(password)
+            let cpassword = document.myForm.cpassword.value;
+            console.log(cpassword)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Property And Method</h1>
+    <h2 id="createTextNode"></h2>
+    <button onclick="createText()">Create Text Node</button><br><br>
+    <button onclick="createElementTag()">Create Element Tag</button>
+
+    <p id="set_attribute">This is set attribute</p>
+    <button onclick="set_attribute()">Create Element Tag</button>
+
+    <script>
+        function createText(){
+            let createTextNodeValue = document.createTextNode('This is Text Node');
+            let createTextNodeSelector = document.getElementById('createTextNode');
+            createTextNodeSelector.appendChild(createTextNodeValue);
+        }
+
+        function createElementTag(){
+            let h3 = document.createElement('h3');
+            h3.innerHTML = 'This is Create Element';
+            document.body.appendChild(h3)
+        }
+
+        function set_attribute(){
+            let setAttributeSelector = document.querySelector('#set_attribute');
+            setAttributeSelector.setAttribute('style', 'background-color: red')
+        }
+
+         
+    </script>
+</body>
+</html>
