@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            margin: auto;
+            width: 50%;
+            background-color: rgb(113, 3, 141);
+            min-height: 100vh;
+            color: white;
+
+        }
+        h2{
+            padding-top: 30px;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            padding: 30px 220px;
+        }
+        .label, .input{
+            margin-top: 20px;
+        }
+        label{
+            line-height: 50px;
+            font-size: 20px;
+        }
+        input{
+            width: 300px;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            padding: 0px 10px;
+            font-size: 18px;
+        }
+        input::placeholder{
+            color: green;
+            font-size: 18px;
+        }
+        #btn{
+            margin-top: 20px;
+            width: 100px;
+            height: 50px;
+            font-size: 19px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .table{
+            margin: auto;
+            margin-top: 50px;
+        }
+        table{
+            width: 90%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        thead{
+            background-color: black;
+            height: 50px;
+        }
+        tbody{
+            background-color: gray;
+        }
+        tfoot{
+            background-color: rgb(47, 0, 128);
+            height: 50px;
+        }
+        ul{
+            list-style: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 align="center">Exam Result</h2>
+        <div class="row">
+            <div class="label">
+                <label for="name">Name:</label>
+            </div>
+            <div class="input">
+                <input type="text" id="name" placeholder="Enter your name: " name="name"><br>
+                <small id="nameCheck" style="color:red;"></small>
+            </div>
+            <div class="label">
+                <label for="myanMark">Myanmar Marks:</label>
+            </div>
+            <div class="input">
+                <input type="number" id="myanMark" placeholder="Enter your myanmar mark: " name="myanMark"><br>
+                <small id="myanMarkCheck" style="color:red;"></small>
+            </div>
+            <div class="label">
+                <label for="engMark">English Marks:</label>
+            </div>
+            <div class="input">
+                <input type="number" id="engMark" placeholder="Enter your english mark: " name="engMark"><br>
+                <small id="engMarkCheck" style="color:red;"></small>
+            </div>
+            <div class="label">
+                <label for="mathMark">Mathematics Marks:</label>
+            </div>
+            <div class="input">
+                <input type="number" id="mathMark" placeholder="Enter your mathematics mark: " name="mathMark"><br>
+                <small id="mathMarkCheck" style="color:red;"></small>
+            </div>
+            <div class="label">
+                <label for="phyMark">Physics Marks:</label>
+            </div>
+            <div class="input">
+                <input type="number" id="phyMark" placeholder="Enter your physics mark: " name="phyMark"><br>
+                <small id="phyMarkCheck" style="color:red;"></small>
+            </div>
+            <div class="label">
+                <label for="cheMark">Chemistry Marks:</label>
+            </div>
+            <div class="input">
+                <input type="number" id="cheMark" placeholder="Enter your chemistry mark: " name="cheMark"><br>
+                <small id="cheMarkCheck" style="color:red;"></small>
+            </div>
+            <div class="label">
+                <label for="bioMark">Biology Marks:</label>
+            </div>
+            <div class="input">
+                <input type="number" id="bioMark" placeholder="Enter your biology mark: " name="bioMark"><br>
+                <small id="bioMarkCheck" style="color:red;"></small>
+            </div>
+            <p id="warning" style="color: red;"></p>
+        </div>
+        <div class="button" align="center">
+            <button type="button" id="btn" onclick="result()">Submit</button>
+        </div>
+        <div class="table" align="center">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>Myanmar</th>
+                        <th>English</th>
+                        <th>Mathematics</th>
+                        <th>Physics</th>
+                        <th>Chemistry</th>
+                        <th>Biology</th>
+                        <th>Total Mark</th>
+                    </tr>
+                </thead>
+                <tbody id="myData">
+
+                </tbody>
+            </table>
+        </div>
+        <ul id="passFail">
+            
+        </ul>
+    </div>
+
+
+    <script>
+        let no = 0;
+        let subjectMarkArrayList=[];
+        function result(){
+            no += 1;
+            let name = document.getElementById('name');
+            let myanMark = document.getElementById('myanMark');
+            let engMark = document.getElementById('engMark');
+            let mathMark= document.getElementById('mathMark');
+            let phyMark = document.getElementById('phyMark');
+            let cheMark = document.getElementById('cheMark');
+            let bioMark = document.getElementById('bioMark');
+            let total = parseInt(myanMark+engMark+mathMark+phyMark+cheMark+bioMark);
+
+
+            if(name.value == "" || myanMark.value == "" || engMark.value == "" || mathMark.value == "" || phyMark.value == "" || cheMark.value == "" || bioMark.value == ""){
+                document.getElementById('nameCheck').innerText = "**Fill out name blank";
+                name.style.border='1px solid red';
+                document.getElementById('myanMarkCheck').innerText = "**Fill out myanmar blank";
+                myanMark.style.border='2px solid red';
+                document.getElementById('engMarkCheck').innerText = "**Fill out english blank";
+                engMark.style.border='2px solid red';
+                document.getElementById('mathMarkCheck').innerText = "**Fill out mathematics blank";
+                mathMark.style.border='2px solid red';
+                document.getElementById('phyMarkCheck').innerText = "**Fill out physics blank";
+                phyMark.style.border='2px solid red';
+                document.getElementById('cheMarkCheck').innerText = "**Fill out chemisty blank";
+                cheMark.style.border='2px solid red';
+                document.getElementById('bioMarkCheck').innerText = "**Fill out biology blank";
+                bioMark.style.border='2px solid red';
+            }else{
+                document.getElementById('myData').append=`<tr><td>${no}</td><td>${name}</td><td>${myanMark}</td><td>${engMark}</td><td>${mathMark}</td><td>${phyMark}</td><td>${cheMark}</td><td>${bioMark}</td><td>${total}</td></tr>`;
+            }
+
+
+
+        }
+        
+    </script>
+</body>
+</html>

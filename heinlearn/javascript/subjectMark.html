@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Mark</title>
+</head>
+<body>
+    <h1>Subject Mark Checklists</h1>
+    <form action="" name="myForm">
+        <div class="row">
+            <div class="col">
+                Name :
+            </div>
+            <div class="col">
+                <input type="text" name="name" id="name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Myanmar Mark :
+            </div>
+            <div class="col">
+                <input type="number" name="myanMark">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                English Mark :
+            </div>
+            <div class="col">
+                <input type="number" name="engMark">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Mathematics Mark :
+            </div>
+            <div class="col">
+                <input type="number" name="mathMark">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Physics Mark :
+            </div>
+            <div class="col">
+                <input type="number" name="phyMark">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Chemistry Mark :
+            </div>
+            <div class="col">
+                <input type="number" name="cheMark">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Biology Mark :
+            </div>
+            <div class="col">
+                <input type="number" name="bioMark">
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col">
+                Total :
+            </div>
+            <div class="col">
+                <input type="number" name="total">
+            </div>
+        </div> -->
+        <div class="btn">
+            <button type="button" onclick="showData()">Submit</button>
+        </div>
+    </form>
+    <h2>Subject Record</h2>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <td>No</td>
+                <td>Name</td>
+                <td>Myanmar</td>
+                <td>English</td>
+                <td>Mathematics</td>
+                <td>Physics</td>
+                <td>Chemistry</td>
+                <td>Biology</td>
+                <td>Total</td>
+            </tr>
+        </thead>
+        <tbody id="myData">
+
+        </tbody>
+    </table>
+    <script>
+        let subjectMarkList = [];
+        function showData(){
+            //alert('ok')
+            //get Data
+            let name = document.myForm.name.value;
+            let myanMark = parseInt(document.myForm.myanMark.value);
+            let engMark = parseInt(document.myForm.engMark.value);
+            let mathMark = parseInt(document.myForm.mathMark.value);
+            let phyMark = parseInt(document.myForm.phyMark.value);
+            let cheMark = parseInt(document.myForm.cheMark.value);
+            let bioMark = parseInt(document.myForm.bioMark.value);
+            let total = myanMark+engMark+mathMark+phyMark+cheMark+bioMark;
+            //console.log(date);
+            //console.log(amount);
+            //console.log(total);
+
+            //add to array
+            let subjectMark = {
+                stuName : name,
+                myanMark : myanMark,
+                engMark : engMark,
+                mathMark : mathMark,
+                phyMark : phyMark,
+                cheMark : cheMark,
+                bioMark : bioMark,
+                Total : total
+            }
+            //console.log(expense);
+            subjectMarkList.push(subjectMark);
+            //console.log(subjectMarkList)
+            let data = '';
+        for(let i = 0; i < subjectMarkList.length; i++){
+            let subjectMark = subjectMarkList[i];
+            data = data + `
+            <tr>
+                <td>${i+1}</td>
+                <td>${subjectMark.stuName}</td>
+                <td>${subjectMark.myanMark}</td>
+                <td>${subjectMark.engMark}</td>
+                <td>${subjectMark.mathMark}</td>
+                <td>${subjectMark.phyMark}</td>
+                <td>${subjectMark.cheMark}</td>
+                <td>${subjectMark.bioMark}</td>
+                <td>${subjectMark.Total}</td>
+            </tr>
+            `;
+            //grand += parseInt(subjectMark.Total);
+            //document.getElementById('grand').innerHTML = grand;
+        }
+        document.getElementById('myData').innerHTML = data;
+        }
+    </script>
+</body>
+</html>

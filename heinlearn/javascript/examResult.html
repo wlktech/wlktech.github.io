@@ -41,6 +41,7 @@
             border: none;
             border-radius: 10px;
             padding: 0px 10px;
+            font-size: 18px;
         }
         input::placeholder{
             color: green;
@@ -80,6 +81,7 @@
             text-align: center;
             margin-top: 20px;
         }
+
     </style>
 </head>
 <body>
@@ -172,6 +174,7 @@
 
 
 
+
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
         $(function(){
@@ -192,37 +195,62 @@
 
                 //Validation Check
                 if(name =="" || myanMark == "0" || engMark == "0" || mathMark == "0" || phyMark == "0" || cheMark == "0" || bioMark == "0"){
-                    $("#warning").text('Please fill all the blank');
+                    //$("#warning").text('Please fill all the blank');
+                    //document.getElementById("name").style.border('1px solid red');
+                    $("#name").css('border', '3px solid red');
+                    $("#myanMark").css('border', '3px solid red');
+                    $("#engMark").css('border', '3px solid red');
+                    $("#mathMark").css('border', '3px solid red');
+                    $("#phyMark").css('border', '3px solid red');
+                    $("#cheMark").css('border', '3px solid red');
+                    $("#bioMark").css('border', '3px solid red');
+                }else{
+                    $(function(){
+                        $("name").css('border', 'none');
+                    })
+                    //Pass or Fail Check
+                    if(myanMark >= 70 && engMark >=75 && mathMark >= 80 && phyMark >= 80 && cheMark >= 80 && bioMark >= 75){
+                        let result = $('#passFail').text(`${name} has passed the Exam with All Ds.`);
+                    }else if(myanMark >= 70 && engMark < 75 && mathMark < 80 && phyMark < 80 && cheMark < 80 && bioMark < 75){
+                        let result = $('#passFail').text(`${name} has passed the Exam with Myanmar Distinction.`)
+                    }else if(myanMark < 70 && engMark >= 75 && mathMark < 80 && phyMark < 80 && cheMark < 80 && bioMark < 75){
+                        let result = $('#passFail').text(`${name} has passed the Exam with English Distinction.`)
+                    }else if(myanMark < 70 && engMark < 75 && mathMark >= 80 && phyMark < 80 && cheMark < 80 && bioMark < 75){
+                        let result = $('#passFail').text(`${name} has passed the Exam with Mathematic Distinction.`)
+                    }else if(myanMark < 70 && engMark < 75 && mathMark < 80 && phyMark >= 80 && cheMark < 80 && bioMark < 75){
+                        let result = $('#passFail').text(`${name} has passed the Exam with Physics Distinction.`)
+                    }else if(myanMark < 70 && engMark < 75 && mathMark < 80 && phyMark < 80 && cheMark >= 80 && bioMark < 75){
+                        let result = $('#passFail').text(`${name} has passed the Exam with Chemistry Distinction.`)
+                    }else if(myanMark < 70 && engMark < 75 && mathMark < 80 && phyMark > 80 && cheMark < 80 && bioMark >= 75){
+                        let result = $('#passFail').text(`${name} has passed the Exam with Biology Distinction.`)
+                    }else if(myanMark >= 40 && engMark >= 40 && mathMark >= 40 && phyMark >= 40 && cheMark >= 40 && bioMark >= 40){
+                        let result = $('#passFail').text(`${name} has passed the Exam.`)
+                    }else{
+                        let result = $('#passFail').text(`${name} has failed the Exam.`)
+                    }
+
+                    //$("#passFail").append('<li>'+result+'</li>')
+                    $('#myData').append('<tr><td>' + no + '</td>' + '<td>' + name + '</td>' + '<td>' + myanMark + '</td>' + '<td>' + engMark + '</td>' + '<td>' + mathMark + '</td>' + '<td>' + phyMark + '</td>' + '<td>' + cheMark + '</td>' + '<td>' + bioMark + '</td>'+ '<td>' + totalMark + '</td></tr>');
+                    $("#passFail").append(`<li>${result}</li>`)
                 }
                 
 
 
 
-                //Pass or Fail Check
-                if(myanMark >= 70 && engMark >=75 && mathMark >= 80 && phyMark >= 80 && cheMark >= 80 && bioMark >= 75){
-                    let result = $('#passFail').text(`${name} has passed the Exam with All Ds.`);
-                }else if(myanMark >= 70 && engMark < 75 && mathMark < 80 && phyMark < 80 && cheMark < 80 && bioMark < 75){
-                    let result = $('#passFail').text(`${name} has passed the Exam with Myanmar Distinction.`)
-                }else if(myanMark < 70 && engMark >= 75 && mathMark < 80 && phyMark < 80 && cheMark < 80 && bioMark < 75){
-                    let result = $('#passFail').text(`${name} has passed the Exam with English Distinction.`)
-                }else if(myanMark < 70 && engMark < 75 && mathMark >= 80 && phyMark < 80 && cheMark < 80 && bioMark < 75){
-                    let result = $('#passFail').text(`${name} has passed the Exam with Mathematic Distinction.`)
-                }else if(myanMark < 70 && engMark < 75 && mathMark < 80 && phyMark >= 80 && cheMark < 80 && bioMark < 75){
-                    let result = $('#passFail').text(`${name} has passed the Exam with Physics Distinction.`)
-                }else if(myanMark < 70 && engMark < 75 && mathMark < 80 && phyMark < 80 && cheMark >= 80 && bioMark < 75){
-                    let result = $('#passFail').text(`${name} has passed the Exam with Chemistry Distinction.`)
-                }else if(myanMark < 70 && engMark < 75 && mathMark < 80 && phyMark > 80 && cheMark < 80 && bioMark >= 75){
-                    let result = $('#passFail').text(`${name} has passed the Exam with Biology Distinction.`)
-                }else if(myanMark >= 40 && engMark >= 40 && mathMark >= 40 && phyMark >= 40 && cheMark >= 40 && bioMark >= 40){
-                    let result = $('#passFail').text(`${name} has passed the Exam.`)
-                }else{
-                    let result = $('#passFail').text(`${name} has failed the Exam.`)
-                }
-                //$("#passFail").append('<li>'+result+'</li>')
-                $('#myData').append('<tr><td>' + no + '</td>' + '<td>' + name + '</td>' + '<td>' + myanMark + '</td>' + '<td>' + engMark + '</td>' + '<td>' + mathMark + '</td>' + '<td>' + phyMark + '</td>' + '<td>' + cheMark + '</td>' + '<td>' + bioMark + '</td>'+ '<td>' + totalMark + '</td></tr>');
-                $("#passFail").append(`<li>${result}</li>`)
+                
+                
             })
         })
+        function change(){
+            document.getElementById("name").style.border("none");
+            document.getElementById("myanMark").style.border("none");
+            document.getElementById("engMark").style.border("none");
+            document.getElementById("mathMark").style.border("none");
+            document.getElementById("phyMark").style.border("none");
+            document.getElementById("cheMark").style.border("none");
+            document.getElementById("bioMark").style.border("none");
+
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Result</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 50%;
+            min-height: 100vh;
+            background-color: blueviolet;
+            margin: auto;
+            text-align: center;
+            color: #fff;
+            padding-top: 60px;
+            
+        }
+        label{
+            font-size: 20px;
+            
+        }
+        input{
+            width: 300px;
+            height: 50px;
+            padding-left: 10px;
+            border-radius: 10px;
+            font-size: 19px;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            font-size: 15px;
+        }
+        span{
+            text-shadow: 2px 3px 4px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" placeholder="Enter your name: " required><br>
+            <span id="nameCheck" style="color: red;"></span><br><br>
+
+            <label for="myn">Myanmar: </label>
+            <input type="text" name="myn" id="myn" placeholder="Enter your myanmar mark: " required><br>
+            <span id="mynCheck" style="color: red;"></span><br><br>
+
+            <label for="eng">English: </label>
+            <input type="text" name="eng" id="eng" placeholder="Enter your english mark: " required><br>
+            <span id="engCheck" style="color: red;"></span><br><br>
+
+            <label for="math">Mathematics: </label>
+            <input type="text" name="math" id="math" placeholder="Enter your mathematics mark: " required><br>
+            <span id="mathCheck" style="color: red;"></span><br><br>
+
+            <label for="phy">Physics: </label>
+            <input type="text" name="phy" id="phy" placeholder="Enter your physics mark: " required><br>
+            <span id="phyCheck" style="color: red;"></span><br><br>
+
+            <label for="che">Chemistry: </label>
+            <input type="text" name="che" id="che" placeholder="Enter your chemistry mark: " required><br>
+            <span id="cheCheck" style="color: red;"></span><br><br>
+
+            <label for="bio">Biology: </label>
+            <input type="text" name="bio" id="bio" placeholder="Enter your biology mark: " required><br>
+            <span id="bioCheck" style="color: red;"></span><br><br>
+            <br><br>
+            <button type="submit" onclick="send()">Submit</button>
+
+    </div>
+
+
+    <script>
+        function send(){
+            let name = document.getElementById('name');
+            let myn = document.getElementById('myn');
+            let eng = document.getElementById('eng');
+            let math = document.getElementById('math');
+            let phy = document.getElementById('phy');
+            let che = document.getElementById('che');
+            let bio = document.getElementById('bio');
+
+            //console.log(name.value);
+            if(name.value =="" || myn.value == "" || eng.value == "" || math.value == "" || phy.value == "" || che.value == "" || bio.value == ""){
+                //alert('Hello')
+                document.getElementById('nameCheck').innerText = "**Fill out name blank";
+                name.style.border='1px solid red';
+                document.getElementById('mynCheck').innerText = "**Fill out myanmar blank";
+                myn.style.border='1px solid red';
+                document.getElementById('engCheck').innerText = "**Fill out english blank";
+                eng.style.border='1px solid red';
+                document.getElementById('mathCheck').innerText = "**Fill out mathematics blank";
+                math.style.border='1px solid red';
+                document.getElementById('phyCheck').innerText = "**Fill out physics blank";
+                phy.style.border='1px solid red';
+                document.getElementById('cheCheck').innerText = "**Fill out chemisty blank";
+                che.style.border='1px solid red';
+                document.getElementById('bioCheck').innerText = "**Fill out biology blank";
+                bio.style.border='1px solid red';
+            }else{
+                document.getElementById('nameCheck').hide();
+                name.style.border='none';
+                document.getElementById('mynCheck').hide();
+                myn.style.border='1px solid red';
+                document.getElementById('engCheck').innerText = "**Fill out english blank";
+                eng.style.border='1px solid red';
+                document.getElementById('mathCheck').innerText = "**Fill out mathematics blank";
+                math.style.border='1px solid red';
+                document.getElementById('phyCheck').innerText = "**Fill out physics blank";
+                phy.style.border='1px solid red';
+                document.getElementById('cheCheck').innerText = "**Fill out chemisty blank";
+                che.style.border='1px solid red';
+                document.getElementById('bioCheck').innerText = "**Fill out biology blank";
+                bio.style.border='1px solid red';
+            }
+            
+          }
+    </script>
+</body>
+</html>
