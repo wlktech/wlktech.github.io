@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: burlywood;
+    width: 90%;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 30px;
+}
+.sub h1{
+    margin: 10px 0px;
+}
+.sub .form{
+    margin-top: 10px;
+    padding: 50px 0px;
+    border-radius: 10px;
+
+    
+}
+.row{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;        
+}
+.col{
+    font-size: 20px;
+    color: rgb(77, 77, 77);
+}
+
+.col input{
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 10px;
+}
+.col input:focus{
+    outline: 0;
+}
+.col.success input{
+    border-color: #09c372;
+}
+.col .error{
+    margin-top: 10px;
+}
+.col.error input{
+    border-color: #ff3860;
+}
+.col.error{
+    color: #ff3860;
+    font-size: 12px;
+    height: 70px;
+}
+.btn{
+    margin-top: 20px;
+}
+.btn button{
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.sub table{
+    width: 90%;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    margin-top: 50px;
+    border-collapse: collapse;
+}
+.sub table tr{
+    height: 40px;
+}

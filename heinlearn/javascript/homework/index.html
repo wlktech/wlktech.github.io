@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Mark</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="main">
+            <div class="sub">
+                <h1 align="center">Subject Mark Checklists</h1>
+            <form action="" name="myForm" class="form" id="form">
+                <div class="row">
+                    <div class="col">
+                        Name :
+                    </div>
+                    <div class="col">
+                        <input type="text" name="name" id="name">
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Myanmar Mark :
+                    </div>
+                    <div class="col">
+                        <input type="number" name="myanMark" id="myanMark">
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        English Mark :
+                    </div>
+                    <div class="col">
+                        <input type="number" name="engMark" id="engMark">
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Mathematics Mark :
+                    </div>
+                    <div class="col">
+                        <input type="number" name="mathMark" id="mathMark">
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Physics Mark :
+                    </div>
+                    <div class="col">
+                        <input type="number" name="phyMark" id="phyMark">
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Chemistry Mark :
+                    </div>
+                    <div class="col">
+                        <input type="number" name="cheMark" id="cheMark">
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Biology Mark :
+                    </div>
+                    <div class="col">
+                        <input type="number" name="bioMark" id="bioMark">
+                        <div class="error"></div>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col">
+                        Total :
+                    </div>
+                    <div class="col">
+                        <input type="number" name="total">
+                    </div>
+                </div> -->
+                <div class="btn" align="center">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        
+
+        <div class="sub">
+            <h1 align="center">Subject Record</h1>
+            <table border="1" cellpadding="10">
+                <thead>
+                    <tr>
+                        <td>No</td>
+                        <td>Name</td>
+                        <td>Myanmar</td>
+                        <td>English</td>
+                        <td>Mathematics</td>
+                        <td>Physics</td>
+                        <td>Chemistry</td>
+                        <td>Biology</td>
+                        <td>Total</td>
+                    </tr>
+                </thead>
+                <tbody id="myData">
+
+                </tbody>
+                <tfoot id="result">
+
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    
+    
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
