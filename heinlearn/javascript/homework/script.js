@@ -81,6 +81,8 @@ const validateInputs = () =>{
     }else{
         setSuccess(bioMark);
     }
+
+    showData();
 }
 
 function showData(){
@@ -152,6 +154,4 @@ for(let i = 0; i < subjectMarkList.length; i++){
     }
 }
 document.getElementById('myData').innerHTML = data;
-
-
 }
