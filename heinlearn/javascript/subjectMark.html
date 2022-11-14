@@ -252,13 +252,30 @@
                     let biology = subjectMark.bioMark;
                     //let resultConditon = subjectMark.result;
         
-                    let resultArray = [];
-                    if(myanmar >= 40 || english >= 40 || mathematics >= 40 || physics >= 40 || chemistry >= 40 || biology >= 40){
-                        resultArray.push(`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam.</td></tr>`);    
+
+                    if(myanmar >= 40 && english >= 40 && mathematics >= 40 && physics >= 40 && chemistry >= 40 && biology >= 40){
                         document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam.</td></tr>`;
                     }else if(myanmar > 70 || english > 70 || mathematics > 80 || physics > 80 || chemistry > 80 || biology > 70){
-                        document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with distinction.</td></tr>`;
-                    }else{
+                        if(myanmar>=70 && english>=40 && mathematics>=40 && physics>=40 && chemistry>=40 && biology>=40){
+                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with Myanmar distinction.</td></tr>`;
+                        }else if(myanmar>=40 && english>=70 && mathematics>=40 && physics>=40 && chemistry>=40 && biology>=40){
+                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with English distinction.</td></tr>`;
+                        }else if(myanmar>=40 && english>=40 && mathematics>=70 && physics>=40 && chemistry>=40 && biology>=40){
+                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with Mathematics distinction.</td></tr>`;
+                        }else if(myanmar>=40 && english>=40 && mathematics>=40 && physics>=70 && chemistry>=40 && biology>=40){
+                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with Physics distinction.</td></tr>`;
+                        }else if(myanmar>=40 && english>=40 && mathematics>=40 && physics>=40 && chemistry>=70 && biology>=40){
+                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with Chemistry distinction.</td></tr>`;
+                        }
+                        else if(myanmar>=40 && english>=40 && mathematics>=40 && physics>=40 && chemistry>=40 && biology>=70){
+                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with Biology distinction.</td></tr>`;
+                        }else{
+                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with distinction.</td></tr>`;
+                        }
+                    }else if(myanmar<40 || english<40 || mathematics <40 || physics<40 |chemistry<40 || biology<40){
+                        document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has failed the Exam.</td></tr>`;
+                    }
+                    else{
                         document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has failed the Exam.</td></tr>`;
                     }
                     
