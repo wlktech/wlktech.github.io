@@ -5,100 +5,177 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subject Mark</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            display: grid;
+            grid-template-columns: auto auto;
+            background-color: burlywood;
+            width: 90%;
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 30px;
+        }
+        .sub h1{
+            margin: 10px 0px;
+        }
+        .sub .form{
+            margin-top: 10px;
+            padding: 50px 0px;
+            border-radius: 10px;
+
+            
+        }
+        .row{
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            width: 60%;
+            margin: auto;
+            margin-top: 10px;        
+        }
+        .col{
+            font-size: 20px;
+            color: rgb(77, 77, 77);
+        }
+       
+        .col input{
+            width: 250px;
+            height: 30px;
+            border-radius: 5px;
+            outline: none;
+            padding-left: 10px;
+        }
+        .btn{
+            margin-top: 20px;
+        }
+        .btn button{
+            width: 100px;
+            height: 40px;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+        .sub table{
+            width: 90%;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            font-size: 18px;
+            margin-top: 50px;
+            border-collapse: collapse;
+        }
+        .sub table tr{
+            height: 40px;
+        }
+
+
+    </style>
 </head>
 <body>
-    <h1>Subject Mark Checklists</h1>
-    <form action="" name="myForm">
-        <div class="row">
-            <div class="col">
-                Name :
-            </div>
-            <div class="col">
-                <input type="text" name="name" id="name"><p id="nameCheck" style="color: red;"></p>
-            </div>
+    <div class="main">
+            <div class="sub">
+                <h1 align="center">Subject Mark Checklists</h1>
+            <form action="" name="myForm" class="form">
+                <div class="row">
+                    <div class="col">
+                        Name :
+                    </div>
+                    <div class="col">
+                        <input type="text" name="name" id="name"><p id="nameCheck" style="color: red;"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Myanmar Mark :
+                    </div>
+                    <div class="col">
+                        <input type="number" name="myanMark" id="myanMark"><p id="myanCheck" style="color: red;"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        English Mark :
+                    </div>
+                    <div class="col">
+                        <input type="number" name="engMark" id="engMark"><p id="engCheck" style="color: red;"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Mathematics Mark :
+                    </div>
+                    <div class="col">
+                        <input type="number" name="mathMark" id="mathMark"><p id="mathCheck" style="color: red;"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Physics Mark :
+                    </div>
+                    <div class="col">
+                        <input type="number" name="phyMark" id="phyMark"><p id="phyCheck" style="color: red;"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Chemistry Mark :
+                    </div>
+                    <div class="col">
+                        <input type="number" name="cheMark" id="cheMark"><p id="cheCheck" style="color: red;"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        Biology Mark :
+                    </div>
+                    <div class="col">
+                        <input type="number" name="bioMark" id="bioMark"><p id="bioCheck" style="color: red;"></p>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col">
+                        Total :
+                    </div>
+                    <div class="col">
+                        <input type="number" name="total">
+                    </div>
+                </div> -->
+                <div class="btn" align="center">
+                    <button type="button" onclick="showData()">Submit</button>
+                </div>
+            </form>
         </div>
-        <div class="row">
-            <div class="col">
-                Myanmar Mark :
-            </div>
-            <div class="col">
-                <input type="number" name="myanMark" id="myanMark"><p id="myanCheck" style="color: red;"></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                English Mark :
-            </div>
-            <div class="col">
-                <input type="number" name="engMark" id="engMark"><p id="engCheck" style="color: red;"></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                Mathematics Mark :
-            </div>
-            <div class="col">
-                <input type="number" name="mathMark" id="mathMark"><p id="mathCheck" style="color: red;"></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                Physics Mark :
-            </div>
-            <div class="col">
-                <input type="number" name="phyMark" id="phyMark"><p id="phyCheck" style="color: red;"></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                Chemistry Mark :
-            </div>
-            <div class="col">
-                <input type="number" name="cheMark" id="cheMark"><p id="cheCheck" style="color: red;"></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                Biology Mark :
-            </div>
-            <div class="col">
-                <input type="number" name="bioMark" id="bioMark"><p id="bioCheck" style="color: red;"></p>
-            </div>
-        </div>
-        <!-- <div class="row">
-            <div class="col">
-                Total :
-            </div>
-            <div class="col">
-                <input type="number" name="total">
-            </div>
-        </div> -->
-        <div class="btn">
-            <button type="button" onclick="showData()">Submit</button>
-        </div>
-    </form>
-    <h2>Subject Record</h2>
-    <table border="1" cellpadding="10">
-        <thead>
-            <tr>
-                <td>No</td>
-                <td>Name</td>
-                <td>Myanmar</td>
-                <td>English</td>
-                <td>Mathematics</td>
-                <td>Physics</td>
-                <td>Chemistry</td>
-                <td>Biology</td>
-                <td>Total</td>
-            </tr>
-        </thead>
-        <tbody id="myData">
+        
 
-        </tbody>
-        <tfoot id="result">
+        <div class="sub">
+            <h1 align="center">Subject Record</h1>
+            <table border="1" cellpadding="10">
+                <thead>
+                    <tr>
+                        <td>No</td>
+                        <td>Name</td>
+                        <td>Myanmar</td>
+                        <td>English</td>
+                        <td>Mathematics</td>
+                        <td>Physics</td>
+                        <td>Chemistry</td>
+                        <td>Biology</td>
+                        <td>Total</td>
+                    </tr>
+                </thead>
+                <tbody id="myData">
 
-        </tfoot>
-    </table>
+                </tbody>
+                <tfoot id="result">
+
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    
+    
 
 
 
@@ -251,33 +328,34 @@
                     let chemistry = subjectMark.cheMark;
                     let biology = subjectMark.bioMark;
                     //let resultConditon = subjectMark.result;
-        
 
                     if(myanmar >= 40 && english >= 40 && mathematics >= 40 && physics >= 40 && chemistry >= 40 && biology >= 40){
-                        document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam.</td></tr>`;
-                    }else if(myanmar > 70 || english > 70 || mathematics > 80 || physics > 80 || chemistry > 80 || biology > 70){
-                        if(myanmar>=70 && english>=40 && mathematics>=40 && physics>=40 && chemistry>=40 && biology>=40){
-                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with Myanmar distinction.</td></tr>`;
-                        }else if(myanmar>=40 && english>=70 && mathematics>=40 && physics>=40 && chemistry>=40 && biology>=40){
-                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with English distinction.</td></tr>`;
-                        }else if(myanmar>=40 && english>=40 && mathematics>=70 && physics>=40 && chemistry>=40 && biology>=40){
-                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with Mathematics distinction.</td></tr>`;
-                        }else if(myanmar>=40 && english>=40 && mathematics>=40 && physics>=70 && chemistry>=40 && biology>=40){
-                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with Physics distinction.</td></tr>`;
-                        }else if(myanmar>=40 && english>=40 && mathematics>=40 && physics>=40 && chemistry>=70 && biology>=40){
-                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with Chemistry distinction.</td></tr>`;
-                        }
-                        else if(myanmar>=40 && english>=40 && mathematics>=40 && physics>=40 && chemistry>=40 && biology>=70){
-                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with Biology distinction.</td></tr>`;
+                        if(myanmar >= 70 || english >= 70 || mathematics >= 80 || physics >= 80 || chemistry >= 80 || biology >= 70){
+                            if(myanmar >= 70 && english >= 70 && mathematics >= 80 && physics >= 80 && chemistry >= 80 && biology >= 80){
+                                document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with All D.</td></tr>`;
+                            }else{
+                                document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with Distinction.</td></tr>`;
+                            }
                         }else{
-                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with distinction.</td></tr>`;
+                            document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam.</td></tr>`;
                         }
+                    }else if(myanmar<40 || english<40 || mathematics <40 || physics<40 |chemistry<40 || biology<40){
+                        document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has failed the Exam.</td></tr>`;
+                    }else{
+                        document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has failed the Exam.</td></tr>`;
+                    }
+        
+
+                    /*if(myanmar >= 40 && english >= 40 && mathematics >= 40 && physics >= 40 && chemistry >= 40 && biology >= 40){
+                        document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam.</td></tr>`;
+                    }else if(myanmar >= 70 || english >= 70 || mathematics >= 80 || physics >= 80 || chemistry >= 80 || biology >= 70){
+                        document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with distinction.</td></tr>`;
                     }else if(myanmar<40 || english<40 || mathematics <40 || physics<40 |chemistry<40 || biology<40){
                         document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has failed the Exam.</td></tr>`;
                     }
                     else{
                         document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has failed the Exam.</td></tr>`;
-                    }
+                    }*/
                     
                     //grand += parseInt(subjectMark.Total);
                     //document.getElementById('grand').innerHTML = grand;
