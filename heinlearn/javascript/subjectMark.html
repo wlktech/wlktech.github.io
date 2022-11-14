@@ -14,7 +14,7 @@
                 Name :
             </div>
             <div class="col">
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name"><p id="nameCheck" style="color: red;"></p>
             </div>
         </div>
         <div class="row">
@@ -22,7 +22,7 @@
                 Myanmar Mark :
             </div>
             <div class="col">
-                <input type="number" name="myanMark">
+                <input type="number" name="myanMark" id="myanMark"><p id="myanCheck" style="color: red;"></p>
             </div>
         </div>
         <div class="row">
@@ -30,7 +30,7 @@
                 English Mark :
             </div>
             <div class="col">
-                <input type="number" name="engMark">
+                <input type="number" name="engMark" id="engMark"><p id="engCheck" style="color: red;"></p>
             </div>
         </div>
         <div class="row">
@@ -38,7 +38,7 @@
                 Mathematics Mark :
             </div>
             <div class="col">
-                <input type="number" name="mathMark">
+                <input type="number" name="mathMark" id="mathMark"><p id="mathCheck" style="color: red;"></p>
             </div>
         </div>
         <div class="row">
@@ -46,7 +46,7 @@
                 Physics Mark :
             </div>
             <div class="col">
-                <input type="number" name="phyMark">
+                <input type="number" name="phyMark" id="phyMark"><p id="phyCheck" style="color: red;"></p>
             </div>
         </div>
         <div class="row">
@@ -54,7 +54,7 @@
                 Chemistry Mark :
             </div>
             <div class="col">
-                <input type="number" name="cheMark">
+                <input type="number" name="cheMark" id="cheMark"><p id="cheCheck" style="color: red;"></p>
             </div>
         </div>
         <div class="row">
@@ -62,7 +62,7 @@
                 Biology Mark :
             </div>
             <div class="col">
-                <input type="number" name="bioMark">
+                <input type="number" name="bioMark" id="bioMark"><p id="bioCheck" style="color: red;"></p>
             </div>
         </div>
         <!-- <div class="row">
@@ -95,9 +95,61 @@
         <tbody id="myData">
 
         </tbody>
+        <tfoot id="result">
+
+        </tfoot>
     </table>
+
+
+
+
     <script>
+        let nameEvent = document.getElementById('name');
+        nameEvent.addEventListener('keyup', function(){
+            nameEvent.style.border='1px solid black';
+            document.getElementById('nameCheck').style.display='none';
+            submit();
+        })
+        let myanEvent = document.getElementById('myanMark');
+        myanEvent.addEventListener('keyup', function(){
+            myanEvent.style.border='1px solid black';
+            document.getElementById('myanCheck').style.display='none';
+            submit();
+        })
+        let engEvent = document.getElementById('engMark');
+        engEvent.addEventListener('keyup', function(){
+            engEvent.style.border='1px solid black';
+            document.getElementById('engCheck').style.display='none';
+            submit();
+        })
+        let mathEvent = document.getElementById('mathMark');
+        mathEvent.addEventListener('keyup', function(){
+            mathEvent.style.border='1px solid black';
+            document.getElementById('mathCheck').style.display='none';
+            submit();
+        })
+        let phyEvent = document.getElementById('phyMark');
+        phyEvent.addEventListener('keyup', function(){
+            phyEvent.style.border='1px solid black';
+            document.getElementById('phyCheck').style.display='none';
+            submit();
+        })
+        let cheEvent = document.getElementById('cheMark');
+        cheEvent.addEventListener('keyup', function(){
+            cheEvent.style.border='1px solid black';
+            document.getElementById('cheCheck').style.display='none';
+            submit();
+        })
+        let bioEvent = document.getElementById('bioMark');
+        bioEvent.addEventListener('keyup', function(){
+            bioEvent.style.border='1px solid black';
+            document.getElementById('bioCheck').style.display='none';
+            submit();
+        })
+
+
         let subjectMarkList = [];
+
         function showData(){
             //alert('ok')
             //get Data
@@ -109,44 +161,122 @@
             let cheMark = parseInt(document.myForm.cheMark.value);
             let bioMark = parseInt(document.myForm.bioMark.value);
             let total = myanMark+engMark+mathMark+phyMark+cheMark+bioMark;
+
+
+            if(name == "" || myanMark == "" || engMark == "" || mathMark == "" || phyMark == "" || cheMark == "" || bioMark == ""){
+                //alert('Hello')
+                document.getElementById('name').style.border='1px solid red';
+                document.getElementById('nameCheck').innerText = '*Please fill out this blank!';
+                document.getElementById('myanMark').style.border='1px solid red';
+                document.getElementById('myanCheck').innerText = '*Please fill out this blank!';
+                document.getElementById('engMark').style.border='1px solid red';
+                document.getElementById('engCheck').innerText = '*Please fill out this blank!';
+                document.getElementById('mathMark').style.border='1px solid red';
+                document.getElementById('mathCheck').innerText = '*Please fill out this blank!';
+                document.getElementById('phyMark').style.border='1px solid red';
+                document.getElementById('phyCheck').innerText = '*Please fill out this blank!';
+                document.getElementById('cheMark').style.border='1px solid red';
+                document.getElementById('cheCheck').innerText = '*Please fill out this blank!';
+                document.getElementById('bioMark').style.border='1px solid red';
+                document.getElementById('bioCheck').innerText = '*Please fill out this blank!';
+                return false;
+            }else if(name == "" && myanMark != "" && engMark != "" && mathMark != "" && phyMark != "" && cheMark != "" && bioMark != ""){
+                document.getElementById('name').style.border='1px solid red';
+                document.getElementById('nameCheck').innerText = '*Please fill out this blank!';
+                return false;
+            }else if(name != "" && myanMark == "" && engMark != "" && mathMark != "" && phyMark != "" && cheMark != "" && bioMark != ""){
+                document.getElementById('myanMark').style.border='1px solid red';
+                document.getElementById('myanCheck').innerText = '*Please fill out this blank!';
+                return false;
+            }else if(name != "" && myanMark != "" && engMark == "" && mathMark != "" && phyMark != "" && cheMark != "" && bioMark != ""){
+                document.getElementById('engMark').style.border='1px solid red';
+                document.getElementById('engCheck').innerText = '*Please fill out this blank!';
+                return false;
+            }else if(name != "" && myanMark != "" && engMark != "" && mathMark == "" && phyMark != "" && cheMark != "" && bioMark != ""){
+                document.getElementById('mathMark').style.border='1px solid red';
+                document.getElementById('mathCheck').innerText = '*Please fill out this blank!';
+                return false;
+            }else if(name != "" && myanMark != "" && engMark != "" && mathMark != "" && phyMark == "" && cheMark != "" && bioMark != ""){
+                document.getElementById('phyMark').style.border='1px solid red';
+                document.getElementById('phyCheck').innerText = '*Please fill out this blank!';
+                return false;
+            }else if(name != "" && myanMark != "" && engMark != "" && mathMark != "" && phyMark != "" && cheMark == "" && bioMark != ""){
+                document.getElementById('cheMark').style.border='1px solid red';
+                document.getElementById('cheCheck').innerText = '*Please fill out this blank!';
+                return false;
+            }else if(name != "" && myanMark != "" && engMark != "" && mathMark != "" && phyMark != "" && cheMark != "" && bioMark == ""){
+                document.getElementById('bioMark').style.border='1px solid red';
+                document.getElementById('bioCheck').innerText = '*Please fill out this blank!';
+                return false;
+            }else{
+                    let subjectMark = {
+                        stuName : name,
+                        myanMark : myanMark,
+                        engMark : engMark,
+                        mathMark : mathMark,
+                        phyMark : phyMark,
+                        cheMark : cheMark,
+                        bioMark : bioMark,
+                        Total : total
+                    }
+        
+        
+        
+                    //console.log(expense);
+                    subjectMarkList.push(subjectMark);
+        
+                    //console.log(subjectMarkList)
+                    let data = '';
+        
+                for(let i = 0; i < subjectMarkList.length; i++){
+                    let subjectMark = subjectMarkList[i];
+                    data = data + `
+                    <tr>
+                        <td>${i+1}</td>
+                        <td>${subjectMark.stuName}</td>
+                        <td>${subjectMark.myanMark}</td>
+                        <td>${subjectMark.engMark}</td>
+                        <td>${subjectMark.mathMark}</td>
+                        <td>${subjectMark.phyMark}</td>
+                        <td>${subjectMark.cheMark}</td>
+                        <td>${subjectMark.bioMark}</td>
+                        <td>${subjectMark.Total}</td>
+        
+                    </tr>
+                    `;
+                    let myanmar = subjectMark.myanMark;
+                    let english = subjectMark.engMark;
+                    let mathematics = subjectMark.mathMark;
+                    let physics = subjectMark.phyMark;
+                    let chemistry = subjectMark.cheMark;
+                    let biology = subjectMark.bioMark;
+                    //let resultConditon = subjectMark.result;
+        
+                    let resultArray = [];
+                    if(myanmar >= 40 || english >= 40 || mathematics >= 40 || physics >= 40 || chemistry >= 40 || biology >= 40){
+                        resultArray.push(`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam.</td></tr>`);    
+                        document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam.</td></tr>`;
+                    }else if(myanmar > 70 || english > 70 || mathematics > 80 || physics > 80 || chemistry > 80 || biology > 70){
+                        document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has passed the Exam with distinction.</td></tr>`;
+                    }else{
+                        document.getElementById('result').innerHTML =`<tr><td colspan="2">Pass or Fail</td><td colspan="7">${name} has failed the Exam.</td></tr>`;
+                    }
+                    
+                    //grand += parseInt(subjectMark.Total);
+                    //document.getElementById('grand').innerHTML = grand;
+                }
+                document.getElementById('myData').innerHTML = data;
+            }
+
+            
             //console.log(date);
             //console.log(amount);
             //console.log(total);
 
             //add to array
-            let subjectMark = {
-                stuName : name,
-                myanMark : myanMark,
-                engMark : engMark,
-                mathMark : mathMark,
-                phyMark : phyMark,
-                cheMark : cheMark,
-                bioMark : bioMark,
-                Total : total
-            }
-            //console.log(expense);
-            subjectMarkList.push(subjectMark);
-            //console.log(subjectMarkList)
-            let data = '';
-        for(let i = 0; i < subjectMarkList.length; i++){
-            let subjectMark = subjectMarkList[i];
-            data = data + `
-            <tr>
-                <td>${i+1}</td>
-                <td>${subjectMark.stuName}</td>
-                <td>${subjectMark.myanMark}</td>
-                <td>${subjectMark.engMark}</td>
-                <td>${subjectMark.mathMark}</td>
-                <td>${subjectMark.phyMark}</td>
-                <td>${subjectMark.cheMark}</td>
-                <td>${subjectMark.bioMark}</td>
-                <td>${subjectMark.Total}</td>
-            </tr>
-            `;
-            //grand += parseInt(subjectMark.Total);
-            //document.getElementById('grand').innerHTML = grand;
-        }
-        document.getElementById('myData').innerHTML = data;
+
+
+        
         }
     </script>
 </body>
