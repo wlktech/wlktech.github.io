@@ -40,6 +40,7 @@ const validateInputs = () =>{
     const cheMarkValue = cheMark.value.trim();
     const bioMarkValue = bioMark.value.trim();
 
+    
     if(fnameValue === ''){
         setError(fname, '*Your Name is Required!');
     }else{
@@ -82,8 +83,12 @@ const validateInputs = () =>{
         setSuccess(bioMark);
     }
 
-    showData();
+    if(fnameValue !== '' && myanMarkValue !== '' && engMarkValue !== '' && mathMarkValue !== '' && phyMarkValue !== '' && cheMarkValue !== '' && bioMarkValue !== ''){
+        showData();
+    }
+    
 }
+
 
 function showData(){
     //alert('ok')
