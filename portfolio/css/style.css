@@ -1,6 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+nav{
+    background-color: #010718;
+
+}
+.navbar-brand{
+    font-weight: 600;
+}
+.navbar-brand:hover{
+    letter-spacing: 5px;
+    transition-duration: .6s;
+}
+.nav-item{
+    line-height: 50px;
+}
 .link{
-    margin-right: 20px;
+    margin-right: 25px;
     text-decoration: none;
     color: rgb(184, 184, 184);
     font-family: 'Poppins', sans-serif;
@@ -10,6 +28,118 @@
     background-color: white;
     padding: 5px 10px;
     transition: .6s;
-    border-radius: 5px;
-    color: black;
+    border-radius: 10px;
+    color: #010718;
 }
+
+/* Home Start */
+#home{
+    background-color: #010718;
+}
+.row{
+    margin: auto;
+    padding: 100px 0px;
+}
+.img{
+    text-align: center;
+    padding: 30px 0px 30px 0px;
+    animation: leftin 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+@keyframes leftin{
+    0%{
+        transform: translateX(-100px);
+        visibility: visible;
+    }
+    100%{
+        transform:translateX(0);
+        visibility: visible;
+    }
+}
+
+.img img{
+    border-radius: 50%;
+
+}
+.txt{
+    padding: 100px 0px;
+    animation: rightin 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+@keyframes rightin{
+    0%{
+        transform: translateX(100px);
+        visibility: visible;
+    }
+    100%{
+        transform:translateX(0);
+        visibility: visible;
+    }
+}
+
+.name{
+    font-size: 35px;
+}
+.text{
+    position: relative;
+    color: #4070F4;
+    font-size: 28px;
+    font-weight: 600;
+}
+.text.first-text{
+    color: #fff;
+}
+.text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #010718;
+    border-left: 2px solid #4070F4;
+    animation: animate 4s steps(12) infinite;
+    margin: auto;
+}
+@keyframes animate{
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+.btn{
+    background-color: #4070F4;
+    color: white;
+}
+.fa-facebook{
+    font-size: 30px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    color: #4070F4;
+}
+/* Home End */
+
+/* About Start */
+.profile{
+    text-align: justify;
+    font-weight: 900;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+/* About End */
+
+
+/* footer Start */
+.footer{
+    background-color: #010718;
+    color: #fff;
+}
+/* footer End */
