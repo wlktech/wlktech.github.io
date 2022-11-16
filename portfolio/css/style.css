@@ -141,6 +141,7 @@
 }
 .graduate{
     margin-top: 10px;
+    text-align: justify;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -150,6 +151,9 @@
 .image:hover{
     transform: scale(1.1);
     transition-duration: .6s;
+}
+.about_me{
+    margin-left: 10%;
 }
 /* About End */
 
