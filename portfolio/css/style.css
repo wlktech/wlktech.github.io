@@ -1,12 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 *{
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
 }
-nav{
-    background-color: #010718;
 
-}
 .navbar-brand{
     font-weight: 600;
 }
@@ -20,7 +16,7 @@ nav{
 .link{
     margin-right: 25px;
     text-decoration: none;
-    color: rgb(184, 184, 184);
+    color: rgb(255, 255, 255);
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
@@ -34,11 +30,12 @@ nav{
 
 /* Home Start */
 #home{
-    background-color: #010718;
+    background-color: #202020;
+    color: rgb(0, 0, 0);
 }
-.row{
+.pro{
     margin: auto;
-    padding: 100px 0px;
+    padding: 80px 0px 40px 0px;
 }
 .img{
     text-align: center;
@@ -64,7 +61,7 @@ nav{
 
 }
 .txt{
-    padding: 100px 0px;
+    padding: 70px 0px;
     animation: rightin 1s linear 1;
     animation-delay: 2s;
     visibility: hidden;
@@ -83,63 +80,150 @@ nav{
 
 .name{
     font-size: 35px;
-}
-.text{
-    position: relative;
-    color: #4070F4;
-    font-size: 28px;
-    font-weight: 600;
-}
-.text.first-text{
-    color: #fff;
-}
-.text.sec-text:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #010718;
-    border-left: 2px solid #4070F4;
-    animation: animate 4s steps(12) infinite;
-    margin: auto;
-}
-@keyframes animate{
-    40%, 60%{
-        left: 100%;
-    }
-    100%{
-        left: 0%;
-    }
-}
-.btn{
-    background-color: #4070F4;
     color: white;
 }
+.aniText h1{
+    font-weight: 600;
+    color: white;
+}
+.btn{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-color: white;
+    font-weight: 600;
+}
+.b:hover{
+    background-color: black;
+    color: white;
+    transition-duration: .6s;
+}
 .fa-facebook{
-    font-size: 30px;
+    font-size: 35px;
     position: relative;
-    top: 10px;
+    top: 8px;
     left: 10px;
-    color: #4070F4;
+    color: #ffffff;
+}
+.fa-facebook:hover{
+    transform: scale(1.2);
+    transition-duration: .6s;
 }
 /* Home End */
 
 /* About Start */
+.header{
+    font-weight: 600;
+}
+.header:hover{
+    letter-spacing: 5px;
+    transition-duration: .6s;
+}
+.underline{
+    width: 100px;
+    margin: auto;
+    border: 3px solid blue;
+    border-radius: 3px;
+}
 .profile{
     text-align: justify;
     font-weight: 900;
     line-height: 40px;
     font-size: 20px;
+    margin-top: 50px;
+}
+.address{
+    font-weight: 600;
+}
+.about{
+    margin: auto;
+    padding: 50px 0px;
+    
+}
+.graduate{
+    margin-top: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.grad-img{
+    overflow: hidden;
+}
+.image:hover{
+    transform: scale(1.1);
+    transition-duration: .6s;
+}
 /* About End */
 
 
+/* Contact Start */
+#contact{
+    background-color: rgb(36, 36, 36);
+    color: white;
+    padding: 30px 0px;
+}
+.contact{
+    margin: auto;
+    padding-top: 30px;
+}
+.input{
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    margin-top: 50px;
+    background-color: rgb(36, 36, 36);
+    color: white;
+}
+.input:focus{
+    background-color: rgb(36, 36, 36);
+    color: white;
+    outline: none;
+}
+.btn1{
+    background-color: white;
+    border-color: black;
+    color: black;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.btn1:hover{
+    color: white;
+    background-color: black;
+    transition-duration: .6s;
+}
+.underline2{
+    width: 100px;
+    margin: auto;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 3px;
+}
+.underline1{
+    width: 100px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+.social{
+    text-decoration: none;
+}
+.social span{
+    margin-left: 20px;
+    font-size: 20px;
+}
+.social_contact{
+    margin-left: 30%;
+}
+.facebook{
+    margin-top: 20px;
+}
+/* Contact End */
+
 /* footer Start */
 .footer{
-    background-color: #010718;
-    color: #fff;
+    height: 70px;
+}
+.footer p{
+    font-size: 18px;
+    line-height: 70px;
+    font-weight: 600;
 }
 /* footer End */
