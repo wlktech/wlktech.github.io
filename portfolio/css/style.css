@@ -139,21 +139,21 @@
     text-align: justify;
     font-weight: 900;
     line-height: 40px;
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 50px;
 }
 .address{
     font-weight: 600;
 }
 .about{
-    margin: auto;
-    padding: 50px 0px;
-    
+    margin: auto;  
 }
 .graduate{
     margin-top: 10px;
     text-align: justify;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 35px;
 }
 
 .grad-img{
@@ -163,9 +163,7 @@
     transform: scale(1.1);
     transition-duration: .6s;
 }
-.about_me{
-    margin-left: 10%;
-}
+
 /* About End */
 
 
