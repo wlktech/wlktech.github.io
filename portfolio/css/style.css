@@ -2,6 +2,19 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+#preloader{
+    background: #121212 url(../img/sand.gif) no-repeat center center;
+    background-size: 30%;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+
+}
+.preloader{
+    visibility: hidden;
+    display: none;
+}
 .reveal{
     position: relative;
     transform: translateY(150px);
@@ -12,9 +25,21 @@
     transform: translateY(0);
     opacity: 1;
 }
-
+.navbar{
+    background-color: black;
+    opacity: 0.6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+.navbar:hover{
+    opacity: 0.8;
+}
 .navbar-brand{
     font-weight: 600;
+    color: red;
 }
 .navbar-brand:hover{
     letter-spacing: 5px;
@@ -40,8 +65,10 @@
 
 /* Home Start */
 #home{
-    background-color: #202020;
-    color: rgb(0, 0, 0);
+    background: url(../img/cover.png) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    color: black;
 }
 .pro{
     margin: auto;
@@ -49,7 +76,7 @@
 }
 .img{
     text-align: center;
-    padding: 30px 0px 30px 0px;
+    padding: 20px 0px 30px 0px;
     animation: leftin 1s linear 1;
     animation-delay: 1s;
     visibility: hidden;
@@ -87,7 +114,6 @@
         visibility: visible;
     }
 }
-
 .name{
     font-size: 35px;
     color: white;
@@ -96,17 +122,7 @@
     font-weight: 600;
     color: white;
 }
-.btn{
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border-color: white;
-    font-weight: 600;
-}
-.b:hover{
-    background-color: black;
-    color: white;
-    transition-duration: .6s;
-}
+
 .fa-facebook{
     font-size: 35px;
     position: relative;
@@ -131,7 +147,7 @@
 .underline{
     width: 100px;
     margin: auto;
-    border: 3px solid blue;
+    border: 3px solid rgb(71, 71, 71);
     border-radius: 3px;
 }
 .profile{
@@ -139,32 +155,35 @@
     font-weight: 900;
     line-height: 40px;
     font-size: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-top: 50px;
 }
 .address{
     font-weight: 600;
 }
 .about{
-    margin: auto;
-    padding: 50px 0px;
-    
+    margin: auto;  
 }
 .graduate{
     margin-top: 10px;
     text-align: justify;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 35px;
 }
 
 .grad-img{
     overflow: hidden;
+    border-radius: 30px;
+}
+.image{
+    border-radius: 30px;
 }
 .image:hover{
     transform: scale(1.1);
     transition-duration: .6s;
 }
-.about_me{
-    margin-left: 10%;
-}
+
 /* About End */
 
 
@@ -227,7 +246,7 @@
     margin-left: 30%;
 }
 .facebook{
-    margin-top: 20px;
+    margin-top: 40px;
 }
 /* Contact End */
 
