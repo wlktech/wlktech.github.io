@@ -186,7 +186,20 @@
     transform: scale(1.1);
     transition-duration: .6s;
 }
-
+.text_bold{
+    font-weight: 600;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.text_unbold{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.text_unbold a{
+    color: black;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.job{
+    font-weight: 600;
+}
 /* About End */
 
 
