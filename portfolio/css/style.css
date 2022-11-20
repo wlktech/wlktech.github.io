@@ -2,6 +2,19 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+#preloader{
+    background: rgb(255, 255, 255) url(../img/puzzel.gif) no-repeat center center;
+    background-size: 30%;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+
+}
+iframe{
+    visibility: hidden;
+    display: none;
+}
 .reveal{
     position: relative;
     transform: translateY(150px);

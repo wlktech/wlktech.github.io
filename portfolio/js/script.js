@@ -1,3 +1,9 @@
+var loader = document.getElementById('preloader');
+window.addEventListener("load", function(){
+  loader.style.display = "none";
+})
+
+
 var typed = new Typed(".auto-type", {
     strings: ["Junior Developer.", "React Developer.", "PHP Developer."],
     typeSpeed:150,
