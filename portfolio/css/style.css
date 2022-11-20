@@ -148,7 +148,7 @@
 .underline{
     width: 100px;
     margin: auto;
-    border: 3px solid blue;
+    border: 3px solid rgb(71, 71, 71);
     border-radius: 3px;
 }
 .profile{
