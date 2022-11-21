@@ -7,17 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h2 id="hide">Hello</h2>
-    <button id="btn">Hide</button>
-    <button id="btn1">Show</button>
+    
+    <h2 id="demo">Hello</h2>
+    <button id="btn">Change</button>
+    <!-- <button id="btn1">Show</button> -->
+
+
+
     <script src="jquery-3.6.1.min.js"></script>
     <script>
         $("#btn").click(function(){
-            $("#hide").fadeOut("slow");
+            $("body").css({
+                'background-color':'black',
+                'color':'white'
+            });
         })
-        $("#btn1").click(function(){
-            $("#hide").fadeIn("slow");
-        })
+                
     </script>
 </body>
 </html>
