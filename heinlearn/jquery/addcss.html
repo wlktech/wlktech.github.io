@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    
+</head>
+<body>
+    <p id="panel">Animation</p>
+    <button id="start">Add CSS</button>
+
+
+
+
+
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#start').click(function(){
+                $('#panel').css({
+                    'color':'red',
+                    'background-color': 'black'
+                });
+                
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    <style>
+        .trip{
+            max-width: 200px;
+            background-color: black;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <p>I want to go to trip.</p>
+    <button id="add_class">Add Class</button>
+    <button id="remove_class">Remove Class</button>
+    <button id="toggle_class">Toggle Class</button>
+
+
+
+
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#add_class').click(function(e){
+                e.preventDefault();
+                $('p').addClass('trip');
+            })
+            $('#remove_class').click(function(e){
+                e.preventDefault();
+                $('p').removeClass('trip');
+            })
+            $('#toggle_class').click(function(e){
+                e.preventDefault();
+                $('p').toggleClass('trip');
+            })
+            
+        })
+    </script>
+</body>
+</html>
