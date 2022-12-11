@@ -59,4 +59,5 @@ $(document).ready(function () {
         $('#soundbox').removeClass('active');
         $('#laptophandbag').addClass('active');
     })
+    
 });
