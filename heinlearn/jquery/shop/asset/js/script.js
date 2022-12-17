@@ -59,5 +59,10 @@ $(document).ready(function () {
         $('#soundbox').removeClass('active');
         $('#laptophandbag').addClass('active');
     })
+
+    num1 = $('#num1').html(0);
+    $('.minus1').click(function(){
+        $.each()
+    })
     
 });

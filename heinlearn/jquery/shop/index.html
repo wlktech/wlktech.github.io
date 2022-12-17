@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="asset/css/style.css">
 </head>
-<body>
+<body id="home">
 <!-- Nav Start -->
 <nav class="navbar navbar-light bg-light navbar-expand-lg shadow">
     <div class="container">
@@ -19,9 +19,9 @@
         </button>
         <div class="collapse navbar-collapse" id="Navbar">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a href="" class="nav-link">HOME</a></li>
-                <li class="nav-item"><a href="" class="nav-link">SHOP</a></li>
-                <li class="nav-item"><a href="" class="nav-link"><i class="fa-solid fa-cart-plus"></i><span class="badge bg-danger" id="qty"></span></a></li>
+                <li class="nav-item"><a href="#home" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="#shop" class="nav-link">SHOP</a></li>
+                <li class="nav-item"><a href="checkout.html" class="nav-link"><i class="fa-solid fa-cart-plus"></i><span class="badge bg-danger" id="qty"></span></a></li>
             </ul>
         </div>
     </div>   
@@ -29,7 +29,7 @@
 <!-- Nav End -->
 
 <!-- Shop Start -->
-<div class="container">
+<div class="container" id="shop">
     <div class="row">
         <div class="col-xl-2 my-5">
             <div class="list-group shadow">
@@ -59,7 +59,7 @@
                         <div class="card-body">
                             <p class="text-center">Headphone</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="2" data-name="headphone" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                         <div class="card-body">
                             <p class="text-center">Headphone</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="3" data-name="headphone" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                         <div class="card-body">
                             <p class="text-center">Headphone</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="4" data-name="headphone" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                         <div class="card-body">
                             <p class="text-center">Earphone</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="5" data-name="earphone" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@
                         <div class="card-body">
                             <p class="text-center">Earphone</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="6" data-name="earphone" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                         <div class="card-body">
                             <p class="text-center">Earphone</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="7" data-name="earphone" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                         <div class="card-body">
                             <p class="text-center">Earphone</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="8" data-name="earphone" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -137,7 +137,7 @@
                         <div class="card-body">
                             <p class="text-center">Sound Box</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="9" data-name="soundbox" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -147,7 +147,7 @@
                         <div class="card-body">
                             <p class="text-center">Sound Box</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="10" data-name="soundbox" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
                         <div class="card-body">
                             <p class="text-center">Sound Box</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="11" data-name="soundbox" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -167,7 +167,7 @@
                         <div class="card-body">
                             <p class="text-center">Sound Box</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="12" data-name="soundbox" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@
                         <div class="card-body">
                             <p class="text-center">Laptop Handbag</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="13" data-name="laptophandbag" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -191,7 +191,7 @@
                         <div class="card-body">
                             <p class="text-center">Laptop Handbag</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="14" data-name="laptophandbag" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -201,7 +201,7 @@
                         <div class="card-body">
                             <p class="text-center">Laptop Handbag</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="15" data-name="laptophandbag" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -211,7 +211,7 @@
                         <div class="card-body">
                             <p class="text-center">Laptop Handbag</p>
                             <p class="text-center">$500</p>
-                            <button class="btn btn-outline-success w-100 addToCart"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
+                            <button class="btn btn-outline-success w-100 addToCart" data-id="16" data-name="laptophandbag" data-price="500"><i class="fa-solid fa-cart-plus"></i> Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -296,6 +296,8 @@
                 }
             }
         }
+
+        let itemStr = localStorage.getItem('')
     })
 </script>
 </body>
