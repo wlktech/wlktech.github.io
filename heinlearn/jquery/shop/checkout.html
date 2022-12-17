@@ -8,10 +8,22 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
+    <nav class="navbar navbar-light bg-light navbar-expand-lg shadow">
+        <div class="container">
+            <a href="" class="navbar-brand">IT SHOP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="checkout.html" class="nav-link"><i class="fa-solid fa-cart-plus"></i><span class="badge bg-danger" id="qty"></span></a></li>
+                </ul>
+            </div>
+        </div>   
+    </nav>
 <div class="container mt-5">
-    <a href="index.html" class="btn btn-outline-primary"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEvtlNsNgzAQBIcO0gkpgZSQSmgh6SgdQAnQSUpAJ4F0imLfGsMf/rZmbtePhpNXczKfSxA2XFLRDeiBd0h1G1SBwQfgvgpeqkQRePgMdMD3KEEV3IbIJaiG5wSHwFMCD1erTg77ryITjEBbQk/VnToDL5mAR8nN8YNFh7wl2S2J3kF1kkhgaaskiuBX8gQ+6gVQBZvEvgkZHr1kdcjsvpIEu4SXIKxtAb+eIBmkl/3TAAAAAElFTkSuQmCC"/>Home</a>
-    
-    <h2 class="text-center my-4">Checkout Lists</h2>
+    <h2 class="text-center my-5">Checkout Lists</h2>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -23,26 +35,13 @@
                     <th>Sub Total</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Headphone</td>
-                    <td>25000</td>
-                    <td><button class="btn btn-danger minus1">-</button> <span id="num1">2</span> <button class="btn btn-success plus1">+</button></td>
-                    <td>50000</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Earphone</td>
-                    <td>10000</td>
-                    <td><button class="btn btn-danger minus2">-</button> <span id="num2">2</span> <button class="btn btn-success plus2">+</button></td>
-                    <td>20000</td>
-                </tr>
+            <tbody id="tbody">
+                
             </tbody>
             <tfoot>
                 <tr>
                     <td colspan="4">Total</td>
-                    <td>70000</td>
+                    <td id="total"></td>
                 </tr>
             </tfoot>
         </table>
@@ -61,6 +60,50 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="asset/js/script.js"></script>
+<script src="asset/js/count.js"></script>
 <script src="https://kit.fontawesome.com/b829c5162c.js" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        count();
+        getData();
+        function getData(){
+            let itemStr = localStorage.getItem('shops');
+            console.log(itemStr);
+            if(itemStr){
+                let itemArr = JSON.parse(itemStr);
+                let data = '';
+                let j=1;
+                $.each(itemArr, function(i, v){
+                    data += `<tr>
+                        <td>${j++}</td>
+                        <td>${v.item_name}</td>
+                        <td>${v.item_price}</td>
+                        <td><button class="btn btn-sm btn-outline-secondary me-2 min">-</button>${v.qty}<button class="btn btn-sm btn-outline-secondary ms-2 max">+</button></td>
+                        <td>${v.item_price*v.qty}</td>
+                    </tr>`;
+                    let total = 0;
+                    
+                });
+                $('#tbody').html(data);
+            }
+        }
+
+        $('#tbody').on('click', '.min', function(){
+            let item_i = $(this).data('item_i');
+            let itemStr = localStorage.getItem('shops');
+            if(itemStr){
+                let itemArr = JSON.parse(itemStr);
+                $.each(itemArr, function(i, v){
+                    if(item_i == i){
+                        v.qty--;
+                    }
+                })
+                let itemData = JSON.stringify(itemArr);
+                localStorage.setItem('shops', itemData);
+                getData();
+            }
+        })
+    })
+</script>
 </body>
 </html>

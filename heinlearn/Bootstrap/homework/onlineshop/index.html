@@ -7,11 +7,15 @@
     <title>WLK-Fashion</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <link rel="stylesheet" href="./css/slick.css">
     <link rel="icon" href="./img/logo.png">
-
+    <script src="./js/jquery.js"></script>
+    <script src="./js/slick.min.js"></script>
 </head>
 <body>
 <!-- nav start -->
+<div id="navbar" class="sticky-top">
     <nav class="navbar navbar-dark text-light bg-secondary">
         <div class="container">
             <span class="d-none d-lg-block"><i class="fa-solid fa-envelope pe-1"></i> contact@wlkfashion.com</span>
@@ -23,7 +27,7 @@
             </span>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-lg shadow-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg shadow-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-link" href="#home">
                 <img src="./img/nav.png" width="100px" alt="">
@@ -35,15 +39,25 @@
 
             <div class="collapse navbar-collapse my-3" id="Collapse">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a href="" class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">SHOP</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">ABOUT</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">CONTACT</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">LOGIN</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Products</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
+                    <li class="nav-item"><a href="" class="nav-link">Promotion</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Register</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+</div>
 <!-- nav end -->
 
 <!-- slide start -->
@@ -55,13 +69,28 @@
     </div>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="./img/menhoddies.jpg" style="height: 650px;" alt="" class="img-fluid w-100">
+            <img src="./img/slide2.jpg" alt="" class="img-fluid w-100">
+            <div class="carousel_text d-none d-lg-block shadow">
+                <h3>Welcome To WLK-Fashion</h3>
+                <p align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nobis excepturi molestias, fugit doloremque deleniti totam praesentium odit nam ipsam? Alias, soluta aperiam, ea quos omnis ipsam deleniti nihil  impedit earum a? Mollitia labore non ducimus corporis doloribus sapiente sint expedita!</p>
+                <button class="btn btn-sm btn-outline-light shadow-lg">SHOP NOW</button>
+            </div>
         </div>
         <div class="carousel-item">
-            <img src="./img/womenhoddies.jpg" style="height: 650px;" alt="" class="img-fluid w-100">
+            <img src="./img/slide1.jpg" alt="" class="img-fluid w-100">
+            <div class="carousel_text d-none d-lg-block">
+                <h3>Welcome To WLK-Fashion</h3>
+                <p align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nobis excepturi molestias, fugit doloremque deleniti totam praesentium odit nam ipsam? Alias, soluta aperiam, ea quos omnis ipsam deleniti nihil  impedit earum a? Mollitia labore non ducimus corporis doloribus sapiente sint expedita!</p>
+                <button class="btn btn-sm btn-outline-light shadow-lg">SHOP NOW</button>
+            </div>
         </div>
         <div class="carousel-item">
-            <img src="./img/womenmen.jpg" style="height: 650px;" alt="" class="img-fluid w-100">
+            <img src="./img/slide3.jpg" alt="" class="img-fluid w-100">
+            <div class="carousel_text d-none d-lg-block">
+                <h3>Welcome To WLK-Fashion</h3>
+                <p align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nobis excepturi molestias, fugit doloremque deleniti totam praesentium odit nam ipsam? Alias, soluta aperiam, ea quos omnis ipsam deleniti nihil  impedit earum a? Mollitia labore non ducimus corporis doloribus sapiente sint expedita!</p>
+                <button class="btn btn-sm btn-outline-light shadow-lg">SHOP NOW</button>
+            </div>
         </div>
     </div>
     <a href="" class="carousel-control-prev" data-bs-target="#Carousel" data-bs-slide="prev">
@@ -73,147 +102,398 @@
 </div>
 <!-- slide end -->
 
-<!-- Feature Product Start -->
-<div class="feature my-5">
-    <h2 class="text-center my-5">Feature Products</h2>
-    <div class="carousel slide" id="slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-2">
-                            <div class="card">
-                                <img src="./img/hred.jpg" alt="" class="card-img-top" style="height:350px;">
-                                <h4 class="text-center my-4">Hoddies for Men</h4>
-                                <p class="text-center">$1000</p>
-                                <small class="text-center">NEW</small>
-                                <div class="action text-center my-3">
-                                    <a class="navbar-link text-center" href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a class="navbar-link text-center" href=""><i class="fa-solid fa-cart-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-2">
-                            <div class="card">
-                                <img src="./img/hyellow.jpg" alt="" class="card-img-top" style="height:350px;">
-                                <h4 class="text-center my-4">Hoddies for Men</h4>
-                                <p class="text-center">$1000</p>
-                                <small class="text-center">NEW</small>
-                                <div class="action text-center my-3">
-                                    <a class="navbar-link text-center" href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a class="navbar-link text-center" href=""><i class="fa-solid fa-cart-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-2">
-                            <div class="card">
-                                <img src="./img/hblack.jpg" alt="" class="card-img-top" style="height:350px;">
-                                <h4 class="text-center my-4">Hoddies for Men</h4>
-                                <p class="text-center">$1000</p>
-                                <small class="text-center">NEW</small>
-                                <div class="action text-center my-3">
-                                    <a class="navbar-link text-center" href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a class="navbar-link text-center" href=""><i class="fa-solid fa-cart-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-2">
-                            <div class="card">
-                                <img src="./img/hwhite.jpg" alt="" class="card-img-top" style="height:350px;">
-                                <h4 class="text-center my-4">Hoddies for Men</h4>
-                                <p class="text-center">$1000</p>
-                                <small class="text-center">NEW</small>
-                                <div class="action text-center my-3">
-                                    <a class="navbar-link text-center" href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a class="navbar-link text-center" href=""><i class="fa-solid fa-cart-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
+<!-- Service Start -->
+<div class="container my-5">
+    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4">
+        <div class="col">
+            <div class="card pt-3 my-2">
+                <div class="row">
+                    <div class="col-3 col-md-3 text-center">
+                        <i class="fa-solid fa-truck-fast fa-2x ps-4 pt-2"></i>
                     </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-2">
-                            <div class="card">
-                                <img src="./img/hg1.jpg" alt="" class="card-img-top" style="height:350px;">
-                                <h4 class="text-center my-4">Hoddies for Women</h4>
-                                <p class="text-center">$1000</p>
-                                <small class="text-center">NEW</small>
-                                <div class="action text-center my-3">
-                                    <a class="navbar-link text-center" href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a class="navbar-link text-center" href=""><i class="fa-solid fa-cart-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-2">
-                            <div class="card">
-                                <img src="./img/hg2.jpg" alt="" class="card-img-top" style="height:350px;">
-                                <h4 class="text-center my-4">Hoddies for Women</h4>
-                                <p class="text-center">$1000</p>
-                                <small class="text-center">NEW</small>
-                                <div class="action text-center my-3">
-                                    <a class="navbar-link text-center" href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a class="navbar-link text-center" href=""><i class="fa-solid fa-cart-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-2">
-                            <div class="card">
-                                <img src="./img/hg3.jpg" alt="" class="card-img-top" style="height:350px;">
-                                <h4 class="text-center my-4">Hoddies for Women</h4>
-                                <p class="text-center">$1000</p>
-                                <small class="text-center">NEW</small>
-                                <div class="action text-center my-3">
-                                    <a class="navbar-link text-center" href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a class="navbar-link text-center" href=""><i class="fa-solid fa-cart-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 col-12 my-2">
-                            <div class="card">
-                                <img src="./img/hg4.jpg" alt="" class="card-img-top" style="height:350px;">
-                                <h4 class="text-center my-4">Hoddies for Women</h4>
-                                <p class="text-center">$1000</p>
-                                <small class="text-center">NEW</small>
-                                <div class="action text-center my-3">
-                                    <a class="navbar-link text-center" href=""><i class="fa-regular fa-heart"></i></a>
-                                    <a class="navbar-link text-center" href=""><i class="fa-solid fa-cart-plus"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-9 col-md-9">
+                        <p class="pb-0 mb-0">Fast & Free Shipping</p>
+                        <p class="text-secondary">For orders from $50</p>
                     </div>
                 </div>
             </div>
         </div>
-        <a href="" class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#slide">
-            <i class="fa-solid fa-circle-left fa-3x text-dark"></i>
-        </a>
-        <a href="" class="carousel-control-next" data-bs-slide="next" data-bs-target="#slide">
-            <i class="fa-solid fa-circle-right fa-3x text-dark"></i>
-        </a>
+        <div class="col">
+            <div class="card pt-3 my-2">
+                <div class="row">
+                    <div class="col-3 col-md-3 text-center">
+                        <i class="fa-solid fa-headset fa-2x ps-4 pt-2"></i>
+                    </div>
+                    <div class="col-9 col-md-9">
+                        <p class="pb-0 mb-0">Support 24/7</p>
+                        <p class="text-secondary">Call us anytime</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card pt-3 my-2">
+                <div class="row">
+                    <div class="col-3 col-md-3 text-center">
+                        <i class="fa-solid fa-shield-halved fa-2x ps-4 pt-2"></i>
+                    </div>
+                    <div class="col-9 col-md-9">
+                        <p class="pb-0 mb-0">100% Safety</p>
+                        <p class="text-secondary">Only secure payments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card pt-3 my-2">
+                <div class="row">
+                    <div class="col-3 col-md-3 text-center">
+                        <i class="fa-solid fa-gift fa-2x ps-4 pt-2"></i>
+                    </div>
+                    <div class="col-9 col-md-9">
+                        <p class="pb-0 mb-0">Gift Promotion</p>
+                        <p class="text-secondary">Discount up to 90%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<!-- Feature Product End -->
+<!-- Service End -->
+
+<!-- Promotion Start -->
+<div class="container">
+    <h4>Promotion Items</h4>
+    <hr class="underline mt-0 pt-0">
+    <div class="row my-4 autoplay">
+        <div class="col">
+            <div class="card m-2">
+                <div class="promo">
+                    <img src="img/new1.png" alt="" class="card-img-top img-fluid promo-img">
+                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
+                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <p class="text-center promo-brand">Puma T-Shirt</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card m-2">
+                <div class="promo">
+                    <img src="img/new2.png" alt="" class="card-img-top img-fluid promo-img">
+                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
+                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <p class="text-center promo-brand">U.S. Polo T-Shirt</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card m-2">
+                <div class="promo">
+                    <img src="img/new3.png" alt="" class="card-img-top img-fluid promo-img">
+                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
+                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <p class="text-center promo-brand">HUGO BOSS Polo Shirt</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card m-2">
+                <div class="promo">
+                    <img src="img/new4.png" alt="" class="card-img-top img-fluid promo-img">
+                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
+                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <p class="text-center promo-brand">GAP Polo Shirt</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card m-2">
+                <div class="promo">
+                    <img src="img/new5.png" alt="" class="card-img-top img-fluid promo-img">
+                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
+                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <p class="text-center promo-brand">Addias T-Shirt</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card m-2">
+                <div class="promo">
+                    <img src="img/new6.png" alt="" class="card-img-top img-fluid promo-img">
+                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
+                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <p class="text-center promo-brand">Levis T-Shirt</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card m-2">
+                <div class="promo">
+                    <img src="img/new7.png" alt="" class="card-img-top img-fluid promo-img">
+                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
+                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <p class="text-center promo-brand">Tommy Hilfiger T-Shirt</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card m-2">
+                <div class="promo">
+                    <img src="img/new8.png" alt="" class="card-img-top img-fluid promo-img">
+                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
+                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <p class="text-center promo-brand">Gucci T-Shirt</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Promotion End -->
+
+
+<!-- New Arrival Start -->
+<div class="container">
+    <h4>New Arrival</h4>
+    <hr class="underline mt-0 pt-0">
+    <div class="row my-4">
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="new_arrival p-3 shadow-lg rounded my-3">
+                <div class="new_arrival_img">
+                    <img src="img/new1.png" class="w-100 img-fluid new_img" alt="">
+                    <div class="button">
+                        <button class="arrival-btn btn btn-outline-light">Detail</button>
+                    </div>
+                    <hr class="line1"><hr class="line2">
+                    <div class="new_arrival_text">
+                        <p class="mb-0 pb-0">Polo T-Shirt</p>
+                        <p>Men <span class="float-end">20000MMK</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="new_arrival p-3 shadow-lg rounded my-3">
+                <div class="new_arrival_img">
+                    <img src="img/new2.png" class="w-100 img-fluid new_img" alt="">
+                    <div class="button">
+                        <button class="arrival-btn btn btn-outline-light">Detail</button>
+                    </div>
+                    <hr class="line1"><hr class="line2">
+                    <div class="new_arrival_text">
+                        <p class="mb-0 pb-0">U.S. Polo Assn T-Shirt</p>
+                        <p>Men <span class="float-end">20000MMK</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="new_arrival p-3 shadow-lg rounded my-3">
+                <div class="new_arrival_img">
+                    <img src="img/new3.png" class="w-100 img-fluid new_img" alt="">
+                    <div class="button">
+                        <button class="arrival-btn btn btn-outline-light">Detail</button>
+                    </div>
+                    <hr class="line1"><hr class="line2">
+                    <div class="new_arrival_text">
+                        <p class="mb-0 pb-0">HUGO BOSS Polo Shirt</p>
+                        <p>Women <span class="float-end">20000MMK</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="new_arrival p-3 shadow-lg rounded my-3">
+                <div class="new_arrival_img">
+                    <img src="img/new4.png" class="w-100 img-fluid new_img" alt="">
+                    <div class="button">
+                        <button class="arrival-btn btn btn-outline-light">Detail</button>
+                    </div>
+                    <hr class="line1"><hr class="line2">
+                    <div class="new_arrival_text">
+                        <p class="mb-0 pb-0">GAP Polo Shirt</p>
+                        <p>Men <span class="float-end">20000MMK</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="new_arrival p-3 shadow-lg rounded my-3">
+                <div class="new_arrival_img">
+                    <img src="img/new5.png" class="w-100 img-fluid new_img" alt="">
+                    <div class="button">
+                        <button class="arrival-btn btn btn-outline-light">Detail</button>
+                    </div>
+                    <hr class="line1"><hr class="line2">
+                    <div class="new_arrival_text">
+                        <p class="mb-0 pb-0">Addias T-Shirt</p>
+                        <p>Men <span class="float-end">20000MMK</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="new_arrival p-3 shadow-lg rounded my-3">
+                <div class="new_arrival_img">
+                    <img src="img/new6.png" class="w-100 img-fluid new_img" alt="">
+                    <div class="button">
+                        <button class="arrival-btn btn btn-outline-light">Detail</button>
+                    </div>
+                    <hr class="line1"><hr class="line2">
+                    <div class="new_arrival_text">
+                        <p class="mb-0 pb-0">Levis T-Shirt</p>
+                        <p>Men <span class="float-end">20000MMK</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="new_arrival p-3 shadow-lg rounded my-3">
+                <div class="new_arrival_img">
+                    <img src="img/new7.png" class="w-100 img-fluid new_img" alt="">
+                    <div class="button">
+                        <button class="arrival-btn btn btn-outline-light">Detail</button>
+                    </div>
+                    <hr class="line1"><hr class="line2">
+                    <div class="new_arrival_text">
+                        <p class="mb-0 pb-0">Tommy Hilfiger T-Shirt</p>
+                        <p>Women <span class="float-end">20000MMK</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+            <div class="new_arrival p-3 shadow-lg rounded my-3">
+                <div class="new_arrival_img">
+                    <img src="img/new8.png" class="w-100 img-fluid new_img" alt="">
+                    <div class="button">
+                        <button class="arrival-btn btn btn-outline-light">Detail</button>
+                    </div>
+                    <hr class="line1"><hr class="line2">
+                    <div class="new_arrival_text">
+                        <p class="mb-0 pb-0">Gucci T-Shirt</p>
+                        <p>Women <span class="float-end">20000MMK</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+<!-- New Arrival End -->
+
+<!-- Subscribe Start -->
+<div class="container-fluid bg-danger text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 my-3">
+                <h3>Subscribe To Our Channel</h3>
+                <p class="my-4" align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe exercitationem, et impedit autem, consequatur quae sint, iure blanditiis facilis provident veniam eius obcaecati officia vel voluptates. Nesciunt odit impedit illum deleniti eum autem cumque accusantium ducimus eius adipisci? Nesciunt asperiores sit optio aliquam voluptatibus numquam vero, nemo et aperiam saepe!</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control">
+                    <button class="btn btn-success" type="button" id="button-addon2">Subscribe</button>
+                </div>               
+            </div>
+            <div class="col-xl-6 my-3" align="center">
+                <img src="img/nav.png" class="img-fluid rounded shadow-lg" alt="">
+            </div>
+        </div>
+    </div>     
+</div>
+<!-- Subscribe End -->
+
+<!-- Latest New Start -->
+<div class="container my-5">
+    <h4>Latest News</h4>
+    <hr class="underline mt-0 pt-0">
+    <div class="row">
+        <div class="col-xl-4 col-md-6 my-3">
+            <div class="card">
+                <div class="img-cover">
+                    <img src="img/consult1.jpeg" alt="" class="card-img-top w-100 zoom">
+                </div>
+                <div class="p-3">
+                    <h4 class="text-danger">Discuss With Other Partner</h4>
+                    <small class="text-secondary">By Admin on 28 Sep 2022</small>
+                    <p class="my-4" align="justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi ipsam temporibus enim voluptas voluptatibus. Quo suscipit dolores quae optio delectus laudantium incidunt facilis accusantium veniam harum minima veritatis, deserunt laboriosam.</p>
+                    <a style="text-decoration:none" href="" class="text-danger">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6 my-3">
+            <div class="card">
+                <div class="img-cover">
+                    <img src="https://img.freepik.com/free-photo/team-meeting-online-conference-call-laptop_23-2148890425.jpg?w=2000" alt="" class="card-img-top w-100 zoom">
+                </div>
+                <div class="p-3">
+                    <h4 class="text-danger">Discuss Meeting With Partner</h4>
+                    <small class="text-secondary">By Admin on 28 Sep 2022</small>
+                    <p class="my-4" align="justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi ipsam temporibus enim voluptas voluptatibus. Quo suscipit dolores quae optio delectus laudantium incidunt facilis accusantium veniam harum minima veritatis, deserunt laboriosam.</p>
+                    <a style="text-decoration:none" href="" class="text-danger">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6 my-3">
+            <div class="card">
+                <div class="img-cover">
+                    <img src="https://www.heritagelaw.com/wp-content/uploads/2020/10/shutterstock_1773514592.jpg" alt="" class="card-img-top w-100 zoom">
+                </div>
+                <div class="p-3">
+                    <h4 class="text-danger">People Protect for COVID-19</h4>
+                    <small class="text-secondary">By Admin on 28 Sep 2022</small>
+                    <p class="my-4" align="justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi ipsam temporibus enim voluptas voluptatibus. Quo suscipit dolores quae optio delectus laudantium incidunt facilis accusantium veniam harum minima veritatis, deserunt laboriosam.</p>
+                    <a style="text-decoration:none" href="" class="text-danger">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Latest New End -->
+
+
 
 
 <!-- footer start -->
-<footer class="bg-secondary pt-3 pb-1">
+<footer class="container-fluid bg-dark text-light pt-4 pb-2">
+    <div class="container mb-3">
+        <div class="row">
+            <div class="col-xl-4 my-3">
+                <h4>WLK-Fashion</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores odit, magnam eligendi nesciunt consequatur delectus minima totam non commodi cupiditate.</p>
+            </div>
+
+            <div class="col-xl-4 my-3">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="" class="nav-link text-white">Home</a>
+                        <a href="" class="nav-link text-white">About</a>
+                        <a href="" class="nav-link text-white">Contact</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="" class="nav-link text-white">News</a>
+                        <a href="" class="nav-link text-white">Promotion</a>
+                        <a href="" class="nav-link text-white">Service</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 my-3">
+                <p><i class="fa-solid fa-house"></i> 28, 4th Ward, South Okkalarpa Tsp, Yangon.</p>
+                <p><i class="fa-solid fa-phone-volume"></i>  +959 421023714</p>
+                <p><i class="fa-solid fa-envelope pe-1"></i> contact@wlkfashion.com</p>
+                <p><i class="fa-brands fa-twitter-square"></i><i class="fa-brands fa-facebook ms-2"></i><i class="fa-brands fa-instagram ms-2"></i></p>
+            </div>
+        </div>
+    </div>
     <p class="text-center text-white">&copy; Copyright: All Rights Reserved By <a class="navbar-link text-white" href="">WLK-TECH</a></p>
 </footer>
 <!-- footer end -->
 
 
+    
     <script src="https://kit.fontawesome.com/b829c5162c.js" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/popper.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
