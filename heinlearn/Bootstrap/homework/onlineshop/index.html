@@ -15,8 +15,7 @@
 </head>
 <body>
 <!-- nav start -->
-<div id="navbar" class="sticky-top">
-    <nav class="navbar navbar-dark text-light bg-secondary">
+    <nav class="navbar navbar-dark text-light bg-secondary" id="navbar">
         <div class="container">
             <span class="d-none d-lg-block"><i class="fa-solid fa-envelope pe-1"></i> contact@wlkfashion.com</span>
             <span class="me-auto ps-4"><i class="fa-solid fa-phone-volume"></i> +959 421023714</span>
@@ -27,9 +26,9 @@
             </span>
         </div>
     </nav>
-    <nav class="navbar navbar-expand-lg shadow-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg shadow-lg navbar-light bg-light sticky-top">
         <div class="container">
-            <a class="navbar-link" href="#home">
+            <a class="navbar-link" href="index.html">
                 <img src="./img/nav.png" width="100px" alt="">
                 <span class="navbar-brand">WLK-Fashion</span>
             </a>
@@ -39,16 +38,16 @@
 
             <div class="collapse navbar-collapse my-3" id="Collapse">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Products</a>
+                        <a class="nav-link dropdown-toggle hoverEffect" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Products</a>
                         <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <li><a class="dropdown-item" href="#">Men's</a></li>
+                          <li><a class="dropdown-item" href="#">Women's</a></li>
+                          <li><a class="dropdown-item" href="#">Unisex's</a></li>
                         </ul>
                       </li>
-                    <li class="nav-item"><a href="" class="nav-link">Promotion</a></li>
+                    <li class="nav-item"><a href="pages/promotion.html" class="nav-link">Promotion</a></li>
                     <li class="nav-item"><a href="" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Login</a></li>
@@ -57,7 +56,6 @@
             </div>
         </div>
     </nav>
-</div>
 <!-- nav end -->
 
 <!-- slide start -->
@@ -166,150 +164,85 @@
     <h4>Promotion Items</h4>
     <hr class="underline mt-0 pt-0">
     <div class="responsive">
-        <div class="card m-2">
-            <div class="promo">
-                <img src="img/new1.png" alt="" class="card-img-top img-fluid promo-img">
-                <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                <span class="origin-price text-danger m-2">20000MMK</span>
-                <p class="text-center promo-brand">Puma T-Shirt</p>
-            </div>
-        </div>
-        <div class="card m-2">
-            <div class="promo">
-                <img src="img/new2.png" alt="" class="card-img-top img-fluid promo-img">
-                <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                <span class="origin-price text-danger m-2">20000MMK</span>
-                <p class="text-center promo-brand">U.S. Polo T-Shirt</p>
-            </div>
-        </div>
-        <div class="card m-2">
-            <div class="promo">
-                <img src="img/new3.png" alt="" class="card-img-top img-fluid promo-img">
-                <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                <span class="origin-price text-danger m-2">20000MMK</span>
-                <p class="text-center promo-brand">HUGO BOSS Polo Shirt</p>
-            </div>
-        </div>
-        <div class="card m-2">
-            <div class="promo">
-                <img src="img/new4.png" alt="" class="card-img-top img-fluid promo-img">
-                <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                <span class="origin-price text-danger m-2">20000MMK</span>
-                <p class="text-center promo-brand">GAP Polo Shirt</p>
-            </div>
-        </div>
-        <div class="card m-2">
-            <div class="promo">
-                <img src="img/new5.png" alt="" class="card-img-top img-fluid promo-img">
-                <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                <span class="origin-price text-danger m-2">20000MMK</span>
-                <p class="text-center promo-brand">Addias T-Shirt</p>
-            </div>
-        </div>
-        <div class="card m-2">
-            <div class="promo">
-                <img src="img/new6.png" alt="" class="card-img-top img-fluid promo-img">
-                <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                <span class="origin-price text-danger m-2">20000MMK</span>
-                <p class="text-center promo-brand">Levis T-Shirt</p>
-            </div>
-        </div>
-        <div class="card m-2">
-            <div class="promo">
-                <img src="img/new8.png" alt="" class="card-img-top img-fluid promo-img">
-                <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                <span class="origin-price text-danger m-2">20000MMK</span>
-                <p class="text-center promo-brand">Gucci T-Shirt</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- <div class="container">
-    <h4>Promotion Items</h4>
-    <hr class="underline mt-0 pt-0">
-    <div class="row my-4 autoplay">
-        <div class="col-xl-3">
-            <div class="card m-3">
+        <a href="pages/promotion.html" class="text-dark text-decoration-none">
+            <div class="card m-2">
                 <div class="promo">
                     <img src="img/new1.png" alt="" class="card-img-top img-fluid promo-img">
-                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <span class="promo-price badge bg-danger p-1 m-1">10000MMK</span>
+                    <span class="origin-price badge text-danger">20000MMK</span>
                     <p class="text-center promo-brand">Puma T-Shirt</p>
                 </div>
             </div>
-        </div>
-        <div class="col-xl-3">
-            <div class="card m-3">
+        </a>
+        
+        <a href="pages/promotion.html" class="text-dark text-decoration-none">
+            <div class="card m-2">
                 <div class="promo">
                     <img src="img/new2.png" alt="" class="card-img-top img-fluid promo-img">
-                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <span class="promo-price badge bg-danger p-1 m-1">10000MMK</span>
+                    <span class="origin-price badge text-danger">20000MMK</span>
                     <p class="text-center promo-brand">U.S. Polo T-Shirt</p>
                 </div>
             </div>
-        </div>
-        <div class="col-xl-3">
-            <div class="card m-3">
+        </a>
+        
+        <a href="pages/promotion.html" class="text-dark text-decoration-none">
+            <div class="card m-2">
                 <div class="promo">
                     <img src="img/new3.png" alt="" class="card-img-top img-fluid promo-img">
-                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <span class="promo-price badge bg-danger p-1 m-1">10000MMK</span>
+                    <span class="origin-price badge text-danger">20000MMK</span>
                     <p class="text-center promo-brand">HUGO BOSS Polo Shirt</p>
                 </div>
             </div>
-        </div>
-        <div class="col-xl-3">
-            <div class="card m-3">
+        </a>
+        
+        <a href="pages/promotion.html" class="text-dark text-decoration-none">
+            <div class="card m-2">
                 <div class="promo">
                     <img src="img/new4.png" alt="" class="card-img-top img-fluid promo-img">
-                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <span class="promo-price badge bg-danger p-1 m-1">10000MMK</span>
+                    <span class="origin-price badge text-danger">20000MMK</span>
                     <p class="text-center promo-brand">GAP Polo Shirt</p>
                 </div>
             </div>
-        </div>
-        <div class="col-xl-3">
-            <div class="card m-3">
+        </a>
+        
+        <a href="pages/promotion.html" class="text-dark text-decoration-none">
+            <div class="card m-2">
                 <div class="promo">
                     <img src="img/new5.png" alt="" class="card-img-top img-fluid promo-img">
-                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <span class="promo-price badge bg-danger p-1 m-1">10000MMK</span>
+                    <span class="origin-price badge text-danger">20000MMK</span>
                     <p class="text-center promo-brand">Addias T-Shirt</p>
                 </div>
             </div>
-        </div>
-        <div class="col-xl-3">
-            <div class="card m-3">
+        </a>
+        
+        <a href="pages/promotion.html" class="text-dark text-decoration-none">
+            <div class="card m-2">
                 <div class="promo">
                     <img src="img/new6.png" alt="" class="card-img-top img-fluid promo-img">
-                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <span class="promo-price badge bg-danger p-1 m-1">10000MMK</span>
+                    <span class="origin-price badge text-danger">20000MMK</span>
                     <p class="text-center promo-brand">Levis T-Shirt</p>
                 </div>
             </div>
-        </div>
-        <div class="col-xl-3">
-            <div class="card m-3">
-                <div class="promo">
-                    <img src="img/new7.png" alt="" class="card-img-top img-fluid promo-img">
-                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                    <span class="origin-price text-danger m-2">20000MMK</span>
-                    <p class="text-center promo-brand">Tommy Hilfiger T-Shirt</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-xl-3">
-            <div class="card m-3">
+        </a>
+        
+        <a href="pages/promotion.html" class="text-dark text-decoration-none">
+            <div class="card m-2">
                 <div class="promo">
                     <img src="img/new8.png" alt="" class="card-img-top img-fluid promo-img">
-                    <span class="promo-price bg-danger text-light p-1 m-1">10000MMK</span>
-                    <span class="origin-price text-danger m-2">20000MMK</span>
+                    <span class="promo-price badge bg-danger p-1 m-1">10000MMK</span>
+                    <span class="origin-price badge text-danger">20000MMK</span>
                     <p class="text-center promo-brand">Gucci T-Shirt</p>
                 </div>
             </div>
-        </div>
+        </a>
+        
     </div>
-</div> -->
+</div>
 <!-- Promotion End -->
 
 

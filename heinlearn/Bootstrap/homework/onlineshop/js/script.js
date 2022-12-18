@@ -1,19 +1,20 @@
 $(document).ready(function () {
+  
     var navbar = $('#navbar');
     $(window).scroll(function(){
-        if($(window).scrollTop() <=80){
+        if($(window).scrollTop() <=30){
             navbar.slideDown('slow');
         }else{
             navbar.slideUp('slow');
         }
     })
 
-    // $('.autoplay').slick({
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     autoplay: true,
-    //     autoplaySpeed: 2000,
-    //   });
+    $(".hoverEffect").hover(function(){
+      $('.dropdown-menu').show('slow');
+      }, function(){
+      $('.dropdown-menu').hide('slow');
+    });
+
     $('.responsive').slick({
         dots: true,
         infinite: false,
@@ -50,4 +51,43 @@ $(document).ready(function () {
           }
         ]
       });
+    
+    //sidebar
+    $('#all').click(function(){
+      $('.puma').show('slow');
+      $('.gucci').show('slow');
+      $('.adidas').show('slow');
+      $('#all').addClass('active');
+      $('#puma').removeClass('active');
+      $('#gucci').removeClass('active');
+      $('#adidas').removeClass('active');
+    })
+    $('#puma').click(function(){
+      $('.puma').show('slow');
+      $('.gucci').hide('slow');
+      $('.adidas').hide('slow');
+      $('#all').removeClass('active');
+      $('#puma').addClass('active');
+      $('#gucci').removeClass('active');
+      $('#adidas').removeClass('active');
+    })
+    $('#gucci').click(function(){
+      $('.puma').hide('slow');
+      $('.gucci').show('slow');
+      $('.adidas').hide('slow');
+      $('#all').removeClass('active');
+      $('#puma').removeClass('active');
+      $('#gucci').addClass('active');
+      $('#adidas').removeClass('active');
+    })
+    $('#adidas').click(function(){
+      $('.puma').hide('slow');
+      $('.gucci').hide('slow');
+      $('.adidas').show('slow');
+      $('#all').removeClass('active');
+      $('#puma').removeClass('active');
+      $('#gucci').removeClass('active');
+      $('#adidas').addClass('active');
+    })
 });
+

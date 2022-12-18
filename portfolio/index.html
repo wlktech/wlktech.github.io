@@ -14,7 +14,7 @@
 <body>
 <div id="preloader"></div>
 <!--nav start-->
-<nav class="navbar navbar-expand-sm navbar-dark text-danger">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#home">WAI LINN KYAW</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -69,7 +69,7 @@
   <div class="container my-5">
     <div class="row reveal">
       <div class="col-xl-6 my-3 reveal">
-        <img src="img/graduate.JPG" class="img-fluid" alt="">
+        <img src="img/graduate.JPG" class="img-fluid rounded shadow-lg" alt="">
       </div>
       <div class="col-xl-6 my-3 reveal">
         <h3 class="job mb-4 text-start text-primary">Full-Stack & Freelance Web Developer</h3>
@@ -78,7 +78,7 @@
             <p class="text_unbold"><span class="text_bold"><i class="fa-solid fa-share text-primary mx-2"></i>Birthday:</span> Aug 29th, 1997.</p>
           </div>
           <div class="col-xl-6">
-            <p class="text_unbold"><span class="text_bold"><i class="fa-solid fa-share text-primary mx-2"></i>Age:</span> 25 years old.</p>
+            <p class="text_unbold"><span class="text_bold"><i class="fa-solid fa-share text-primary mx-2"></i>Age:</span> <span class="text_bold" id="age"></span> years old.</p>
           </div>
           <div class="col-xl-6">
             <p class="text_unbold"><span class="text_bold"><i class="fa-solid fa-share text-primary mx-2"></i>GitHub:</span><a href=""> wlktech</a></p>
@@ -108,11 +108,11 @@
 </div>
 <!-- About End -->
 
-<div class="preloader">
+<!-- <div class="preloader">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/JmOzco_KT3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/JmOzco_KT3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/JmOzco_KT3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</div> -->
 
 
 
@@ -125,21 +125,28 @@
   <div class="contact row container justify-content-end reveal">
     <div class="col-xl mt-5">
       <h4>Send me an email</h4>
-      <div class="form-floating mb-3 mt-3">
-        <input type="text" class="input form-control" id="Name" placeholder="Enter Name" name="Name">
-        <label for="Name" class="text-white">Name</label>
+    <form name="myForm" onsubmit="return validateForm()" action="index.html">
+      <p id="success" class="text-success text_bold"></p>
+      <div class="form-floating">
+        <input type="text" class="input form-control" id="name" placeholder="Enter Name" name="name">
+        <label for="name" class="text-white">Name</label>
+        <span class="text-danger" id="name_warn"></span>
       </div>
-      <div class="form-floating mb-3 mt-3">
-        <input type="text" class="input form-control" id="Email" placeholder="Enter Email" name="Email">
-        <label for="Email" class="text-white">Email Address</label>
+      <div class="form-floating">
+        <input type="text" class="input form-control" id="email" placeholder="Enter Email" name="email">
+        <label for="email" class="text-white">Email Address</label>
+        <span class="text-danger" id="email_warn"></span>
       </div>
-      <div class="form-floating mb-3 mt-3">
-        <input type="text" class="input form-control" id="meassage" placeholder="Enter meassage" name="Message">
-        <label for="Message" class="text-white">Message</label>
+      <div class="form-floating">
+        <input type="text" class="input form-control" id="meassage" placeholder="Enter meassage" name="message">
+        <label for="message" class="text-white">Message</label>
+        <span class="text-danger" id="message_warn"></span>
       </div>
+      
       <div class="mb-3 mt-3">
-        <button class="btn btn-outline-light my-4">SUBMIT</button>
+        <button type="submit" class="btn btn-outline-light my-4">SUBMIT</button>
       </div>
+    </form>
     </div>
     <div class="social_contact col-xl mt-5">
       <h4>SOCIAL CONTACTS</h4>

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 *{
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 #preloader{
     background: #121212 url(../img/sand.gif) no-repeat center center;
@@ -29,11 +30,11 @@
 .navbar{
     background-color: black;
     opacity: 0.6;
-    position: fixed;
+    /* position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 99;
+    z-index: 99; */
 }
 .navbar:hover{
     opacity: 0.8;
@@ -53,7 +54,7 @@
     margin-right: 25px;
     text-decoration: none;
     color: rgb(255, 255, 255);
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     font-weight: 600;
 }
 .link:hover{
