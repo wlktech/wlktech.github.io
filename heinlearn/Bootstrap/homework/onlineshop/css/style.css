@@ -77,6 +77,28 @@
     right: 0px;
     text-decoration: line-through;
 }
-.promo-brand{
-    font-size: 20px;
+
+.left_arrow{
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+}
+.left_arrow:hover, .right_arrow:hover{
+    background-color: rgb(103, 48, 48, 0.7);
+}
+.right_arrow{
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
 }
