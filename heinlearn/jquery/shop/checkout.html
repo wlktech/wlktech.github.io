@@ -17,7 +17,7 @@
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
-                    <li class="nav-item"><a href="checkout.html" class="nav-link"><i class="fa-solid fa-cart-plus"></i><span class="badge bg-danger" id="qty"></span></a></li>
+                    <li class="nav-item"><a href="checkout.html" class="nav-link"><i class="fa-solid fa-cart-plus"></i><span class="badge bg-danger" id="count_number"></span></a></li>
                 </ul>
             </div>
         </div>   
@@ -38,15 +38,9 @@
             <tbody id="tbody">
                 
             </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="4">Total</td>
-                    <td id="total"></td>
-                </tr>
-            </tfoot>
         </table>
     </div>
-    <button class="btn btn-outline-danger">Order Now</button>
+    <button class="btn btn-outline-success" id="order">Order Now</button>
 </div>
 
 
@@ -64,45 +58,79 @@
 <script src="https://kit.fontawesome.com/b829c5162c.js" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){
-        count();
         getData();
+        count();
         function getData(){
-            let itemStr = localStorage.getItem('shops');
-            console.log(itemStr);
-            if(itemStr){
-                let itemArr = JSON.parse(itemStr);
+            let itemGetData = localStorage.getItem('shops');
+            if(itemGetData){
+                let itemDataArray = JSON.parse(itemGetData);
                 let data = '';
-                let j=1;
-                $.each(itemArr, function(i, v){
+                let j = 1;
+                //total Calculation
+                let total = 0;
+                $.each(itemDataArray, function(i, v){
                     data += `<tr>
                         <td>${j++}</td>
                         <td>${v.item_name}</td>
                         <td>${v.item_price}</td>
-                        <td><button class="btn btn-sm btn-outline-secondary me-2 min">-</button>${v.qty}<button class="btn btn-sm btn-outline-secondary ms-2 max">+</button></td>
-                        <td>${v.item_price*v.qty}</td>
-                    </tr>`;
-                    let total = 0;
-                    
-                });
+                        <td><button class="btn btn-sm btn-outline-secondary me-2 min" data-item_i="${i}">-</button>${v.qty}<button class="btn btn-sm btn-outline-secondary ms-2 max" data-item_i="${i}">+</button></td>
+                        <td>${v.qty*v.item_price}</td>
+                    </tr>`
+                    total += v.item_price * v.qty;
+                })
+                data += `<td colspan="4">Total</td> <td>${total}</td>`;
+                $('#tbody').html(data);
+            }else{
+                let data = '';
                 $('#tbody').html(data);
             }
-        }
 
-        $('#tbody').on('click', '.min', function(){
-            let item_i = $(this).data('item_i');
-            let itemStr = localStorage.getItem('shops');
-            if(itemStr){
-                let itemArr = JSON.parse(itemStr);
-                $.each(itemArr, function(i, v){
-                    if(item_i == i){
-                        v.qty--;
-                    }
-                })
-                let itemData = JSON.stringify(itemArr);
-                localStorage.setItem('shops', itemData);
+            $('#tbody').on('click', '.min', function(){
+                let item_i = $(this).data('item_i');
+                let itemStr = localStorage.getItem('shops');
+                if(itemStr){
+                    let itemArr = JSON.parse(itemStr);
+                    $.each(itemArr, function(i,v){
+                        if(item_i == i){
+                            v.qty--;
+                            if(v.qty == 0){
+                                //item delete 
+                                itemArr.splice(item_i, 1);
+                            }
+                        }
+                    })
+
+                    let itemData = JSON.stringify(itemArr);
+                    localStorage.setItem('shops', itemData);
+                    getData();
+                    count();
+                }
+            })
+            $('#tbody').on('click', '.max', function(){
+                let item_i = $(this).data('item_i');
+                let itemStr = localStorage.getItem('shops');
+                if(itemStr){
+                    let itemArr = JSON.parse(itemStr);
+                    $.each(itemArr, function(i,v){
+                        if(item_i == i){
+                            v.qty++;
+                        }
+                    })
+
+                    let itemData = JSON.stringify(itemArr);
+                    localStorage.setItem('shops', itemData);
+                    getData();
+                    count();
+                }
+            })
+
+
+            $('#order').click(function(){
+                localStorage.clear();
                 getData();
-            }
-        })
+                count();
+            })
+        }
     })
 </script>
 </body>
