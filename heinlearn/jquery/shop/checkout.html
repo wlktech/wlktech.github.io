@@ -84,7 +84,7 @@
                 let data = '';
                 $('#tbody').html(data);
             }
-
+        }
             $('#tbody').on('click', '.min', function(){
                 let item_i = $(this).data('item_i');
                 let itemStr = localStorage.getItem('shops');
@@ -130,7 +130,7 @@
                 getData();
                 count();
             })
-        }
+        
     })
 </script>
 </body>
