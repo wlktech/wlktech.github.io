@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    <style>
+        #panel{
+            max-width: 150px;
+            padding: 50px 0;
+            background-color: red;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <p id="panel">Animation</p>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+
+
+
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#start').click(function(){
+                $('#panel').animate({left:'500px'},2000);
+                $('#panel').animate({top:'500px'},2000);
+                $('#panel').animate({left:'0px'},2000);
+                $('#panel').animate({top:'0px'},2000);
+            })
+        })
+    </script>
+</body>
+</html>

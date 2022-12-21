@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Out</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light navbar-expand-lg shadow">
+        <div class="container">
+            <a href="" class="navbar-brand">IT SHOP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                    <li class="nav-item"><a href="checkout.html" class="nav-link"><i class="fa-solid fa-cart-plus"></i><span class="badge bg-danger" id="count_number"></span></a></li>
+                </ul>
+            </div>
+        </div>   
+    </nav>
+<div class="container mt-5">
+    <h2 class="text-center my-5">Checkout Lists</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                    <th>Qty</th>
+                    <th>Sub Total</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            </tbody>
+        </table>
+    </div>
+    <button class="btn btn-outline-success" id="order">Order Now</button>
+</div>
+
+
+
+
+
+
+
+
+<script src="asset/js/jquery-3.6.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="asset/js/script.js"></script>
+<script src="asset/js/count.js"></script>
+<script src="https://kit.fontawesome.com/b829c5162c.js" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        getData();
+        count();
+        function getData(){
+            let itemGetData = localStorage.getItem('shops');
+            if(itemGetData){
+                let itemDataArray = JSON.parse(itemGetData);
+                let data = '';
+                let j = 1;
+                //total Calculation
+                let total = 0;
+                $.each(itemDataArray, function(i, v){
+                    data += `<tr>
+                        <td>${j++}</td>
+                        <td>${v.item_name}</td>
+                        <td>${v.item_price}</td>
+                        <td><button class="btn btn-sm btn-outline-secondary me-2 min" data-item_i="${i}">-</button>${v.qty}<button class="btn btn-sm btn-outline-secondary ms-2 max" data-item_i="${i}">+</button></td>
+                        <td>${v.qty*v.item_price}</td>
+                    </tr>`
+                    total += v.item_price * v.qty;
+                })
+                data += `<td colspan="4">Total</td> <td>${total}</td>`;
+                $('#tbody').html(data);
+            }else{
+                let data = '';
+                $('#tbody').html(data);
+            }
+        }
+            $('#tbody').on('click', '.min', function(){
+                let item_i = $(this).data('item_i');
+                let itemStr = localStorage.getItem('shops');
+                if(itemStr){
+                    let itemArr = JSON.parse(itemStr);
+                    $.each(itemArr, function(i,v){
+                        if(item_i == i){
+                            v.qty--;
+                            if(v.qty == 0){
+                                //item delete 
+                                itemArr.splice(item_i, 1);
+                            }
+                        }
+                    })
+
+                    let itemData = JSON.stringify(itemArr);
+                    localStorage.setItem('shops', itemData);
+                    getData();
+                    count();
+                }
+            })
+            $('#tbody').on('click', '.max', function(){
+                let item_i = $(this).data('item_i');
+                let itemStr = localStorage.getItem('shops');
+                if(itemStr){
+                    let itemArr = JSON.parse(itemStr);
+                    $.each(itemArr, function(i,v){
+                        if(item_i == i){
+                            v.qty++;
+                        }
+                    })
+
+                    let itemData = JSON.stringify(itemArr);
+                    localStorage.setItem('shops', itemData);
+                    getData();
+                    count();
+                }
+            })
+
+
+            $('#order').click(function(){
+                localStorage.clear();
+                getData();
+                count();
+            })
+        
+    })
+</script>
+</body>
+</html>

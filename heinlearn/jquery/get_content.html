@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    
+</head>
+<body>
+    <h3>Today is <i>TGIF</i>. We go to the Coffee Bar.</h3>
+    <p id="content1"></p>
+    <p id="content2"></p>
+    <h2></h2>
+    Name :: <input type="text" id="name" name="name">
+    <button id="click">Click</button>
+
+
+
+
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#click').click(function(){
+                let get_text = $('h3').text();
+                let get_html = $('h3').html();
+                $('#content1').text(get_text);
+                $('#content2').html(get_html);
+                
+                let name = $('#name').val();
+                $('h2').text("Welcome, " + name);
+            })
+        })
+    </script>
+</body>
+</html>
