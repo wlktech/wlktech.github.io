@@ -28,6 +28,7 @@
 }
 .about_img{
     overflow: hidden;
+    border-radius: 10px;
 }
 .about_image:hover{
     transform: scale(1.1);
