@@ -16,7 +16,7 @@
 
 .leftin{
     position: relative;
-    transform: translateX(-200px);
+    transform: translateX(200px);
     /* transform: translateY(150px); */
     opacity: 0;
     transition: 1s all ease;
@@ -29,7 +29,7 @@
 
 .rightin{
     position: relative;
-    transform: translateX(200px);
+    transform: translateX(-200px);
     /* transform: translateY(150px); */
     opacity: 0;
     transition: 1s all ease;
@@ -134,3 +134,9 @@
     font-size: 12px;
 }
 /* promo */
+
+/* product */
+.checked {
+    color: orange;
+}
+/* product */
