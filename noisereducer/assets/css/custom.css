@@ -1,7 +1,44 @@
 *{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.reveal{
+    position: relative;
+    transform: scale(0);
+    /* transform: translateY(150px); */
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.reveal.active{
+    transform: scale(1);
+    opacity: 1;
+}
 
+.leftin{
+    position: relative;
+    transform: translateX(-200px);
+    /* transform: translateY(150px); */
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.leftin.Leftin{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.rightin{
+    position: relative;
+    transform: translateX(200px);
+    /* transform: translateY(150px); */
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.rightin.Rightin{
+    transform: translateX(0);
+    opacity: 1;
+}
 /* Home */
 .carousel_text{
     position: absolute;
@@ -92,5 +129,8 @@
 }
 .slick-dots li button:hover{
     opacity: 1;
+}
+.color{
+    font-size: 12px;
 }
 /* promo */
