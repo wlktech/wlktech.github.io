@@ -171,21 +171,73 @@ $("#eColor3").click(function() {
   $("#e1").attr("src", "./assets/img/pg.jpg");
 });
 
-//fabric foam
-$("#fColor0").click(function() {
+//fabric black panel
+$("#fabric1").click(function() {
   // Change src attribute of image
   $("#f1").attr("src", "./assets/img/products/WE-08 Black.png");
+  $("#price1").text("Ks30,000");
 });
-$("#fColor1").click(function() {
+$("#fabric2").click(function() {
   // Change src attribute of image
-  $("#f1").attr("src", "./assets/img/pb.jpg");
+  $("#f1").attr("src", "./assets/img/products/fabricSize1.jpg");
+  $("#price1").text("Ks30,000");
 });
-$("#fColor2").click(function() {
+$("#fabric3").click(function() {
   // Change src attribute of image
-  $("#f1").attr("src", "./assets/img/pr.jpg");
+  $("#f1").attr("src", "./assets/img/products/fabricSize2.jpg");
+  $("#price1").text("Ks60,000");
 });
 
+//fabric dark grey panel
+$("#darkgrey0").click(function() {
+  // Change src attribute of image
+  $("#f2").attr("src", "./assets/img/products/Dark Grey.png");
+  $("#price2").text("Ks30,000");
+});
+$("#darkgrey1").click(function() {
+  // Change src attribute of image
+  $("#f2").attr("src", "./assets/img/products/fabricSize1.jpg");
+  $("#price2").text("Ks30,000");
+});
+$("#darkgrey2").click(function() {
+  // Change src attribute of image
+  $("#f2").attr("src", "./assets/img/products/fabricSize2.jpg");
+  $("#price2").text("Ks60,000");
+});
 
+//fabric light grey panel
+$("#lightgrey0").click(function() {
+  // Change src attribute of image
+  $("#f3").attr("src", "./assets/img/products/light grey.png");
+  $("#price3").text("Ks30,000");
+});
+$("#lightgrey1").click(function() {
+  // Change src attribute of image
+  $("#f3").attr("src", "./assets/img/products/fabricSize1.jpg");
+  $("#price3").text("Ks30,000");
+});
+$("#lightgrey2").click(function() {
+  // Change src attribute of image
+  $("#f3").attr("src", "./assets/img/products/fabricSize2.jpg");
+  $("#price3").text("Ks60,000");
+});
+
+//fabric beige panel
+$("#beige0").click(function() {
+  // Change src attribute of image
+  $("#f4").attr("src", "./assets/img/products/beige.png");
+  $("#price4").text("Ks30,000");
+});
+$("#beige1").click(function() {
+  // Change src attribute of image
+  $("#f4").attr("src", "./assets/img/products/fabricSize1.jpg");
+  $("#price4").text("Ks30,000");
+});
+$("#beige2").click(function() {
+  // Change src attribute of image
+  $("#f4").attr("src", "./assets/img/products/fabricSize2.jpg");
+  $("#price4").text("Ks60,000");
+});
 
 
 
