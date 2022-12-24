@@ -139,4 +139,20 @@
 .checked {
     color: orange;
 }
+.divider{
+    /* background-color: rgb(255, 37, 37); */
+    padding: 1px 3px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #666699 0%, #cc99ff 100%);
+}
+.selector{
+    border: none;
+}
 /* product */
+
+/* footer */
+.textColor{
+    color: rgb(175, 175, 175);
+}
+/* footer */

@@ -98,4 +98,99 @@ $(document).ready(function () {
     })
     
 
+//pyramid foam
+    $("#pColor0").click(function() {
+      // Change src attribute of image
+      $("#p1").attr("src", "./assets/img/promo1.jpg");
+    });
+    $("#pColor1").click(function() {
+      // Change src attribute of image
+      $("#p1").attr("src", "./assets/img/pb.jpg");
+    });
+    $("#pColor2").click(function() {
+      // Change src attribute of image
+      $("#p1").attr("src", "./assets/img/pr.jpg");
+    });
+    $("#pColor3").click(function() {
+      // Change src attribute of image
+      $("#p1").attr("src", "./assets/img/pg.jpg");
+    });
+
+
+//wedge foam
+$("#wColor0").click(function() {
+  // Change src attribute of image
+  $("#w1").attr("src", "./assets/img/promo2.jpg");
+});
+$("#wColor1").click(function() {
+  // Change src attribute of image
+  $("#w1").attr("src", "./assets/img/pb.jpg");
+});
+$("#wColor2").click(function() {
+  // Change src attribute of image
+  $("#w1").attr("src", "./assets/img/pr.jpg");
+});
+$("#wColor3").click(function() {
+  // Change src attribute of image
+  $("#w1").attr("src", "./assets/img/pg.jpg");
+});
+
+//diffusor foam
+$("#dColor0").click(function() {
+  // Change src attribute of image
+  $("#d1").attr("src", "./assets/img/promo2.jpg");
+});
+$("#dColor1").click(function() {
+  // Change src attribute of image
+  $("#d1").attr("src", "./assets/img/pb.jpg");
+});
+$("#dColor2").click(function() {
+  // Change src attribute of image
+  $("#d1").attr("src", "./assets/img/pr.jpg");
+});
+$("#dColor3").click(function() {
+  // Change src attribute of image
+  $("#d1").attr("src", "./assets/img/pg.jpg");
+});
+
+//eggcrate foam
+$("#eColor0").click(function() {
+  // Change src attribute of image
+  $("#e1").attr("src", "./assets/img/promo2.jpg");
+});
+$("#eColor1").click(function() {
+  // Change src attribute of image
+  $("#e1").attr("src", "./assets/img/pb.jpg");
+});
+$("#eColor2").click(function() {
+  // Change src attribute of image
+  $("#e1").attr("src", "./assets/img/pr.jpg");
+});
+$("#eColor3").click(function() {
+  // Change src attribute of image
+  $("#e1").attr("src", "./assets/img/pg.jpg");
+});
+
+//fabric foam
+$("#fColor0").click(function() {
+  // Change src attribute of image
+  $("#f1").attr("src", "./assets/img/products/WE-08 Black.png");
+});
+$("#fColor1").click(function() {
+  // Change src attribute of image
+  $("#f1").attr("src", "./assets/img/pb.jpg");
+});
+$("#fColor2").click(function() {
+  // Change src attribute of image
+  $("#f1").attr("src", "./assets/img/pr.jpg");
+});
+
+
+
+
+
+
+
+
+
 });
