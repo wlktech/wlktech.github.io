@@ -109,11 +109,11 @@ $(document).ready(function () {
     });
     $("#pColor2").click(function() {
       // Change src attribute of image
-      $("#p1").attr("src", "./assets/img/pr.jpg");
+      $("#p1").attr("src", "./assets/img/pg.jpg");
     });
     $("#pColor3").click(function() {
       // Change src attribute of image
-      $("#p1").attr("src", "./assets/img/pg.jpg");
+      $("#p1").attr("src", "./assets/img/pr.jpg");
     });
 
 
@@ -124,33 +124,33 @@ $("#wColor0").click(function() {
 });
 $("#wColor1").click(function() {
   // Change src attribute of image
-  $("#w1").attr("src", "./assets/img/pb.jpg");
+  $("#w1").attr("src", "./assets/img/products/wedgered.jpg");
 });
 $("#wColor2").click(function() {
   // Change src attribute of image
-  $("#w1").attr("src", "./assets/img/pr.jpg");
+  $("#w1").attr("src", "./assets/img/products/greywedge.jpg");
 });
 $("#wColor3").click(function() {
   // Change src attribute of image
-  $("#w1").attr("src", "./assets/img/pg.jpg");
+  $("#w1").attr("src", "./assets/img/products/black&redwedge.jpg");
 });
 
 //diffusor foam
 $("#dColor0").click(function() {
   // Change src attribute of image
-  $("#d1").attr("src", "./assets/img/promo2.jpg");
+  $("#d1").attr("src", "./assets/img/promo5.jpg");
 });
 $("#dColor1").click(function() {
   // Change src attribute of image
-  $("#d1").attr("src", "./assets/img/pb.jpg");
+  $("#d1").attr("src", "./assets/img/products/reddiffusor.jpg");
 });
 $("#dColor2").click(function() {
   // Change src attribute of image
-  $("#d1").attr("src", "./assets/img/pr.jpg");
+  $("#d1").attr("src", "./assets/img/products/greydiffusor.jpg");
 });
 $("#dColor3").click(function() {
   // Change src attribute of image
-  $("#d1").attr("src", "./assets/img/pg.jpg");
+  $("#d1").attr("src", "./assets/img/products/backgrounddiffusorfoam.jpg");
 });
 
 //eggcrate foam
