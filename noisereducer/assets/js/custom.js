@@ -240,9 +240,130 @@ $("#beige2").click(function() {
 });
 
 
+//Polyester Black panel
+$("#pe10").click(function() {
+  // Change src attribute of image
+  $("#peb1").attr("src", "./assets/img/products/blackpoly.jpg");
 
+});
+$("#pe11").click(function() {
+  // Change src attribute of image
+  $("#peb1").attr("src", "./assets/img/products/hexagonBackground.jpg");
 
+});
+$("#pe12").click(function() {
+  // Change src attribute of image
+  $("#peb1").attr("src", "./assets/img/products/detailpoly.avif");
 
+});
 
+//Polyester Brown panel
+$("#pe20").click(function() {
+  // Change src attribute of image
+  $("#pebr1").attr("src", "./assets/img/products/brownpoly.jpg");
+
+});
+$("#pe21").click(function() {
+  // Change src attribute of image
+  $("#pebr1").attr("src", "./assets/img/products/hexagonBackground.jpg");
+
+});
+$("#pe22").click(function() {
+  // Change src attribute of image
+  $("#pebr1").attr("src", "./assets/img/products/detailpoly.avif");
+
+});
+
+//Polyester Lightgrey panel
+$("#pe30").click(function() {
+  // Change src attribute of image
+  $("#pelg1").attr("src", "./assets/img/products/lightgreypoly.jpg");
+
+});
+$("#pe31").click(function() {
+  // Change src attribute of image
+  $("#pelg1").attr("src", "./assets/img/products/hexagonBackground.jpg");
+
+});
+$("#pe32").click(function() {
+  // Change src attribute of image
+  $("#pelg1").attr("src", "./assets/img/products/detailpoly.avif");
+
+});
+
+//Polyester Red panel
+$("#pe40").click(function() {
+  // Change src attribute of image
+  $("#per1").attr("src", "./assets/img/products/redpoly.jpg");
+
+});
+$("#pe41").click(function() {
+  // Change src attribute of image
+  $("#per1").attr("src", "./assets/img/products/hexagonBackground.jpg");
+
+});
+$("#pe42").click(function() {
+  // Change src attribute of image
+  $("#per1").attr("src", "./assets/img/products/detailpoly.avif");
+
+});
+
+//Wooden Diffusor panel
+$("#w11").click(function() {
+  // Change src attribute of image
+  $("#w10").attr("src", "./assets/img/products/w1.jpg");
+
+});
+$("#w12").click(function() {
+  // Change src attribute of image
+  $("#w10").attr("src", "./assets/img/products/w2.1.png");
+
+});
+
+//Wooden Diffusor panel
+$("#w21").click(function() {
+  // Change src attribute of image
+  $("#w20").attr("src", "./assets/img/products/w2.png");
+
+});
+$("#w22").click(function() {
+  // Change src attribute of image
+  $("#w20").attr("src", "./assets/img/products/w1.1.jpg");
+
+});
+
+//Wooden Diffusor panel
+$("#w31").click(function() {
+  // Change src attribute of image
+  $("#w30").attr("src", "./assets/img/products/w5.jpg");
+
+});
+$("#w32").click(function() {
+  // Change src attribute of image
+  $("#w30").attr("src", "./assets/img/products/w5.1.jpg");
+
+});
+$("#w33").click(function() {
+  // Change src attribute of image
+  $("#w30").attr("src", "./assets/img/products/w5.2.webp");
+
+});
+
+//Wooden Diffusor panel
+$("#w41").click(function() {
+  // Change src attribute of image
+  $("#w40").attr("src", "./assets/img/products/w6.jpg");
+
+});
+$("#w42").click(function() {
+  // Change src attribute of image
+  $("#w40").attr("src", "./assets/img/products/w6.1.webp");
+
+});
+$("#w43").click(function() {
+  // Change src attribute of image
+  $("#w40").attr("src", "./assets/img/products/w6.2.jpg");
+
+});
 
 });
