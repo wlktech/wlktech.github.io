@@ -355,4 +355,59 @@ $("#w43").click(function() {
 
 });
 
+//AddToCart System Start
+$('.addToCart').click(function(e){
+  e.preventDefault();
+  let id = $(this).data('id');
+  let name = $(this).data('name');
+  let description = $(this).data('description');
+  let price = $(this).data('price');
+  console.log(id, name, description, price);
+
+  //create an obj
+  let items = {
+      item_id : id,
+      item_name : name, 
+      item_description : description,
+      item_price : price,
+      qty : 1
+  }
+
+  //create localstorage
+  let itemString = localStorage.getItem('shops');
+  let itemArray;
+  if(itemString == null){
+      itemArray = [];
+  }else{
+      itemArray = JSON.parse(itemString);
+  }
+
+  //if item is same, qty will be plus 1.
+  let status = false;
+  $.each(itemArray, function(i, v){
+      if(id == v.item_id){
+          status = true;
+          v.qty++;
+      }
+  })
+
+  //if item is not same, another item will be added.
+  if(status == false){
+      //data place in array
+      itemArray.push(items);
+  }
+
+  //convert data into string
+  let itemData = JSON.stringify(itemArray);
+  localStorage.setItem('shops', itemData);
+  // count();
+
+})
+//AddToCart System End
+
+
+
+
+
+
 });
