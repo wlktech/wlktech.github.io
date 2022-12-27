@@ -13,10 +13,12 @@
     transform: scale(1);
     opacity: 1;
 }
-
+#about{
+    overflow: hidden;
+}
 .leftin{
     position: relative;
-    transform: translateX(200px);
+    transform: translateX(-500px);
     /* transform: translateY(150px); */
     opacity: 0;
     transition: 1s all ease;
@@ -29,7 +31,7 @@
 
 .rightin{
     position: relative;
-    transform: translateX(-200px);
+    transform: translateX(500px);
     /* transform: translateY(150px); */
     opacity: 0;
     transition: 1s all ease;

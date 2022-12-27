@@ -156,20 +156,9 @@ $("#dColor3").click(function() {
 //eggcrate foam
 $("#eColor0").click(function() {
   // Change src attribute of image
-  $("#e1").attr("src", "./assets/img/promo2.jpg");
+  $("#e1").attr("src", "./assets/img/promo4.jpg");
 });
-$("#eColor1").click(function() {
-  // Change src attribute of image
-  $("#e1").attr("src", "./assets/img/pb.jpg");
-});
-$("#eColor2").click(function() {
-  // Change src attribute of image
-  $("#e1").attr("src", "./assets/img/pr.jpg");
-});
-$("#eColor3").click(function() {
-  // Change src attribute of image
-  $("#e1").attr("src", "./assets/img/pg.jpg");
-});
+
 
 //fabric black panel
 $("#fabric1").click(function() {
