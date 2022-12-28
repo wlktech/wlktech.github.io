@@ -58,11 +58,9 @@
                     <a class="nav-link" href="#contact">CONTACT</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link position-relative btn" style="width: 50px;" href="checkout.html">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                          99+
-                        </span>
+                    <a href="checkout.html" class="nav-link">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <span class="badge bg-danger" id="count_number"></span>
                     </a>
                 </li>
             </ul>
@@ -227,6 +225,65 @@
     </div>
 </div>
 <!-- Promo End -->
+
+<!-- Service Start -->
+<div class="container my-5 reveal">
+    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4">
+        <div class="col">
+            <div class="card pt-3 my-2">
+                <div class="row">
+                    <div class="col-3 col-md-3 text-center">
+                        <i class="fa-solid fa-truck-fast fa-2x ps-4 pt-2"></i>
+                    </div>
+                    <div class="col-9 col-md-9">
+                        <p class="pb-0 mb-0">Fast & Free Shipping</p>
+                        <p class="text-secondary">For orders from $50</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card pt-3 my-2">
+                <div class="row">
+                    <div class="col-3 col-md-3 text-center">
+                        <i class="fa-solid fa-headset fa-2x ps-4 pt-2"></i>
+                    </div>
+                    <div class="col-9 col-md-9">
+                        <p class="pb-0 mb-0">Support 24/7</p>
+                        <p class="text-secondary">Call us anytime</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card pt-3 my-2">
+                <div class="row">
+                    <div class="col-3 col-md-3 text-center">
+                        <i class="fa-solid fa-shield-halved fa-2x ps-4 pt-2"></i>
+                    </div>
+                    <div class="col-9 col-md-9">
+                        <p class="pb-0 mb-0">100% Safety</p>
+                        <p class="text-secondary">Only secure payments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card pt-3 my-2">
+                <div class="row">
+                    <div class="col-3 col-md-3 text-center">
+                        <i class="fa-solid fa-gift fa-2x ps-4 pt-2"></i>
+                    </div>
+                    <div class="col-9 col-md-9">
+                        <p class="pb-0 mb-0">Gift Promotion</p>
+                        <p class="text-secondary">Discount up to 90%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
 
 <!-- Products Start -->
 <div class="container py-5" id="product">
@@ -598,6 +655,7 @@
     <script src="assets/js/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/b829c5162c.js" crossorigin="anonymous"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/count.js"></script>
     <script>
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
@@ -714,9 +772,9 @@
         <div class="modal-footer">
           <!-- <button type="button" class="btn btn-success">Buy Now</button> -->
           <!-- <input type="hidden" value="add"> -->
-          <button type="button" class="btn btn-success addToCart" data-id="1" data-description="Black, 50x50x5cm" data-name="Pyramid Foam"  data-price="20000" id="pb50">Add To Cart</button>
-          <button type="button" class="btn btn-success addToCart" data-id="2" data-description="Grey, 50x50x5cm" data-name="Pyramid Foam"  data-price="20000" id="pg50">Add To Cart</button>
-          <button type="button" class="btn btn-success addToCart" data-id="3" data-description="Red, 50x50x5cm" data-name="Pyramid Foam"  data-price="20000" id="pr50">Add To Cart</button>
+          <button type="button" class="btn btn-success addToCart" data-id="1" data-description="Black, 50x50x5cm, 25kg/m3" data-name="Pyramid Foam"  data-price="20000" id="pb50">Add To Cart</button>
+          <button type="button" class="btn btn-success addToCart" data-id="2" data-description="Grey, 50x50x5cm, 25kg/m3" data-name="Pyramid Foam"  data-price="20000" id="pg50">Add To Cart</button>
+          <button type="button" class="btn btn-success addToCart" data-id="3" data-description="Red, 50x50x5cm, 25kg/m3" data-name="Pyramid Foam"  data-price="20000" id="pr50">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -742,28 +800,25 @@
                         <p>Density : <small class="text-secondary"> 25kg/m3</small></p>
                         <p>Price : <small class="text-secondary"> Ks20,000</small></p>
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-4">
                                 <button class="selector" ><img id="wColor0" src="./assets/img/promo2.jpg" class="w-100" alt=""></button>
                             </div>
-                            <div class="col-3">
+                            <div class="col-4">
                                 <button class="selector" ><img id="wColor1" src="./assets/img/products/wedgered.jpg" class="w-100" alt=""></button>
                             </div>
-                            <div class="col-3">
+                            <div class="col-4">
                                 <button class="selector" ><img id="wColor2" src="./assets/img/products/greywedge.jpg" class="w-100" alt=""></button>
                             </div>
-                            <div class="col-3">
-                                <button class="selector" ><img id="wColor3" src="./assets/img/products/black&redwedge.jpg" class="w-100" alt=""></button>
-                            </div>
                         </div>
-                        
                     </div>
                 </div>
                 
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="4" data-description="Black, 50x50x5cm, 25kg/m3" data-name="Wedge Foam"  data-price="20000" id="wb50">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="5" data-description="Red, 50x50x5cm, 25kg/m3" data-name="Wedge Foam"  data-price="20000" id="wr50">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="6" data-description="Grey, 50x50x5cm, 25kg/m3" data-name="Wedge Foam"  data-price="20000" id="wg50">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -785,22 +840,20 @@
                     </div>
                     <div class="col-md-6">
                         <p>Size : <small class="text-secondary"> 50x50x5cm</small></p>
-                        <p>Color : <small class="text-secondary"> Black/Red/Gray</small></p>
+                        <p>Color : <small class="text-secondary dcolor"> Black</small></p>
                         <p>Density : <small class="text-secondary"> 25kg/m3</small></p>
                         <p>Price : <small class="text-secondary"> Ks20,000</small></p>
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-4">
                                 <button class="selector" ><img id="dColor0" src="./assets/img/promo5.jpg" class="w-100" alt=""></button>
                             </div>
-                            <div class="col-3">
+                            <div class="col-4">
                                 <button class="selector" ><img id="dColor1" src="./assets/img/products/reddiffusor.jpg" class="w-100" alt=""></button>
                             </div>
-                            <div class="col-3">
+                            <div class="col-4">
                                 <button class="selector" ><img id="dColor2" src="./assets/img/products/greydiffusor.jpg" class="w-100" alt=""></button>
                             </div>
-                            <div class="col-3">
-                                <button class="selector" ><img id="dColor3" src="./assets/img/products/backgrounddiffusorfoam.jpg" class="w-100" alt=""></button>
-                            </div>
+                            
                         </div>
                         
                     </div>
@@ -809,8 +862,9 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="7" data-description="Black, 50x50x5cm, 25kg/m3" data-name="Diffusor Foam"  data-price="20000" id="db50">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="8" data-description="Red, 50x50x5cm, 25kg/m3" data-name="Diffusor Foam"  data-price="20000" id="dr50">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="9" data-description="Grey, 50x50x5cm, 25kg/m3" data-name="Diffusor Foam"  data-price="20000" id="dg50">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -840,15 +894,7 @@
                             <div class="col-12">
                                 <button class="selector" ><img id="eColor0" src="./assets/img/promo4.jpg" class="w-25" alt=""></button>
                             </div>
-                            <!-- <div class="col-3">
-                                <button class="selector" ><img id="eColor1" src="./assets/img/pb.jpg" class="w-100" alt=""></button>
-                            </div>
-                            <div class="col-3">
-                                <button class="selector" ><img id="eColor2" src="./assets/img/pg.jpg" class="w-100" alt=""></button>
-                            </div>
-                            <div class="col-3">
-                                <button class="selector" ><img id="eColor3" src="./assets/img/pr.jpg" class="w-100" alt=""></button>
-                            </div> -->
+                            
                         </div>
                         
                     </div>
@@ -857,8 +903,7 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="10" data-description="Black, 50x50x5cm, 25kg/m3" data-name="Eggcrate Foam"  data-price="20000" id="eb50">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -879,7 +924,7 @@
                         <img src="./assets/img/products/WE-08 Black.png" class="w-100" id="f1" alt="">
                     </div>
                     <div class="col-md-6">
-                        <p>Size : <small class="text-secondary"> 60x60x6cm/60x120x6cm</small></p>
+                        <p>Size : <small class="text-secondary fbsize"> 60x60x6cm</small></p>
                         <p>Color : <small class="text-secondary"> Black</small></p>
                         <p>Density : <small class="text-secondary"> 96kg/m3</small></p>
                         <p>Price : <small class="text-secondary" id="price1"> Ks30,000</small></p>
@@ -901,8 +946,8 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="11" data-description="Black, 60x60x6cm, 96kg/m3" data-name="Fabric Panel"  data-price="30000" id="fb60">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="12" data-description="Black, 60x120x6cm, 96kg/m3" data-name="Fabric Panel"  data-price="60000" id="fb120">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -924,7 +969,7 @@
                         <img src="./assets/img/products/Dark Grey.png" class="w-100" id="f2" alt="">
                     </div>
                     <div class="col-md-6">
-                        <p>Size : <small class="text-secondary"> 60x60x6cm/60x120x6cm</small></p>
+                        <p>Size : <small class="text-secondary fbsize"> 60x60x6cm</small></p>
                         <p>Color : <small class="text-secondary"> Darkgray</small></p>
                         <p>Density : <small class="text-secondary"> 96kg/m3</small></p>
                         <p>Price : <small class="text-secondary" id="price2"> Ks30,000</small></p>
@@ -946,8 +991,8 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="13" data-description="Darkgrey, 60x60x6cm, 96kg/m3" data-name="Fabric Panel"  data-price="30000" id="fdg60">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="14" data-description="Darkgrey, 60x120x6cm, 96kg/m3" data-name="Fabric Panel"  data-price="60000" id="fdg120">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -969,7 +1014,7 @@
                         <img src="./assets/img/products/light grey.png" class="w-100" id="f3" alt="">
                     </div>
                     <div class="col-md-6">
-                        <p>Size : <small class="text-secondary"> 60x60x6cm/60x120x6cm</small></p>
+                        <p>Size : <small class="text-secondary fbsize"> 60x60x6cm</small></p>
                         <p>Color : <small class="text-secondary"> Lightgray</small></p>
                         <p>Density : <small class="text-secondary"> 96kg/m3</small></p>
                         <p>Price : <small class="text-secondary" id="price3"> Ks30,000</small></p>
@@ -991,8 +1036,8 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="15" data-description="Light Grey, 60x60x6cm, 96kg/m3" data-name="Fabric Panel"  data-price="30000" id="flg60">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="16" data-description="Light Grey, 60x120x6cm, 96kg/m3" data-name="Fabric Panel"  data-price="60000" id="flg120">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -1013,7 +1058,7 @@
                         <img src="./assets/img/products/beige.png" class="w-100" id="f4" alt="">
                     </div>
                     <div class="col-md-6">
-                        <p>Size : <small class="text-secondary"> 60x60x6cm/60x120x6cm</small></p>
+                        <p>Size : <small class="text-secondary fbsize"> 60x60x6cm</small></p>
                         <p>Color : <small class="text-secondary"> Lightgray</small></p>
                         <p>Density : <small class="text-secondary"> 96kg/m3</small></p>
                         <p>Price : <small class="text-secondary" id="price4"> Ks30,000</small></p>
@@ -1035,8 +1080,8 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="17" data-description="Beige, 60x60x6cm, 96kg/m3" data-name="Fabric Panel"  data-price="30000" id="fbg60">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="18" data-description="Beige, 60x120x6cm, 96kg/m3" data-name="Fabric Panel"  data-price="60000" id="fbg120">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -1058,7 +1103,7 @@
                         <img src="./assets/img/products/blackpoly.jpg" class="w-100" id="peb1" alt="">
                     </div>
                     <div class="col-md-6">
-                        <p>Size : <small class="text-secondary"> 60x60x60cm</small></p>
+                        <p>Size : <small class="text-secondary"> 60x60x0.9cm</small></p>
                         <p>Color : <small class="text-secondary"> Black</small></p>
                         <p>Density : <small class="text-secondary"> 215kg/m3</small></p>
                         <p>Price : <small class="text-secondary"> Ks80,000/6pcs</small></p>
@@ -1080,8 +1125,7 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="19" data-description="Black, 60x60x0.9cm, 215kg/m3, 6pcs" data-name="Polyester Hexagon"  data-price="80000">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -1125,8 +1169,7 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="20" data-description="Brown, 60x60x0.9cm, 215kg/m3, 6pcs" data-name="Polyester Hexagon"  data-price="80000">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -1170,8 +1213,7 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="21" data-description="Light Grey, 60x60x0.9cm, 215kg/m3, 6pcs" data-name="Polyester Hexagon"  data-price="80000">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -1215,8 +1257,7 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="22" data-description="Red, 60x60x0.9cm, 215kg/m3, 6pcs" data-name="Polyester Hexagon"  data-price="80000">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -1255,8 +1296,7 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="23" data-description="Timber, 60x60x10cm" data-name="Wooden Diffusor"  data-price="60000">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -1295,8 +1335,7 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="24" data-description="Timber, 60x60x10cm" data-name="Wooden Diffusor"  data-price="60000">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -1337,8 +1376,7 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="25" data-description="Timber, 60x60x10cm" data-name="Wooden Diffusor"  data-price="60000">Add To Cart</button>
         </div>
       </div>
     </div>
@@ -1379,8 +1417,7 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-success">Buy Now</button>
-          <button type="button" class="btn btn-success">Add To Cart</button>
+            <button type="button" class="btn btn-success addToCart" data-id="26" data-description="Timber, 60x60x120cm" data-name="Wooden Basstrap"  data-price="120000">Add To Cart</button>
         </div>
       </div>
     </div>

@@ -154,34 +154,52 @@ $("#wColor1").click(function() {
   $('.wcolor').text('Red');
   $('#wb50').hide();
   $('#wg50').hide();
-  $('#wr50').hide();
+  $('#wr50').show();
 });
 $("#wColor2").click(function() {
   // Change src attribute of image
   $("#w1").attr("src", "./assets/img/products/greywedge.jpg");
-});
-$("#wColor3").click(function() {
-  // Change src attribute of image
-  $("#w1").attr("src", "./assets/img/products/black&redwedge.jpg");
+  $('.wcolor').text('Grey');
+  $('#wb50').hide();
+  $('#wg50').show();
+  $('#wr50').hide();
 });
 
+
+
+
 //diffusor foam
+$('#db50').show();
+$('#dg50').hide();
+$('#dr50').hide();
+
 $("#dColor0").click(function() {
   // Change src attribute of image
   $("#d1").attr("src", "./assets/img/promo5.jpg");
+  $('.dcolor').text('Black');
+  $('#db50').show();
+  $('#dg50').hide();
+  $('#dr50').hide();
 });
 $("#dColor1").click(function() {
   // Change src attribute of image
   $("#d1").attr("src", "./assets/img/products/reddiffusor.jpg");
+  $('.dcolor').text('Red');
+  $('#db50').hide();
+  $('#dg50').hide();
+  $('#dr50').show();
 });
 $("#dColor2").click(function() {
   // Change src attribute of image
   $("#d1").attr("src", "./assets/img/products/greydiffusor.jpg");
+  $('.dcolor').text('Grey');
+  $('#db50').hide();
+  $('#dg50').show();
+  $('#dr50').hide();
 });
-$("#dColor3").click(function() {
-  // Change src attribute of image
-  $("#d1").attr("src", "./assets/img/products/backgrounddiffusorfoam.jpg");
-});
+
+
+
 
 //eggcrate foam
 $("#eColor0").click(function() {
@@ -191,71 +209,122 @@ $("#eColor0").click(function() {
 
 
 //fabric black panel
+  $('#fb60').show();
+  $('#fb120').hide();
 $("#fabric1").click(function() {
   // Change src attribute of image
   $("#f1").attr("src", "./assets/img/products/WE-08 Black.png");
+  $('.fbsize').text('60x60x6cm');
   $("#price1").text("Ks30,000");
+  $('#fb60').show();
+  $('#fb120').hide();
 });
 $("#fabric2").click(function() {
   // Change src attribute of image
   $("#f1").attr("src", "./assets/img/products/fabricSize1.jpg");
+  $('.fbsize').text('60x60x6cm');
   $("#price1").text("Ks30,000");
+  $('#fb60').show();
+  $('#fb120').hide();
 });
 $("#fabric3").click(function() {
   // Change src attribute of image
   $("#f1").attr("src", "./assets/img/products/fabricSize2.jpg");
+  $('.fbsize').text('60x120x6cm');
   $("#price1").text("Ks60,000");
+  $('#fb60').hide();
+  $('#fb120').show();
 });
 
+
+
 //fabric dark grey panel
+$('#fdg60').show();
+$('#fdg120').hide();
 $("#darkgrey0").click(function() {
   // Change src attribute of image
   $("#f2").attr("src", "./assets/img/products/Dark Grey.png");
   $("#price2").text("Ks30,000");
+  $('.fbsize').text('60x60x6cm');
+  $('#fdg60').show();
+  $('#fdg120').hide();
 });
 $("#darkgrey1").click(function() {
   // Change src attribute of image
   $("#f2").attr("src", "./assets/img/products/fabricSize1.jpg");
   $("#price2").text("Ks30,000");
+  $('.fbsize').text('60x60x6cm');
+  $('#fdg60').show();
+  $('#fdg120').hide();
 });
 $("#darkgrey2").click(function() {
   // Change src attribute of image
   $("#f2").attr("src", "./assets/img/products/fabricSize2.jpg");
   $("#price2").text("Ks60,000");
+  $('.fbsize').text('60x120x6cm');
+  $('#fdg60').hide();
+  $('#fdg120').show();
 });
 
+
+
 //fabric light grey panel
+$('#flg60').show();
+$('#flg120').hide();
 $("#lightgrey0").click(function() {
   // Change src attribute of image
   $("#f3").attr("src", "./assets/img/products/light grey.png");
   $("#price3").text("Ks30,000");
+  $('.fbsize').text('60x60x6cm');
+  $('#flg60').show();
+  $('#flg120').hide();
 });
 $("#lightgrey1").click(function() {
   // Change src attribute of image
   $("#f3").attr("src", "./assets/img/products/fabricSize1.jpg");
   $("#price3").text("Ks30,000");
+  $('.fbsize').text('60x60x6cm');
+  $('#flg60').show();
+  $('#flg120').hide();
 });
 $("#lightgrey2").click(function() {
   // Change src attribute of image
   $("#f3").attr("src", "./assets/img/products/fabricSize2.jpg");
   $("#price3").text("Ks60,000");
+  $('.fbsize').text('60x120x6cm');
+  $('#flg60').hide();
+  $('#flg120').show();
 });
 
+
+
+
 //fabric beige panel
+$('#fbg60').show();
+$('#fbg120').hide();
 $("#beige0").click(function() {
   // Change src attribute of image
   $("#f4").attr("src", "./assets/img/products/beige.png");
   $("#price4").text("Ks30,000");
+  $('.fbsize').text('60x60x6cm');
+  $('#fbg60').show();
+  $('#fbg120').hide();
 });
 $("#beige1").click(function() {
   // Change src attribute of image
   $("#f4").attr("src", "./assets/img/products/fabricSize1.jpg");
   $("#price4").text("Ks30,000");
+  $('.fbsize').text('60x60x6cm');
+  $('#fbg60').show();
+  $('#fbg120').hide();
 });
 $("#beige2").click(function() {
   // Change src attribute of image
   $("#f4").attr("src", "./assets/img/products/fabricSize2.jpg");
   $("#price4").text("Ks60,000");
+  $('.fbsize').text('60x120x6cm');
+  $('#fbg60').hide();
+  $('#fbg120').show();
 });
 
 
@@ -386,6 +455,7 @@ $("#w43").click(function() {
 });
 
 //AddToCart System Start
+count();
 $('.addToCart').click(function(e){
   e.preventDefault();
   let id = $(this).data('id');
@@ -433,7 +503,7 @@ $('.addToCart').click(function(e){
   //convert data into string
   let itemData = JSON.stringify(itemArray);
   localStorage.setItem('shops', itemData);
-  // count();
+  count();
 
 })
 //AddToCart System End
