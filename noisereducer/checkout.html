@@ -74,7 +74,7 @@
     <h2 class="text-center my-5">Checkout Lists</h2>
     <h5 class="alert" id="success"></h5>
 
-    <div class="table-responsive">
+    <div class="table-responsive-xl">
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -82,7 +82,7 @@
                     <th>Item Name</th>
                     <th>Descriptions</th>
                     <th>Item Price</th>
-                    <th>Qty</th>
+                    <th>Quantity</th>
                     <th>Sub Total</th>
                 </tr>
             </thead>
@@ -93,10 +93,68 @@
     </div>
     <button class="btn btn-outline-secondary" id="order">Order Now</button>
 </div>
+
 <!-- Checkout End -->
 
 
-
+<!-- Service Start -->
+<div class="container my-5">
+    <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-4">
+        <div class="col">
+            <div class="card pt-3 my-2">
+                <div class="row">
+                    <div class="col-3 col-md-3 text-center">
+                        <i class="fa-solid fa-truck-fast fa-2x ps-4 pt-2"></i>
+                    </div>
+                    <div class="col-9 col-md-9">
+                        <p class="pb-0 mb-0">Fast & Free Shipping</p>
+                        <p class="text-secondary">For orders from $50</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card pt-3 my-2">
+                <div class="row">
+                    <div class="col-3 col-md-3 text-center">
+                        <i class="fa-solid fa-headset fa-2x ps-4 pt-2"></i>
+                    </div>
+                    <div class="col-9 col-md-9">
+                        <p class="pb-0 mb-0">Support 24/7</p>
+                        <p class="text-secondary">Call us anytime</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card pt-3 my-2">
+                <div class="row">
+                    <div class="col-3 col-md-3 text-center">
+                        <i class="fa-solid fa-shield-halved fa-2x ps-4 pt-2"></i>
+                    </div>
+                    <div class="col-9 col-md-9">
+                        <p class="pb-0 mb-0">100% Safety</p>
+                        <p class="text-secondary">Only secure payments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card pt-3 my-2">
+                <div class="row">
+                    <div class="col-3 col-md-3 text-center">
+                        <i class="fa-solid fa-gift fa-2x ps-4 pt-2"></i>
+                    </div>
+                    <div class="col-9 col-md-9">
+                        <p class="pb-0 mb-0">Gift Promotion</p>
+                        <p class="text-secondary">Discount up to 90%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
 
 
 
@@ -168,7 +226,7 @@
                             <td>${v.item_name}</td>
                             <td>${v.item_description}</td>
                             <td>${v.item_price}</td>
-                            <td><button class="btn btn-sm btn-outline-secondary me-2 min" data-item_i="${i}">-</button>${v.qty}<button class="btn btn-sm btn-outline-secondary ms-2 max" data-item_i="${i}">+</button></td>
+                            <td><button class="btn btn-sm btn-outline-secondary min" data-item_i="${i}">-</button>${v.qty}<button class="btn btn-sm btn-outline-secondary max" data-item_i="${i}">+</button></td>
                             <td>${v.qty*v.item_price}</td>
                         </tr>`
                         total += v.item_price * v.qty;
