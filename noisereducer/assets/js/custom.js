@@ -99,36 +99,62 @@ $(document).ready(function () {
     
 
 //pyramid foam
+    $('#pb50').show();
+    $('#pg50').hide();
+    $('#pr50').hide();
     $("#pColor0").click(function() {
       // Change src attribute of image
       $("#p1").attr("src", "./assets/img/promo1.jpg");
-      $('.color').text('Black');
+      $('.pcolor').text('Black');
+      $('#pb50').show();
+      $('#pg50').hide();
+      $('#pr50').hide();
     });
     $("#pColor1").click(function() {
       // Change src attribute of image
       $("#p1").attr("src", "./assets/img/pb.jpg");
-      $('.color').text('Black');
+      $('.pcolor').text('Black');
+      $('#pb50').show();
+      $('#pg50').hide();
+      $('#pr50').hide();
     });
     $("#pColor2").click(function() {
       // Change src attribute of image
       $("#p1").attr("src", "./assets/img/pg.jpg");
-      $('.color').text('Grey');
+      $('.pcolor').text('Grey');
+      $('#pb50').hide();
+      $('#pg50').show();
+      $('#pr50').hide();
     });
     $("#pColor3").click(function() {
       // Change src attribute of image
       $("#p1").attr("src", "./assets/img/pr.jpg");
-      $('.color').text('Red');
+      $('.pcolor').text('Red');
+      $('#pb50').hide();
+      $('#pg50').hide();
+      $('#pr50').show();
     });
 
 
 //wedge foam
+$('#wb50').show();
+$('#wg50').hide();
+$('#wr50').hide();
 $("#wColor0").click(function() {
   // Change src attribute of image
   $("#w1").attr("src", "./assets/img/promo2.jpg");
+  $('.wcolor').text('Black');
+  $('#wb50').show();
+  $('#wg50').hide();
+  $('#wr50').hide();
 });
 $("#wColor1").click(function() {
   // Change src attribute of image
   $("#w1").attr("src", "./assets/img/products/wedgered.jpg");
+  $('.wcolor').text('Red');
+  $('#wb50').hide();
+  $('#wg50').hide();
+  $('#wr50').hide();
 });
 $("#wColor2").click(function() {
   // Change src attribute of image
@@ -364,8 +390,9 @@ $('.addToCart').click(function(e){
   e.preventDefault();
   let id = $(this).data('id');
   let name = $(this).data('name');
+  let description = $(this).data('description');
   //changeColor
-  let description = $("input[type='radio']").val();
+  // let description = $("input[type='radio']:checked").val();
   // alert(description)
   let price = $(this).data('price');
   console.log(id, name, description, price);
