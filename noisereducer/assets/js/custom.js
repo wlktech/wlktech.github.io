@@ -360,7 +360,9 @@ $('.addToCart').click(function(e){
   e.preventDefault();
   let id = $(this).data('id');
   let name = $(this).data('name');
-  let description = $(this).data('description');
+  // let description = $(this).data('description');
+  let description = $("input[type='checkbox']").val();
+  alert(description);
   let price = $(this).data('price');
   console.log(id, name, description, price);
 

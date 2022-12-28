@@ -151,6 +151,13 @@
 .selector{
     border: none;
 }
+.select{
+    position: absolute;
+    width: 1px;
+}
+.point{
+    cursor: pointer;
+}
 /* product */
 
 /* footer */
