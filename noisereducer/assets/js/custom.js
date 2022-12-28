@@ -102,18 +102,22 @@ $(document).ready(function () {
     $("#pColor0").click(function() {
       // Change src attribute of image
       $("#p1").attr("src", "./assets/img/promo1.jpg");
+      $('.color').text('Black');
     });
     $("#pColor1").click(function() {
       // Change src attribute of image
       $("#p1").attr("src", "./assets/img/pb.jpg");
+      $('.color').text('Black');
     });
     $("#pColor2").click(function() {
       // Change src attribute of image
       $("#p1").attr("src", "./assets/img/pg.jpg");
+      $('.color').text('Grey');
     });
     $("#pColor3").click(function() {
       // Change src attribute of image
       $("#p1").attr("src", "./assets/img/pr.jpg");
+      $('.color').text('Red');
     });
 
 
@@ -360,9 +364,9 @@ $('.addToCart').click(function(e){
   e.preventDefault();
   let id = $(this).data('id');
   let name = $(this).data('name');
-  // let description = $(this).data('description');
-  let description = $("input[type='checkbox']").val();
-  alert(description);
+  //changeColor
+  let description = $("input[type='radio']").val();
+  // alert(description)
   let price = $(this).data('price');
   console.log(id, name, description, price);
 
