@@ -101,31 +101,35 @@
             <div class="form-floating mb-3 mt-3">
                 <input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname">
                 <label for="fname">First Name</label>
-              </div>
+            </div>
+            <small class="text-danger" id="name_warn"></small>
         </div>
         <div class="col-xl-6">
             <div class="form-floating mb-3 mt-3">
                 <input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname">
                 <label for="lname">Last Name</label>
-              </div>
+            </div>
         </div>
         <div class="col-xl-6">
             <div class="form-floating mb-3 mt-3">
                 <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
                 <label for="email">Email</label>
-              </div>
+            </div>
+            <small class="text-danger" id="email_warn"></small>
         </div>
         <div class="col-xl-6">
             <div class="form-floating mb-3 mt-3">
                 <input type="number" class="form-control" id="phone" placeholder="Enter phone" name="phone">
                 <label for="phone">Phone</label>
-              </div>
+            </div>
+            <small class="text-danger" id="phone_warn"></small>
         </div>
         <div class="col-xl-6">
             <div class="form-floating mb-3 mt-3">
                 <input type="text" class="form-control" id="address" placeholder="Enter address" name="address">
                 <label for="address">Address</label>
-              </div>
+            </div>
+            <small class="text-danger" id="address_warn"></small>
         </div>
         <div class="col-xl-6">
             <div class="form-floating my-3">
@@ -136,7 +140,8 @@
                   <option>CB Pay</option>
                 </select>
                 <label for="sel1" class="form-label">Payment Methods:</label>
-              </div>
+            </div>
+            <small class="text-danger" id="payment_warn"></small>
         </div> 
         <button class="btn btn-outline-secondary w-25 m-auto my-5" id="order">Order Now</button>         
     </div>
@@ -327,11 +332,42 @@
     
     
                 $('#order').click(function(){
-                    $('#success').addClass('alert-success');
-                    $('#success').text('You have ordered successfully.');
-                    localStorage.clear();
                     getData();
                     count();
+                    let fname = $("#fname").val();
+                    let lname = $("#lname").val();
+                    let email = $("#email").val();
+                    let phone = $("#phone").val();
+                    let address = $("#address").val();
+
+                    if (fname == "" || lname == "" || email =="" || phone=="" || address == "") {
+                        if(fname=="" || lname==""){
+                            $("#name_warn").text("*Name must be filled out");
+                        }
+                        if(email==""){
+                            $("#email_warn").text("*Email must be filled out");
+                        }
+                        if(phone==""){
+                            $("#phone_warn").text("*Phone must be filled out");
+                        }
+                        if(address==""){
+                            $("#address_warn").text("*Address must be filled out");
+                        }
+                        // alert("Name must be filled out");
+                        return false;
+                    }else{
+                        $("#name_warn").text("");
+                        $("#email_warn").text("");
+                        $("#phone_warn").text("");
+                        $("#address_warn").text("");
+                        $("#deliInfo").hide('slow');
+                        $('#success').addClass('alert-success');
+                        $('#success').text('You have ordered successfully.');
+                        localStorage.clear();
+                        getData();
+                        count();
+
+                    }
                 })
             
         })
