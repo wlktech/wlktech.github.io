@@ -454,6 +454,14 @@ $("#w43").click(function() {
 
 });
 
+//Asking for delivery information
+$("#deliInfo").hide('slow');
+$("#buy").click(function(){
+  $("#deliInfo").show('slow');
+})
+
+
+
 //AddToCart System Start
 count();
 $('.addToCart').click(function(e){
@@ -508,6 +516,31 @@ $('.addToCart').click(function(e){
 })
 //AddToCart System End
 
+//Input Validation
+function validateForm() {
+  let fname = $("#fname").val();
+  let lname = $("#lname").val();
+  let email = $("#email").val();
+  let phone = $("#phone").val();
+  let address = $("#address").val();
+
+  let name = document.forms["myForm"]["name"].value;
+  let email = document.forms["myForm"]["email"].value;
+  let message = document.forms["myForm"]["message"].value;
+  if (name == "" || email =="" || message=="") {
+  if(name==""){
+      document.getElementById('name_warn').innerHTML = "*Name must be filled out";
+  }if(email==""){
+      document.getElementById('email_warn').innerHTML = "*Email must be filled out";
+  }if(message==""){
+      document.getElementById('message_warn').innerHTML = "*Comments must be filled out";
+  }
+  // alert("Name must be filled out");
+  return false;
+  }else{
+  document.getElementById('success').innerHTML = "You have sent successfully!"
+  }
+}
 
 
 
