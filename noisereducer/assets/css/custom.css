@@ -1,6 +1,19 @@
 *{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+#preloader{
+    background: #ffffff url(../img/Bouncing\ ball.gif) no-repeat center center;
+    background-size: 50%;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10000;
+
+}
+.preloader{
+    visibility: hidden;
+    display: none;
+}
 .reveal{
     position: relative;
     transform: scale(0);

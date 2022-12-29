@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body data-bs-spy="scroll">
+<div id="preloader"></div>
 <!-- navbar start -->
 <nav class="navbar text-light bg-secondary py-1" id="home">
     <div class="container">
@@ -602,9 +603,13 @@
 <!-- Products End -->
 
 
-
-
-
+<!-- Preloader -->
+<div class="preloader">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JmOzco_KT3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JmOzco_KT3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/JmOzco_KT3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+</div>
+<!-- Preloader -->
 
 <!-- footer start -->
 <footer class="container-fluid bg-dark textColor pt-4 pb-2" id="contact">
@@ -703,6 +708,11 @@
         }
           
           window.addEventListener("scroll", reveal);
+        
+        var loader = document.getElementById('preloader');
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
     </script>
 </body>
 </html>
