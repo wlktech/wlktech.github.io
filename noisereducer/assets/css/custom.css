@@ -178,7 +178,7 @@
     color: rgb(175, 175, 175);
 }
 /* footer */
-#count_number{
+.badge{
     position: relative;
     top: -10px;
 }
