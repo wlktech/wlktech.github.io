@@ -178,5 +178,8 @@
     color: rgb(175, 175, 175);
 }
 /* footer */
-
+#count_number{
+    position: relative;
+    top: -10px;
+}
 /* checkout */
