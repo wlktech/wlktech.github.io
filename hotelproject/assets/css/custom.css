@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+.navbar-line{
+    border-bottom: 1px solid #AD8E3D;
+}
+.line{
+    border: 1px solid #AD8E3D;
+}
+.logo-service{
+    color: #AD8E3D;
+    font-size: 12px;
+    position: relative;
+    top: -10px;
+}
+.logo{
+    position: relative;
+    top: 10px;
+    text-align: left;
+}
+.logo-name{
+    font-size: 16px;
+    font-weight: 600;
+}
+.logo-img{
+    position: relative;
+    top: -10px;
+}
+.nav-link{
+    color: #AD8E3D;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.btn-book{
+    background-color: #AD8E3D;
+    color: #fff;
+    padding: 10px 15px;
+}
+i{
+    color: #AD8E3D;
+}
+.goldText{
+    color: #AD8E3D;
+}
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+  
+.subnav .subnavbtn {
+   font-size: 16px;  
+   border: none;
+   outline: none;
+   color: white;
+   padding: 14px 16px;
+   background-color: inherit;
+   font-family: inherit;
+   margin: 0;
+}
+  
+ .subnav:hover .subnavbtn {
+   background-color: rgb(255, 255, 255);
+   color: black;
+}
+  
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    z-index: 1;
+    padding: 20px 0px;
+}
+  
+.subnav-content a {
+    float: left;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.link:hover{
+    background-color: #AD8E3D;
+    color: rgb(255, 255, 255);
+}
+.link:hover i{
+    color: rgb(255, 255, 255);
+}
+  
+.subnav:hover .subnav-content {
+    display: block;
+}
+
+.link{
+    background-color: rgb(244, 244, 244);
+    width: 100px;
+    height: 100px;
+    padding: 15px 0px;
+    margin-left: 10px;
+    text-align: center;
+    border: 1px solid #AD8E3D;
+}
+.side-link{
+    display: block;
+    width: 100px;
+    text-align: center;
+    border: 1px solid #AD8E3D;
+    padding-top: 20px;
+    margin-top: 40px;
+    color: #000;
+}
+.side-link:hover{
+    background-color: #AD8E3D;
+    color: white;
+    transition-duration: .6s;
+}
+.side-link:hover i{
+    color: white;
+    transition-duration: .6s;
+}
+.profile-title{
+    position: relative;
+    top: 20px;
+}
+.profile-nav{
+    position: relative;
+    float: right;
+}
+
+
+
