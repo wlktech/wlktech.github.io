@@ -129,5 +129,45 @@ i{
     float: right;
 }
 
+/* slick */
+/* .responsive{
+    margin-top:150px;
+} */
+.left_arrow{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    padding: 10px;
+    border-radius: 50%;
+    color: #AD8E3D;
+    font-size: 30px;
+    cursor: pointer;
+}
+.left_arrow:hover, .right_arrow:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.right_arrow{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 0px;
+    padding: 10px;
+    border-radius: 50%;
+    color: #AD8E3D;
+    font-size: 30px;
+    cursor: pointer;
+}
 
-
+.slick-dots li button{
+    width: 20px;
+    background-color: rgb(117, 117, 117);
+    border-radius: 50%;
+    opacity: 0.3;
+}
+.slick-dots li button:hover{
+    opacity: 1;
+}
+.color{
+    font-size: 12px;
+}
+/* slick */
