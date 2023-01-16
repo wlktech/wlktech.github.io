@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+
+
+*{
+    /* font-family: 'Source Serif Pro', serif; */
+    font-family: 'Sofia Sans', sans-serif;
+    font-weight: 700;
+}
+.bg-gold{
+    background-color: #FCC203;
+}
+.text-gold{
+    color: #FCC203;
+}
+
+.carousel-item::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right:0;
+    background: #000;
+    opacity: 0.7;
+}
+.carousel-caption{
+    /* position: absolute; */
+    bottom: 40%;
+
+}
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+.carousel-caption a{
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+}
+
+@media only screen and (max-width:900px){
+    .carousel-caption h5{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width:700px){
+    .carousel-caption{
+        position: absolute;
+        bottom: 80px;
+    }
+}
+@media only screen and (max-width:600px){
+    .carousel-caption{
+        position: absolute;
+        bottom: 80px;
+    }
+}
+@media only screen and (max-width:500px){
+    .carousel-caption h5{
+        font-size: 30px;
+    }
+    .carousel-caption{
+        position: absolute;
+        bottom: 50px;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .carousel-caption h5{
+        font-size: 20px;
+    }
+    .carousel-caption p{
+        font-size: 14px;
+    }
+    .carousel-caption{
+        position: absolute;
+        bottom: 20px;
+    }
+}
