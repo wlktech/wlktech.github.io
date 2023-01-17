@@ -22,9 +22,13 @@
     color: #d4a300;
 }
 .btn-outline-gold{
-    border: #d4a300;
-    color: white;
+    border: 1px solid #d4a300;
+    color: #d4a300;
     background-color: none;
+}
+.btn-outline-gold:hover{
+    background-color: black;
+    color: #d4a300;
 }
 
 .carousel-item::before{
@@ -152,3 +156,66 @@
     font-weight: 700;
 }
 /* About end */
+
+/* service start */
+.service-card{
+    background-color: aliceblue;
+    margin: 0px 10px;
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+.service-card:hover{
+    transform: scale(0.9);
+    transition-duration: .6s;
+}
+.fa-bullhorn, .fa-laptop-code, .fa-desktop{
+    padding: 20px;
+    border-radius: 50%;
+    background-color: rgb(221, 238, 254);
+}
+/* service end */
+
+/* project start */
+.project-card{
+    position: relative;
+    width: 50%;
+    max-width: 300px;
+}
+.project-card:hover{
+    transform: scale(0.9);
+    transition-duration: .6s;
+}
+.project-card-title{
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.project-card:hover .project-card-title {
+    opacity: 1;
+}
+/* project end */
+
+
+
+
+/* contact start */
+textarea{
+    resize: none;
+}
+.underline{
+    border: 1px solid #000000;
+}
+.facebook, .twitter, .youtube{
+    color: #d4a300;
+    font-size: 25px;
+}
+/* contact end */

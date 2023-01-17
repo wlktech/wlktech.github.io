@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./assets/css/custom.css">
 
 </head>
-<body>
+<body id="home">
 <!-- nav start -->
 <nav class="navbar navbar-dark text-light bg-gold">
     <div class="container">
@@ -21,7 +21,7 @@
         <span>Follow Us : 
             <a class="text-white" href="https://www.facebook.com/profile.php?id=100087413634026" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             <a class="text-white" href="https://twitter.com/WaiLinn14350415" target="_blank"><i class="fa-brands fa-twitter ps-2"></i></a>
-            <a class="text-white" href=""><i class="fa-brands fa-instagram ps-2"></i></a>
+            <a class="text-white" href="https://www.youtube.com/@wlk-tech2325" target="_blank"><i class="fa-brands fa-youtube ps-2"></i></a>
         </span>
     </div>
 </nav>
@@ -37,19 +37,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">HOME</a>
+            <a class="nav-link" href="#home">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ABOUT</a>
+            <a class="nav-link" href="#about">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">SERVICE</a>
+            <a class="nav-link" href="#service">SERVICE</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">BLOG</a>
+            <a class="nav-link" href="#project">PROJECT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">CONTACT</a>
+            <a class="nav-link" href="#blog">BLOG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">CONTACT</a>
           </li>
         </ul>
       </div>
@@ -65,11 +68,12 @@
     </div>
     <div class="offcanvas-body">
         <div class="list-group list-group-flush">
-            <a href="./index.html" class="list-group-item"><i class="fas fa-home text-gold me-2"></i>HOME</a>
-            <a href="./index.html" class="list-group-item"><i class="fas fa-globe text-gold me-2"></i>ABOUT</a>
-            <a href="./index.html" class="list-group-item"><i class="fas fa-gear text-gold me-2"></i>SERVICE</a>
-            <a href="./index.html" class="list-group-item"><i class="fas fa-blog text-gold me-2"></i>BLOG</a>
-            <a href="./index.html" class="list-group-item"><i class="fas fa-address-book text-gold me-2"></i>CONTACT</a>
+            <a href="#home" class="list-group-item"><i class="fas fa-home text-gold me-2"></i>HOME</a>
+            <a href="#about" class="list-group-item"><i class="fas fa-globe text-gold me-2"></i>ABOUT</a>
+            <a href="#service" class="list-group-item"><i class="fas fa-gear text-gold me-2"></i>SERVICE</a>
+            <a href="#project" class="list-group-item"><i class="fas fa-book text-gold me-2"></i>PROJECT</a>
+            <a href="#blog" class="list-group-item"><i class="fas fa-blog text-gold me-2"></i>BLOG</a>
+            <a href="#contact" class="list-group-item"><i class="fas fa-address-book text-gold me-2"></i>CONTACT</a>
         </div>
     </div>
 </div>
@@ -124,10 +128,10 @@
 <!-- home end -->
 
 <!-- intro start -->
-<div class="container my-5">
+<div class="container py-5 mt-5" id="about">
   <div class="row">
-    <div class="col-xl-6 my-3 px-3">
-      <h2 class="my-2 header"><span class="v-line"></span> About Us</h2>
+    <div class="col-xl-6 my-3">
+      <h2 class="mb-2 mt-5 header"><span class="v-line"></span> About Us</h2>
       <p align="justify" class="about-para mt-4">
         The WLK-TECH team is organized in Jan 2023, organized by Frontend Developer, Backend Developer and Graphic Designer. 
       </p>
@@ -139,21 +143,150 @@
         </ul>
       <p class="about-para mb-0">Our Vision</p> 
         <ul class="about-para">
-          <li>to grow our group to reach the International.</li>
+          <li>to grow up our group to reach the International.</li>
         </ul>
-      <button class="btn btn-gold">Read More</button>
+      <!-- <button class="btn btn-gold">Read More</button> -->
     </div>
-    <div class="col-xl-6 my-3 px-3">
+    <div class="col-xl-6 my-3">
       <img src="./assets/img/vision.png" class="w-100 rounded shadow" alt="">
     </div>
   </div>
 </div>
 <!-- intro end -->
 
+<!-- Service Start -->
+<div class="container py-5" id="service">
+  <h2 class="mt-5 header"><span class="v-line"></span> Our Service</h2>
+  <div class="row mt-5">
+    <div class="col-md-3 col-12">
+      <div class="service-card my-3 shadow text-center">
+        <i class="fa-solid fa-laptop-code fa-2x"></i>
+        <p class="mt-2 mb-1">Web Design</p>
+        <small class="text-secondary">Company Profiles, Education Profiles</small>
+      </div>
+    </div>
+    <div class="col-md-3 col-12">
+      <div class="service-card my-3 shadow text-center">
+        <i class="fa-solid fa-bullhorn fa-2x"></i>
+        <p class="mt-2 mb-1">Branding</p>
+        <small class="text-secondary">Logo Designs, Graphic Designs</small>
+      </div>
+    </div>
+    <div class="col-md-3 col-12">
+      <div class="service-card my-3 shadow text-center">
+        <i class="fa-solid fa-desktop fa-2x"></i>
+        <p class="mt-2 mb-1">Fully Responsive</p>
+        <small class="text-secondary">Design for Desktop, Laptop & Mobile</small>
+      </div>
+    </div>
+    <div class="col-md-3 col-12">
+      <div class="service-card my-3 shadow text-center">
+        <i class="fa-solid fa-laptop-code fa-2x"></i>
+        <p class="mt-2 mb-1">Web Development</p>
+        <small class="text-secondary">Development for Blogs, Product Posts</small>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Service End -->
+
+<!-- project start -->
+<div class="container py-5" id="project">
+  <h2 class="mt-5 mb-4 header"><span class="v-line"></span> Our Project</h2>
+  <h4 class="py-3">Recent Projects</h4>
+  <div class="row">
+    <div class="col-lg-3 col-12 my-3">
+      <a class="project-card d-block w-100 shadow m-auto" href="https://noisereducer.vercel.app/" target="_blank">
+        <img src="./assets/img/nr.jpg" class="d-block w-100 rounded" alt="">
+        <div class="project-card-title">
+          <h5 class="text-center">Noise Reducer</h5>
+          <small class="text-center">Acoustic Material Selling</small>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-3 col-12 my-3">
+      <a class="project-card d-block w-100 shadow m-auto" href="https://royal-palace-hotel.vercel.app/" target="_blank">
+        <img src="./assets/img/royal.jpg" class="d-block w-100 rounded" alt="">
+        <div class="project-card-title">
+          <h5 class="text-center">Royal Palace Hotel</h5>
+          <small class="text-center">Hotel Profile</small>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-3 col-12 my-3">
+      <a class="project-card d-block w-100 shadow m-auto" href="https://j-library-wlk.vercel.app/" target="_blank">
+        <img src="./assets/img/jl.jpg" class="d-block w-100 rounded" alt="">
+        <div class="project-card-title">
+          <h5 class="text-center">J-Library</h5>
+          <small class="text-center">Japanese Language Library</small>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-3 col-12 my-3">
+      <a class="project-card d-block w-100 shadow m-auto" href="https://noisereducer.vercel.app/" target="_blank">
+        <img src="./assets/img/fashion.png" class="d-block w-100 rounded" alt="">
+        <div class="project-card-title">
+          <h5 class="text-center">WLK-Fashion</h5>
+          <small class="text-center">Online Fashion Shop</small>
+        </div>
+      </a>
+    </div>
+  </div>
+  <a href="./assets/pages/project.html" class="text-center d-block mt-4 btn">SEE MORE<i class="fas fa-arrow-right ms-2"></i></a>
+</div>
+<!-- project end -->
 
 
 
-
+<!-- contact start -->
+<div class="container-fluid py-5" id="contact">
+  <div class="container">
+    <h2 class="mb-4 mt-5 header"><span class="v-line"></span> Contact Us</h2>
+    <div class="row">
+      <div class="col-lg-6 my-3">
+        <h4 class="my-3">Send a message </h4>
+        <form action="">
+          <div class="input-group my-3">
+            <span class="input-group-text"><i class="fas fa-user"></i></span>
+            <input type="text" class="form-control" placeholder="Enter Username">
+          </div>
+          <div class="input-group my-3">
+            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+            <input type="email" class="form-control" placeholder="Enter Your Email">
+          </div>
+          <div class="input-group my-3">
+            <span class="input-group-text"><i class="fas fa-message"></i></span>
+            <textarea class="form-control" name="message" id="message" cols="10" rows="10" placeholder="Leave A Message"></textarea>
+          </div>
+          <div class="input-group my-3">
+            <button class="btn btn-outline-gold">SEND</button>
+          </div>
+        </form>
+        <hr class="underline">
+        <div class="phone my-3">
+          <span class="text-gold"><i class="fas fa-phone-volume me-2"></i> +959 421023714</span>
+        </div>
+        <div class="email my-3">
+          <a href="" class="text-decoration-none text-gold"><i class="fas fa-envelope me-2"></i> wlktech22@gmail.com</a>
+        </div>
+        <a class="text-decoration-none" href="https://www.facebook.com/profile.php?id=100087413634026" target="_blank">
+          <i class="fa-brands fa-facebook facebook me-2"></i>
+        </a>
+        <a class="text-decoration-none" href="https://twitter.com/WaiLinn14350415" target="_blank">
+          <i class="fa-brands fa-twitter twitter me-2"></i>
+        </a>
+        <a class="text-decoration-none" href="https://www.youtube.com/@wlk-tech2325" target="_blank">
+          <i class="fa-brands fa-youtube youtube me-2"></i>
+        </a>
+        
+      </div>
+      <div class="col-lg-6 my-3">
+        <iframe class="rounded shadow" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.38318246791!2d96.16870831521217!3d16.856928988398508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c193631e318d6b%3A0x989fcb3a2b8b438c!2sWLK-TECH!5e0!3m2!1sen!2smm!4v1673971843080!5m2!1sen!2smm" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- contact end -->
 
 <!-- footer start -->
 <footer class="bg-gold text-white pt-4 pb-1">
