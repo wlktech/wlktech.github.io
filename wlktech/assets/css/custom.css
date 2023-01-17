@@ -8,10 +8,23 @@
     font-weight: 700;
 }
 .bg-gold{
-    background-color: #FCC203;
+    background-color: #d4a300;
 }
 .text-gold{
-    color: #FCC203;
+    color: #d4a300;
+}
+.btn-gold{
+    background-color: #d4a300;
+    color: white;
+}
+.btn-gold:hover{
+    background-color: black;
+    color: #d4a300;
+}
+.btn-outline-gold{
+    border: #d4a300;
+    color: white;
+    background-color: none;
 }
 
 .carousel-item::before{
@@ -21,8 +34,8 @@
     left: 0;
     bottom: 0;
     right:0;
-    background: #000;
-    opacity: 0.7;
+    background: rgba(0, 0, 0, 0.8);
+    /* opacity: 0.8; */
 }
 .carousel-caption{
     /* position: absolute; */
@@ -34,55 +47,94 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 25px;
+    animation: moveleft 1s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+@keyframes moveleft{
+    0%{
+        transform: translateX(-100px);
+        visibility: visible;
+    }
+    100%{
+        transform:translateX(0);
+        visibility: visible;
+    }
 }
 .carousel-caption p{
     width: 60%;
     margin: auto;
     font-size: 18px;
     line-height: 1.9;
+    animation: moveright 1s linear 1;
+    animation-delay: 2s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+}
+@keyframes moveright{
+    0%{
+        transform: translateX(100px);
+        visibility: visible;
+    }
+    100%{
+        transform:translateX(0);
+        visibility: visible;
+    }
 }
 .carousel-caption a{
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
+    animation: zoomin 1s linear 1;
+    animation-delay: 3s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
 }
+@keyframes zoomin{
+    0%{
+        transform: scale(0.01);
+        visibility: visible;
+    }
+    100%{
+        transform:scale(1);
+        visibility: visible;
+    }
+}
+
 
 @media only screen and (max-width:900px){
     .carousel-caption h5{
         font-size: 30px;
     }
+    .carousel-caption{
+        position: absolute;
+        bottom: 80px;
+    }
+}
+@media only screen and (max-width:800px){
+    .carousel-caption{
+        position: absolute;
+        bottom: 60px;
+    }
 }
 @media only screen and (max-width:700px){
     .carousel-caption{
         position: absolute;
-        bottom: 80px;
+        bottom: 40px;
     }
 }
 @media only screen and (max-width:600px){
     .carousel-caption{
         position: absolute;
-        bottom: 80px;
+        bottom: 30px;
     }
-}
-@media only screen and (max-width:500px){
-    .carousel-caption h5{
-        font-size: 30px;
-    }
-    .carousel-caption{
-        position: absolute;
-        bottom: 50px;
-    }
-}
-
-@media only screen and (max-width:400px){
     .carousel-caption h5{
         font-size: 20px;
     }
     .carousel-caption p{
-        font-size: 14px;
-    }
-    .carousel-caption{
-        position: absolute;
-        bottom: 20px;
+        font-size: 16px;
     }
 }
+
+
