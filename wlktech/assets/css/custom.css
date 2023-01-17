@@ -137,4 +137,18 @@
     }
 }
 
-
+/* About start */
+.v-line{
+    background-color: #d4a300;
+    padding: 0px 3px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+.about-para{
+    font-size: 18px;
+    line-height: 30px;
+}
+.header{
+    font-weight: 700;
+}
+/* About end */
