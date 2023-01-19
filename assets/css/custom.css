@@ -7,6 +7,19 @@
     font-family: 'Sofia Sans', sans-serif;
     font-weight: 700;
 }
+#preloader{
+    background: #ffffff url(../img/Iphone-spinner-2.gif) no-repeat center center;
+    background-size: 3%;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10000;
+
+}
+.preloader{
+    visibility: hidden;
+    display: none;
+}
 /* scroll animation */
 .reveal{
     position: relative;
